@@ -1,8 +1,10 @@
-from Version1.library.autoupdate import Autoupdate
+
 import os.path as path
 
+from Process.AutoUpdate.autoupdate import Autoupdate
 
-@Autoupdate(name="Autoupdate WISROVI", project="wisrovi/MANITOR-WISROVI", root_path=path.dirname(path.realpath(__file__)))
+
+@Autoupdate(name="Autoupdate WISROVI", project="wisrovi/MANITOR-Raspberry", root_path=path.dirname(path.realpath(__file__)))
 def main_demo_autoupdate():
     print("update library")
 
