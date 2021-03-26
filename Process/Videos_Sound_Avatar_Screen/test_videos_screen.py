@@ -7,6 +7,8 @@ FOLDER = '../../' + PATH_VIDEOS
 
 import os
 import json
+import cv2
+import time
 
 if not os.path.isdir(FOLDER):
     print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
@@ -44,18 +46,15 @@ def save_video_show( numero_video: int, visto=False):
         json.dump(OBJ, outfile)
 
 
-def Contar(*args):
-    if avatar_class.instruccion_actual >= len(LISTADO_VIDEOS_INSTRUCCIONES):
-        avatar_class.terminar_proceso_avatar()
-    else:
-        avatar_class.continuar_siguiente_paso_instruccion()
-
-
-import cv2
-import time
-
-cv2.namedWindow("Frame")
-cv2.createButton("Contar", Contar, None, cv2.QT_PUSH_BUTTON, 1)
+# def Contar(*args):
+#     if avatar_class.instruccion_actual >= len(LISTADO_VIDEOS_INSTRUCCIONES):
+#         avatar_class.terminar_proceso_avatar()
+#     else:
+#         avatar_class.continuar_siguiente_paso_instruccion()
+#
+#
+# cv2.namedWindow("Frame")
+# cv2.createButton("Contar", Contar, None, cv2.QT_PUSH_BUTTON, 1)
 
 if __name__ == "__main__":
     avatar_class.iniciar_avatar()
@@ -72,7 +71,7 @@ if __name__ == "__main__":
                 if len(data) > 0:
                     print("nuevo video", data)
                     if not data['visto']:
-                        util.save_video_show(data['numero_paso'], True)
+                        save_video_show(data['numero_paso'], True)
                         print("Nuevo video mostrar")
 
                         if data['numero_paso'] < 0:
