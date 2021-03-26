@@ -1,4 +1,4 @@
-from Process.Mqtt.MqttUtil import Mqtt
+from MqttUtil import Mqtt
 import time
 
 
