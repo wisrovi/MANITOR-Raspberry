@@ -1,21 +1,47 @@
 from Config_Videos_Sound_Screen.Instrucciones_Videos import \
     LISTADO_VIDEOS_INSTRUCCIONES, CHECK_NEW_VIDEO
 from util_show_videos import Avatar_video
-from Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS
-from Util.Util import Util
-
-util = Util()
-
+from Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS, FILE_VIDEO_CONTROL
 
 FOLDER = '../../' + PATH_VIDEOS
 
 import os
+import json
 
 if not os.path.isdir(FOLDER):
     print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
     exit()
 
 avatar_class = Avatar_video(FOLDER)
+
+
+class File_New_Video(object):
+    numero_paso = int()
+    visto = bool()
+
+    def __init__(self, number, show):
+        self.numero_paso = number
+        self.visto = show
+
+    def getJson(self):
+        return self.__dict__
+
+
+def read_video_show():
+    data = dict()
+    FILE = '../../' + FILE_VIDEO_CONTROL
+    if os.path.isfile(FILE):
+        with open(FILE) as json_file:
+            data = json.load(json_file)
+    else:
+        print("No existe el archivo ", os.getcwd(), FILE)
+    return data
+
+
+def save_video_show( numero_video: int, visto=False):
+    OBJ = File_New_Video(numero_video, visto).getJson()
+    with open('../../' + FILE_VIDEO_CONTROL, 'w') as outfile:
+        json.dump(OBJ, outfile)
 
 
 def Contar(*args):
@@ -42,7 +68,7 @@ if __name__ == "__main__":
         if avatar_class.get_primer_inicio_avatar():
             if int(abs((time.time() - time_delay) * 100)) / 100 >= CHECK_NEW_VIDEO:
                 time_delay = time.time()
-                data = util.read_video_show()
+                data = read_video_show()
                 if len(data) > 0:
                     print("nuevo video", data)
                     if not data['visto']:
