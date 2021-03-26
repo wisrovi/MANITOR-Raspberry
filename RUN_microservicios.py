@@ -4,17 +4,17 @@ import cv2
 import time
 from multiprocessing import Process
 
-from Beacon_scan.ScanUtility import beacontools
-from Beacon_scan.config_beacon import TIME_SCAN, NAME_FILE_BEACON
-from Mqtt.MqttUtil import Mqtt
+from Process.Beacon_scan.ScanUtility import beacontools
+from Process.Beacon_scan.config_beacon import TIME_SCAN, NAME_FILE_BEACON
+from Process.Mqtt.MqttUtil import Mqtt
 from Advanced_features import Orden_mqtt_recibida
-from Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS
-from Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
+from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS
+from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
     LISTADO_VIDEOS_INSTRUCCIONES, CHECK_NEW_VIDEO
-from Videos_Sound_Avatar_Screen.util_show_videos import Avatar_video
-from Util.Util import Util
+from Process.Videos_Sound_Avatar_Screen.util_show_videos import Avatar_video
+from Process.Util.Util import Util
 
-FOLDER = '../' + PATH_VIDEOS
+FOLDER = PATH_VIDEOS
 avatar_class = Avatar_video(FOLDER)
 util = Util()
 scan_beacon = beacontools(0, TIME_SCAN)
@@ -108,6 +108,7 @@ def main_mqtt():
 if __name__ == "__main__":
     if not os.path.isdir(FOLDER):
         print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
+    else:
         proceso_videos = Process(target=main_videos)
         proceso_videos.start()
 

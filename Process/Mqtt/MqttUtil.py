@@ -6,7 +6,7 @@ class Mqtt(object):
     import json
     import datetime
 
-    from Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT
+    from Process.Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT
 
     def __init__(self, clase_ejecutar):
         self.__get_mac()
