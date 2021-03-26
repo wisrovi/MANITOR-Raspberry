@@ -109,11 +109,11 @@ if __name__ == "__main__":
     if not os.path.isdir(FOLDER):
         print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
     else:
-        proceso_videos = Process(target=main_videos)
-        proceso_videos.start()
+        process_creator = Process(target=main_videos)
+        process_creator.start()
 
-    proceso_beacon_scan = Process(target=main_beacon_scan)
-    proceso_beacon_scan.start()
+    process_creator = Process(target=main_beacon_scan)
+    process_creator.start()
 
-    proceso_mqtt = Process(target=main_mqtt)
-    proceso_mqtt.start()
+    process_creator = Process(target=main_mqtt)
+    process_creator.start()
