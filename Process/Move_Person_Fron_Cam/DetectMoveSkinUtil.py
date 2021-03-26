@@ -2,7 +2,7 @@ class Deteccion_movimiento:
     import cv2
     import numpy as np
     from time import strftime
-    from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import STATUS_MOVIMIENTO, valor_cambio, \
+    from config_movimiento_frente_camara import STATUS_MOVIMIENTO, valor_cambio, \
         TIEMPO_POR_INSTRUCCION, constante_cambio_area
 
     chrono_siguiente_instruccion = None
