@@ -18,4 +18,4 @@ TOPICS_USAR.append(PROJECT + "OTA")
 TOPICS_USAR.append(PROJECT + Get_MAC() + "/restart")
 TOPICS_USAR.append(PROJECT + Get_MAC() + "/OTA")
 
-FILE_MQTT = "mqtt.json"
+FILE_MQTT = "json_mqtt.json"

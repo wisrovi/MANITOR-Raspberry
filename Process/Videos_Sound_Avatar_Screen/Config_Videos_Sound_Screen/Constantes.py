@@ -1,3 +1,3 @@
 PATH_VIDEOS = "resources/"
 
-FILE_VIDEO_CONTROL = "video_now.json"
+FILE_VIDEO_CONTROL = "json_video_now.json"
