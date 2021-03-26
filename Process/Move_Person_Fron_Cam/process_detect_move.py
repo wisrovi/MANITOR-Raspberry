@@ -1,4 +1,4 @@
-from Process.Move_Person_Fron_Cam.DetectMoveSkinUtil import Deteccion_movimiento
+from DetectMoveSkinUtil import Deteccion_movimiento
 
 if __name__ == "__main__":
     import cv2
