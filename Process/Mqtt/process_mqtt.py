@@ -39,14 +39,15 @@ mqtt = Mqtt(Orden_mqtt_recibida)
 
 
 @Mqtt_Decorador("mqtt manitor", mqtt)
-def main():
+def main_mqtt():
     while True:
         time.sleep(3)
         data = mqtt.read_file()
         if len(data) > 0:
             print(data)
             mqtt.EnviarCardHolder(data['uuid'])
+    mqtt.FinalizarEscuchaMQTT()
 
 
 if __name__ == "__main__":
-    main()
+    main_mqtt()

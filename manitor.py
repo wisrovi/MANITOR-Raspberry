@@ -1,6 +1,6 @@
 from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
     LISTADO_VIDEOS_INSTRUCCIONES
-from Util.Util import Util
+from Process.Util import Util
 
 util = Util()
 util.enviar_mqtt(uuid="1234567890abcdefghijklmnoprstuvwxyz")
