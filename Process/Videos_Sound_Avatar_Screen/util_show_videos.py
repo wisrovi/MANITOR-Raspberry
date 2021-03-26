@@ -1,10 +1,10 @@
 class Avatar_video:
     import numpy as np
     import cv2
-    from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Avatar_Videos import AVATAR
-    from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
+    from Config_Videos_Sound_Screen.Avatar_Videos import AVATAR
+    from Config_Videos_Sound_Screen.Instrucciones_Videos import \
         LISTADO_VIDEOS_INSTRUCCIONES
-    from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Screen_Resolution import LIENZO_MOSTRAR_VIDEOS
+    from Config_Videos_Sound_Screen.Screen_Resolution import LIENZO_MOSTRAR_VIDEOS
 
     instruccion_actual = 0
     avatar_inicio = True
