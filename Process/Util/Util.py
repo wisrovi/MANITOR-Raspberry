@@ -30,7 +30,8 @@ class Util(object):
             with open(FILE) as json_file:
                 data = self.json.load(json_file)
         else:
-            print("No existe el archivo ", self.os.getcwd(), FILE)
+            pass
+            # print("No existe el archivo ", self.os.getcwd(), FILE)
         return data
 
     def save_video_show(self, numero_video: int, visto=False):
