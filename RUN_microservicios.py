@@ -117,8 +117,6 @@ if __name__ == "__main__":
 
     jobs.append(Process(target=main_mqtt))
 
-    # jobs.append(Process(target=main_beacon_scan))
-
     for job in jobs:
         job.start()
 
