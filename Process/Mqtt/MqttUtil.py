@@ -89,6 +89,8 @@ class Mqtt(object):
             with open(FILE) as json_file:
                 data = self.json.load(json_file)
             self.remove(FILE)
+        else:
+            print("no existe archivo mqtt", self.os.getcwd())
         return data
 
 
