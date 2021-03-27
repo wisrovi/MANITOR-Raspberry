@@ -64,7 +64,7 @@ class Avatar_video:
             else:
                 if not self.primer_inicio_avatar:
                     self.primer_inicio_avatar = True
-                    print("Inicio Avatar Completo")
+                    print("[main_videos]:", "Inicio Avatar Completo")
 
                 if self.hay_video_mostrar:
                     self.hay_video_mostrar, self.frame = self.video_instructivo_mostrar.read()
