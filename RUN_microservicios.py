@@ -108,6 +108,16 @@ def main_mqtt():
 
 
 if __name__ == "__main__":
+    from decouple import config
+    print()
+    print("*********************************************************")
+    print("*\t", "Autor: " "\t\t\t\t\t\t\t\t\t\t\t*")
+    print("*\t", config('autor', default=''), "\t\t\t\t*")
+    print("*\t", config('alias_autor', default=''), "\t\t\t\t\t\t\t\t\t\t\t*")
+    print("*\t", config('email_autor', default=''), "\t\t\t\t\t\t*")
+    print("*\t", config('linkedin_autor', default=''), "\t*")
+    print("*********************************************************")
+
     jobs = list()
 
     if not os.path.isdir(FOLDER):

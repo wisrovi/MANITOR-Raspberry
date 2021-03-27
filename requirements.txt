@@ -9,6 +9,7 @@ opencv-python==4.5.1.48
 paho-mqtt==1.5.1
 playsound==1.2.2
 PyBluez==0.23
+python-decouple==3.4
 requests==2.25.1
 smmap==3.0.5
 urllib3==1.26.4
