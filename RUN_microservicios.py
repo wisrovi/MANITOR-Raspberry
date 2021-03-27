@@ -88,7 +88,7 @@ def main_beacon_scan():
         if PRINT_LOG:
             print("[main_beacon_scan]:", "Escaneando")
 
-        with open("../../" + NAME_FILE_BEACON, 'w') as outfile:
+        with open( NAME_FILE_BEACON, 'w') as outfile:
             json.dump(OBJ, outfile)
 
         time.sleep(TIME_SCAN)
