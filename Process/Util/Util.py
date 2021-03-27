@@ -8,7 +8,7 @@ class Util(object):
 
     def __init__(self):
         self.BASE_DIR = self.os.path.dirname(self.os.path.realpath(__file__))
-        self.BASE_DIR_ROOT = "/".join([e for e in self.BASE_DIR.split("/")][:-1]) + "/"
+        self.BASE_DIR_ROOT = "/".join([e for e in self.BASE_DIR.split("/")][:-2]) + "/"
 
     def enviar_mqtt(self, uuid):
         OBJ = dict()
