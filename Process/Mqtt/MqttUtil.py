@@ -1,3 +1,6 @@
+from Advanced_features import Orden_mqtt_recibida
+
+
 class Mqtt(object):
     import paho.mqtt.client as mqtt
     import getmac
@@ -30,11 +33,11 @@ class Mqtt(object):
                                 port=self.PORT_MQTT)  # , keepalive=60, bind_address="") #connect to broker
             for topic in self.TOPICS_USAR:
                 self.__SuscribirTopic(topic)
-                print("Suscrito a:", topic)
+                print("[main_mqtt]:","Suscrito a:", topic)
 
             self.__IniciarEscuchaMQTT()
         except:
-            print("Error al conectarse al broker de MQTT")
+            print("[main_mqtt]:","Error al conectarse al broker de MQTT")
 
     def EnviarCardHolder(self, uuid):
         mac = self.IDENTIFICADOR_MANITOR
@@ -90,23 +93,5 @@ class Mqtt(object):
 
 
 if __name__ == "__main__":
-    class Orden_mqtt_recibida:
-        @staticmethod
-        def public_ota():
-            print("Orden publica: OTA")
-
-        @staticmethod
-        def public_restart():
-            print("Orden publica: restart")
-
-        @staticmethod
-        def private_ota():
-            print("Orden privada: OTA")
-
-        @staticmethod
-        def private_restart():
-            print("Orden privada: restart")
-
-
     mqtt = Mqtt(Orden_mqtt_recibida)
     mqtt.EnviarDatoServidor("queso", "hola mundo")

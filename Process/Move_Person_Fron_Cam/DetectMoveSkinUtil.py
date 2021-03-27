@@ -2,7 +2,7 @@ class Deteccion_movimiento:
     import cv2
     import numpy as np
     from time import strftime
-    from config_movimiento_frente_camara import STATUS_MOVIMIENTO, valor_cambio, \
+    from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import STATUS_MOVIMIENTO, valor_cambio, \
         TIEMPO_POR_INSTRUCCION, constante_cambio_area
 
     chrono_siguiente_instruccion = None
@@ -150,6 +150,9 @@ class Deteccion_movimiento:
         self.status = self.STATUS_MOVIMIENTO[1]
         self.contador_cambio_estado = 0
 
+    def hay_movimiento(self):
+        return self.PROCESS_DETECT_MOVE
+
     def activar_siguiente_video(self):
         self.dm.mostrar_siguiente_video()
 
@@ -162,7 +165,7 @@ class Deteccion_movimiento:
     def set_time(self, time_new):
         self.tiempo = time_new
 
-    def proceso_completo(self):
+    def get_frame(self):
         frame, _, _, masking = self.FrameSinRuido(self.cap)
         _, _, hay_movimiento_segun_cambio_areas = self.hallar_contornos_areas(frame, masking)
 
@@ -206,62 +209,16 @@ class Deteccion_movimiento:
                             self.chrono_siguiente_instruccion = self.currentTime()
 
                         if self.contador_cambio_estado >= int(self.valor_cambio / 1):
-                            self.dm.terminar_proceso()
+                            self.dm.proceso_interrumpido_por_superar_tres_advertencias()
                             self.terminar_proceso_deteccion_movimiento()
                     else:
                         self.contador_cambio_estado = 0
 
         return frame
 
+    def reiniciar_tiempo_instruccion(self):
+        self.chrono_siguiente_instruccion = self.currentTime()
+
 
 if __name__ == "__main__":
-    import cv2
-    import time
-
-
-    class Proceso_deteccion_movimiento:
-        def iniciar_proceso(self):
-            print("Proceso iniciado")
-
-        def primer_movimiento_detectado(self):
-            print("Primer movimiento")
-
-        def terminar_proceso(self):
-            print("Proceso terminado")
-
-        def primer_preaviso_no_movimiento(self):
-            print("Primer preaviso")
-
-        def segundo_preaviso_no_movimiento(self):
-            print("Segundo preaviso")
-
-        def tercer_preaviso_no_movimiento(self):
-            print("Tercer preaviso, por favor repita la instruccion")
-
-        def mostrar_siguiente_video(self):
-            print("Siguiente instruccion")
-            dm.set_time(5)
-
-
-    dm = Deteccion_movimiento(0, Proceso_deteccion_movimiento)
-
-    chrono_temporal = dm.currentTime()
-    while True:
-        frame = dm.proceso_completo()
-
-        if not dm.PROCESS_DETECT_MOVE:
-            if abs(chrono_temporal - dm.currentTime()) >= 10:
-                chrono_temporal = dm.currentTime()
-                dm.iniciar_proceso_deteccion_movimiento()
-        else:
-            chrono_temporal = dm.currentTime()
-
-        cv2.imshow("frame", frame)
-
-        time.sleep(0.025)
-        k = cv2.waitKey(30) & 0xff
-        if k == 27:
-            break
-
-    dm.cerrar_camara()
-    cv2.destroyAllWindows()
+    pass
