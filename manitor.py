@@ -18,7 +18,7 @@ def corrimiento(lista, data):
 
 
 def main_move_detect():
-    MOSTRAR_FRAME = True
+    MOSTRAR_FRAME = False
     import cv2
     import time
 
@@ -96,8 +96,8 @@ def main_move_detect():
             else:
                 dm.terminar_proceso_deteccion_movimiento()
 
+        frame = dm.get_frame()
         if MOSTRAR_FRAME:
-            frame = dm.get_frame()
             cv2.imshow("frame", frame)
 
         time.sleep(0.025)
