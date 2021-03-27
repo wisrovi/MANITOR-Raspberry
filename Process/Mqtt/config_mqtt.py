@@ -1,4 +1,4 @@
-BROKER_MQTT = "35.174.172.57"  # ip del broker
+BROKER_MQTT = "192.168.1.108"  # ip del broker
 PORT_MQTT = 2883  # puerto del broker
 USER = ""
 PWD = ""

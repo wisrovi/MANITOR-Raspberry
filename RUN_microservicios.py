@@ -15,13 +15,12 @@ from Process.Videos_Sound_Avatar_Screen.util_show_videos import Avatar_video
 from Process.Util.Util import Util
 
 FOLDER = PATH_VIDEOS
-avatar_class = Avatar_video(FOLDER)
+
 util = Util()
-scan_beacon = beacontools(0, TIME_SCAN)
-mqtt = Mqtt(Orden_mqtt_recibida)
 
 
 def main_videos():
+    avatar_class = Avatar_video(FOLDER)
     avatar_class.iniciar_avatar()
 
     time_delay = time.time()
@@ -75,6 +74,7 @@ def main_videos():
 
 def main_beacon_scan():
     PRINT_LOG = False
+    scan_beacon = beacontools(0, TIME_SCAN)
     scan_beacon.start_continue_process()
     while True:
         BEACONS = scan_beacon.get_beacons()
@@ -83,10 +83,10 @@ def main_beacon_scan():
         for key, beacon_class in BEACONS.items():
             OBJ[key] = beacon_class.getJson()
             if PRINT_LOG:
-                print("[main_beacon_scan]:",beacon_class.getJson())
+                print("[main_beacon_scan]:", beacon_class.getJson())
 
         if PRINT_LOG:
-            print("[main_beacon_scan]:","Escaneando")
+            print("[main_beacon_scan]:", "Escaneando")
 
         with open("../../" + NAME_FILE_BEACON, 'w') as outfile:
             json.dump(OBJ, outfile)
@@ -96,6 +96,8 @@ def main_beacon_scan():
 
 
 def main_mqtt():
+    mqtt = Mqtt(Orden_mqtt_recibida)
+    print("\n*** MQTT Working ***\n")
     while True:
         time.sleep(3)
         data = mqtt.read_file()
@@ -106,14 +108,18 @@ def main_mqtt():
 
 
 if __name__ == "__main__":
+    jobs = list()
+
     if not os.path.isdir(FOLDER):
         print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
     else:
-        process_creator = Process(target=main_videos)
-        process_creator.start()
+        jobs.append(Process(target=main_videos))
 
-    process_creator = Process(target=main_beacon_scan)
-    process_creator.start()
+    jobs.append(Process(target=main_mqtt))
 
-    process_creator = Process(target=main_mqtt)
-    process_creator.start()
+    # jobs.append(Process(target=main_beacon_scan))
+
+    for job in jobs:
+        job.start()
+
+    main_beacon_scan()
