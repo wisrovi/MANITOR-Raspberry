@@ -125,4 +125,4 @@ if __name__ == "__main__":
     if os.path.isfile(FILE):
         main_move_detect()
     else:
-        print("No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con {}'create_file_config_color.py'".format(FILE))
+        print("No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con {}'".format(FILE))

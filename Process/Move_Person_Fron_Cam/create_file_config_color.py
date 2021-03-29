@@ -13,7 +13,11 @@ if (len(sys.argv) <= 1) :
     useCamera = True
 
 # Create a window
-cv2.namedWindow('image')
+# cv2.namedWindow('image')
+
+cv2.namedWindow("image", cv2.WND_PROP_FULLSCREEN)
+cv2.setWindowProperty("image", cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+
 
 # create trackbars for color change
 cv2.createTrackbar('HMin','image',0,179,nothing) # Hue is from 0-179 for Opencv
