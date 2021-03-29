@@ -11,3 +11,4 @@ TIEMPO_VOLVER_LAVAR_MANOS = 60  # segundos (recomendado 5 minutos)
 
 FILE_MOVE_DETECT = "json_move_detect.json"
 
+FILE_CONFIG_MOVE_DETECT = "config_color_piel.json"
