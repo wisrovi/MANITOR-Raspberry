@@ -13,8 +13,10 @@ class Util(object):
     def enviar_mqtt(self, uuid):
         OBJ = dict()
         OBJ['uuid'] = uuid
-        with open(self.BASE_DIR_ROOT + self.FILE_MQTT, 'w') as outfile:
+        FILE = self.BASE_DIR_ROOT + "/" + self.FILE_MQTT
+        with open(FILE, 'w') as outfile:
             self.json.dump(OBJ, outfile)
+        print("[main_move_detect]: enviar Mqtt", FILE)
 
     def read_data_scan_beacon(self):
         data = dict()

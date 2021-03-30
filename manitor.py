@@ -59,7 +59,7 @@ def main_move_detect():
             tiempo = int(abs(self.time_elapsed - self.time.time()) * 100) / 100
 
             self.id_video += 1
-            if self.id_video >= len(manitor.LISTADO_VIDEOS_INSTRUCCIONES):
+            if self.id_video >= len(LISTADO_VIDEOS_INSTRUCCIONES):
                 self.id_video = -1
                 manitor.reportar_correcto_lavado_manos(historico[0])
                 manitor.video_instruccion_mostrar_video(self.id_video)

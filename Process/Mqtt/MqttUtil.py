@@ -18,6 +18,8 @@ class Mqtt(object):
         self.client = self.mqtt.Client(self.IDENTIFICADOR_MANITOR)
         self.client.on_message = self.__on_message
         self.__conect()
+        self.BASE_DIR = self.os.path.dirname(self.os.path.realpath(__file__))
+        self.BASE_DIR_ROOT = "/".join([e for e in self.BASE_DIR.split("/")][:-2]) + "/"
 
     def __Leer_HoraActual(self):
         x = self.datetime.datetime.now()
@@ -84,13 +86,14 @@ class Mqtt(object):
 
     def read_file(self):
         data = dict()
-        FILE = "../../" + self.FILE_MQTT
+        FILE = self.BASE_DIR_ROOT + self.FILE_MQTT
         if self.os.path.isfile(FILE):
             with open(FILE) as json_file:
                 data = self.json.load(json_file)
             self.remove(FILE)
         else:
-            print("no existe archivo mqtt", self.os.getcwd())
+            # print("no existe archivo mqtt", FILE)
+            pass
         return data
 
 

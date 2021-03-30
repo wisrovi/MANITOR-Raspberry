@@ -1,4 +1,3 @@
-
 class Configuracion_filtro_camara(object):
     import cv2
     import numpy as np
@@ -9,7 +8,7 @@ class Configuracion_filtro_camara(object):
     ventana_config_crada = False
     primera_captura_config = False
 
-    def __init__(self, fullscreen=False):
+    def __init__(self, fullscreen=True):
         self.fullscreen = fullscreen
 
     def abrir_camara(self):
@@ -19,8 +18,8 @@ class Configuracion_filtro_camara(object):
     def __nothing(x):
         pass
 
-    def Crear_ventana_config(self, aplicar_filtros):
-        if aplicar_filtros:
+    def Crear_ventana_config(self, aplicar_filtros, mostrar_barras=False):
+        if aplicar_filtros and mostrar_barras:
             if self.fullscreen:
                 self.cv2.namedWindow("config", self.cv2.WND_PROP_FULLSCREEN)
                 self.cv2.setWindowProperty("config", self.cv2.WND_PROP_FULLSCREEN, self.cv2.WINDOW_FULLSCREEN)
@@ -67,11 +66,14 @@ class Configuracion_filtro_camara(object):
         self.aplicar_filtros = aplicar_filtros
 
         if not self.ventana_config_crada and mostrar_barras:
-            self.Crear_ventana_config(aplicar_filtros)
+            self.Crear_ventana_config(aplicar_filtros, True)
+        else:
+            if self.fullscreen and not mostrar_barras:
+                self.Crear_ventana_config(aplicar_filtros)
 
         ret, img = self.cap.read()
 
-        if mostrar_barras:
+        if mostrar_barras and aplicar_filtros:
             self.hMin = self.cv2.getTrackbarPos('HMin', 'config')
             self.sMin = self.cv2.getTrackbarPos('SMin', 'config')
             self.vMin = self.cv2.getTrackbarPos('VMin', 'config')
@@ -131,7 +133,7 @@ class Configuracion_filtro_camara(object):
                 texto_poner = "Oprima '{}' para continuar".format(tecla_salir)
             else:
                 texto_poner = texto2
-            self.cv2.putText(imagen, text=texto_poner, org=(50, imagen.shape[0 ] -50 ),
+            self.cv2.putText(imagen, text=texto_poner, org=(50, imagen.shape[0] - 50),
                              fontFace=self.cv2.FONT_HERSHEY_SIMPLEX, fontScale=1, color=self.COLORES[color_texto],
                              thickness=2, lineType=self.cv2.LINE_AA)
         return imagen
@@ -174,7 +176,6 @@ class Configuracion_filtro_camara(object):
 import json
 from config_movimiento_frente_camara import FILE_CONFIG_MOVE_DETECT
 
-
 tecla = {
     "ESC": 27,
     "q": ord("q"),
@@ -187,7 +188,7 @@ config_cam = Configuracion_filtro_camara(True)
 config_cam.abrir_camara()
 
 while True:
-    img = config_cam.read_frame(False)
+    img = config_cam.read_frame(True)
     if img is None:
         continue
 
@@ -229,7 +230,7 @@ while True:
             json.dump(OBJ, outfile)
         break
 
-    # if config_cam.buscar_tecla_salir(tecla["ESC"]):
-    #     break
+    if config_cam.buscar_tecla_salir(tecla["ESC"]):
+        break
 
 config_cam.cerrar_camara()
