@@ -172,7 +172,7 @@ class Configuracion_filtro_camara(object):
 
 
 import json
-from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import FILE_CONFIG_MOVE_DETECT
+from config_movimiento_frente_camara import FILE_CONFIG_MOVE_DETECT
 
 
 tecla = {
@@ -183,7 +183,7 @@ tecla = {
     "v": ord("v")
 }
 
-config_cam = Configuracion_filtro_camara(False)
+config_cam = Configuracion_filtro_camara(True)
 config_cam.abrir_camara()
 
 while True:
