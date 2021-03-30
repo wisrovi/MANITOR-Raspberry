@@ -18,9 +18,12 @@ class Util(object):
 
     def read_data_scan_beacon(self):
         data = dict()
-        if self.__exist_file(self.BASE_DIR_ROOT + self.NAME_FILE_BEACON):
-            with open(self.BASE_DIR_ROOT + self.NAME_FILE_BEACON) as json_file:
-                data = self.json.load(json_file)
+        try:
+            if self.__exist_file(self.BASE_DIR_ROOT + self.NAME_FILE_BEACON):
+                with open(self.BASE_DIR_ROOT + self.NAME_FILE_BEACON) as json_file:
+                    data = self.json.load(json_file)
+        except:
+            pass
         return data
 
     def read_video_show(self):

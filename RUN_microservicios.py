@@ -25,6 +25,9 @@ def main_videos():
 
     time_delay = time.time()
 
+    cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
     while True:
         black_screen, video_inicial_final = avatar_class.proceso()
 

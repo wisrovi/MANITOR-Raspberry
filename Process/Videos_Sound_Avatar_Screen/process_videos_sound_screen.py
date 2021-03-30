@@ -14,6 +14,7 @@ if not os.path.isdir(FOLDER):
     print("No se encuentra la carpeta con los recursos", os.getcwd(), FOLDER)
     exit()
 
+
 #################################################
 
 class File_New_Video(object):
@@ -44,6 +45,7 @@ def save_video_show(numero_video: int, visto=False):
     with open('../../' + FILE_VIDEO_CONTROL, 'w') as outfile:
         json.dump(OBJ, outfile)
 
+
 #################################################
 
 
@@ -58,8 +60,6 @@ def save_video_show(numero_video: int, visto=False):
 # cv2.createButton("Contar", Contar, None, cv2.QT_PUSH_BUTTON, 1)
 
 
-
-
 avatar_class = Avatar_video(FOLDER)
 
 
@@ -67,6 +67,9 @@ def main_videos():
     avatar_class.iniciar_avatar()
 
     time_delay = time.time()
+
+    cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
     while True:
         black_screen, video_inicial_final = avatar_class.proceso()
