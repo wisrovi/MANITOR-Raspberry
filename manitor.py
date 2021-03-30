@@ -121,9 +121,9 @@ if __name__ == "__main__":
     print("*\t", config('linkedin_autor', default=''), "\t*")
     print("*********************************************************")
 
-    BASE_DIR = os.path.dirname(os.path.realpath(__file__)) + "Move_Person_Fron_Cam/"
+    BASE_DIR = os.path.dirname(os.path.realpath(__file__)) + "/Process/Move_Person_Fron_Cam/"
     FILE = BASE_DIR + FILE_CONFIG_MOVE_DETECT
     if os.path.isfile(FILE):
         main_move_detect()
     else:
-        print("No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con '{}create_file_config_color.py'".format(BASE_DIR))
+        print("No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con '{}CREATE_file_config_color.py'".format(BASE_DIR))

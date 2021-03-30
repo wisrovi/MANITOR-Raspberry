@@ -1,9 +1,15 @@
+
+
+
 class Deteccion_movimiento:
     import cv2
     import numpy as np
+    import json
+    import os
     from time import strftime
     from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import STATUS_MOVIMIENTO, valor_cambio, \
         TIEMPO_POR_INSTRUCCION, constante_cambio_area
+    from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import FILE_CONFIG_MOVE_DETECT
 
     chrono_siguiente_instruccion = None
     chrono_tiempo_alerta = None
@@ -23,6 +29,19 @@ class Deteccion_movimiento:
         self.instanciar_clase(clase)
         self.tiempo = self.TIEMPO_POR_INSTRUCCION
 
+        OBJ = dict()
+        with open(self.os.path.dirname(self.os.path.realpath(__file__)) + "/" + self.FILE_CONFIG_MOVE_DETECT) as json_file:
+            OBJ = self.json.load(json_file)
+            # print(OBJ)
+
+        colores = dict()
+        colores['piel'] = (self.CreateColor(OBJ["H_min"], OBJ["S_min"], OBJ["V_min"]), self.CreateColor(OBJ["H_max"], OBJ["S_max"], OBJ["V_max"]))
+        # colores['verde'] = (self.CreateColor(34, 177, 76), self.CreateColor(255, 255, 255))
+        self.franja_colores = {
+            "min": colores["piel"][0],
+            "max": colores["piel"][1]
+        }
+
     def LeerFotograma(self, cap):
         _, frame = cap.read()
         # cv2.imshow("Original Image", frame)
@@ -39,14 +58,7 @@ class Deteccion_movimiento:
             hsv_img = self.cv2.cvtColor(frame, self.cv2.COLOR_BGR2HSV)
 
             # Creo una mascara, donde pinto en blanco el color a buscar (color piel) y en negro lo que no cumpla dentro del color de interes
-            colores = dict()
-            colores['piel'] = (self.CreateColor(0, 48, 40), self.CreateColor(60, 255, 255))
-            colores['verde'] = (self.CreateColor(34, 177, 76), self.CreateColor(255, 255, 255))
-            franja_colores = {
-                "min": colores["piel"][0],
-                "max": colores["piel"][1]
-            }
-            masking = self.cv2.inRange(hsv_img, franja_colores["min"], franja_colores["max"])
+            masking = self.cv2.inRange(hsv_img, self.franja_colores["min"], self.franja_colores["max"])
 
             # eliminamos el ruido
             if False:
