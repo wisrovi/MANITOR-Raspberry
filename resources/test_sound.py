@@ -12,8 +12,8 @@ if __name__ == "__main__":
     path_audio = "p0.mp3"
 
 
-    currs = ThreadPoolExecutor(max_workers=5)
-    currs.submit(reproducir_audio, path_audio)
+    #currs = ThreadPoolExecutor(max_workers=5)
+    #currs.submit(reproducir_audio, path_audio)
 
-    #playsound(path_audio)
+    reproducir_audio(path_audio)
 
