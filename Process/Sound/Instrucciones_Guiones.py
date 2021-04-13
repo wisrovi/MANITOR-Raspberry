@@ -1,9 +1,12 @@
+PATH_VIDEOS = "resources/"
+
 
 def CreateGuion(id, text):
     guion = dict()
     guion['id'] = id
     guion['text'] = text
     return guion
+
 
 GUIONES = list()
 GUIONES.append(CreateGuion(id=0,

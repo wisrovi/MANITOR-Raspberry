@@ -2,8 +2,7 @@ class Sonido(object):
     from playsound import playsound
     from concurrent.futures import ThreadPoolExecutor
 
-    from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS
-    from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Guiones import GUIONES
+    from Instrucciones_Guiones import GUIONES, PATH_VIDEOS
 
     dialogos = list()
 
