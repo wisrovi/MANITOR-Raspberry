@@ -27,6 +27,7 @@ if __name__ == "__main__":
     s.reproducir(0)
 
     import time
+
     time.sleep(5)
 
     s.reproducir(2)
