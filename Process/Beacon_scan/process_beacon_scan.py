@@ -3,7 +3,7 @@ from config_beacon import TIME_SCAN,NAME_FILE_BEACON
 import json
 import time
 from ScanUtility import beacontools
-PRINT_LOG = False
+PRINT_LOG = True
 scan_beacon = beacontools(0, TIME_SCAN)
 
 

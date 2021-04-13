@@ -87,7 +87,9 @@ def main_move_detect():
         if (int(abs(time_elapsed - time.time()) * 100) / 100) >= 5:
             time_elapsed = time.time()
 
-            lectura_scan_beacon = sorted([(data_json['rssi'], uuid) for uuid, data_json in manitor.read_beacons().items()],key=lambda x: x[0],reverse=True)
+            lectura_scan_beacon = sorted(
+                [(data_json['rssi'], uuid) for uuid, data_json in manitor.read_beacons().items()], key=lambda x: x[0],
+                reverse=True)
             mas_cercano = lectura_scan_beacon[0] if len(lectura_scan_beacon) > 0 else (None, "")
             historico = corrimiento(historico, mas_cercano[1])
             # print( True if (historico[0]==historico[1] and len(historico[1])>0) else False ,list(map(lambda x: x[:8], list(filter(lambda x: len(x) > 8, historico)))))
@@ -112,6 +114,7 @@ def main_move_detect():
 
 if __name__ == "__main__":
     from decouple import config
+
     print()
     print("*********************************************************")
     print("*\t", "Autor: " "\t\t\t\t\t\t\t\t\t\t\t*")
@@ -126,4 +129,6 @@ if __name__ == "__main__":
     if os.path.isfile(FILE):
         main_move_detect()
     else:
-        print("No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con '{}CREATE_file_config_color.py'".format(BASE_DIR))
+        print(
+            "No existe el archivo de configuracion para detectar el movimiento, por favor validelo o creelo con '{}CREATE_file_config_color.py'".format(
+                BASE_DIR))
