@@ -4,11 +4,7 @@
 #DEVICE = "RPI"
 #DEVICE = "PC"
 
-import argparse
 
-parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('id', help='id image')
-args = parser.parse_args()
 
 #dialogos = None
 
@@ -22,19 +18,11 @@ class Sonido(object):
     from playsound import playsound
     from multiprocessing import Process
 
-    from Instrucciones_Guiones import GUIONES, PATH_VIDEOS
+    def __init__(self, base_path, path, guiones, device="RPI" ):
 
-    def __init__(self, path=None, device="RPI", base_path=None):
-        if path is None:
-            path = self.PATH_VIDEOS
+        self.BASE_PATH = base_path
 
-        if base_path is not None:
-            self.BASE_PATH = base_path
-        else:
-
-            self.BASE_PATH = self.os.getcwd()
-
-        self.dialogos = [path + "p" + str(id_dialogo) + ".wav" for id_dialogo in [diag['id'] for diag in self.GUIONES]]
+        self.dialogos = [path + "p" + str(id_dialogo) + ".wav" for id_dialogo in [diag['id'] for diag in guiones]]
 
         self.DEVICE = device
 
@@ -71,7 +59,15 @@ class Sonido(object):
 
 
 if __name__ == "__main__":
-    s = Sonido(device="PC", path="")
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('id', help='id image')
+    args = parser.parse_args()
+
+    from Instrucciones_Guiones import GUIONES
+    import os
+    s = Sonido(device="PC", path="", base_path=os.getcwd(), guiones=GUIONES)
     s.reproducir(args.id)
 
 """

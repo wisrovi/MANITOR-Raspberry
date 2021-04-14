@@ -13,6 +13,7 @@ from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones
     LISTADO_VIDEOS_INSTRUCCIONES, CHECK_NEW_VIDEO
 from Process.Videos_Sound_Avatar_Screen.util_show_videos import Avatar_video
 from Process.Util.Util import Util
+from resources.test_sound import Sonido
 
 FOLDER = PATH_VIDEOS
 
@@ -108,6 +109,11 @@ def main_mqtt():
             print(data)
             mqtt.EnviarCardHolder(data['uuid'])
     mqtt.FinalizarEscuchaMQTT()
+
+
+def main_sonido():
+    import os
+    #s = Sonido(base_path=)
 
 
 if __name__ == "__main__":
