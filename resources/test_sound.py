@@ -18,7 +18,7 @@ def crear_lista_audios(path=None):
     if path is None:
         path = PATH_VIDEOS
     dialogos = [path + "p" + str(id_dialogo) + ".wav" for id_dialogo in [diag['id'] for diag in GUIONES]]
-    # print(dialogos)
+    print(dialogos)
 
 
 from multiprocessing import Process
