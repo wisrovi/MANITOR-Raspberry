@@ -11,5 +11,5 @@ args = parser.parse_args()
 id_audio = int(args.id)
 
 
-Util().save_audio_show(id_audio, False)
+Util().save_audio_show(id_audio)
 

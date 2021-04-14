@@ -8,11 +8,13 @@ from Process.Beacon_scan.ScanUtility import beacontools
 from Process.Beacon_scan.config_beacon import TIME_SCAN, NAME_FILE_BEACON
 from Process.Mqtt.MqttUtil import Mqtt
 from Advanced_features import Orden_mqtt_recibida
+from Process.Sound.config_sound import TIME_SCAN_FILE_SOUND
 from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Constantes import PATH_VIDEOS
 from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
     LISTADO_VIDEOS_INSTRUCCIONES, CHECK_NEW_VIDEO
 from Process.Videos_Sound_Avatar_Screen.util_show_videos import Avatar_video
 from Process.Util.Util import Util
+from resources.Instrucciones_Guiones import GUIONES
 from resources.test_sound import Sonido
 
 FOLDER = PATH_VIDEOS
@@ -21,13 +23,15 @@ util = Util()
 
 
 def main_videos():
+    PANTALLA_COMPLETA = True
     avatar_class = Avatar_video(FOLDER)
     avatar_class.iniciar_avatar()
 
     time_delay = time.time()
 
-    cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)
-    cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    if PANTALLA_COMPLETA:
+        cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)
+        cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
     while True:
         black_screen, video_inicial_final = avatar_class.proceso()
@@ -113,7 +117,23 @@ def main_mqtt():
 
 def main_sonido():
     import os
-    #s = Sonido(base_path=)
+    import time
+    base_folder = os.getcwd() + "/" + PATH_VIDEOS
+
+    util = Util()
+    print(base_folder)
+    s = Sonido(base_path=base_folder, path=PATH_VIDEOS, guiones=GUIONES)
+    while True:
+        time.sleep(TIME_SCAN_FILE_SOUND)
+        OBJ = util.read_data_scan_sound()
+        if not OBJ['visto']:
+            id_audio = OBJ['numero_audio']
+            print("audio: ", id_audio)
+            util.save_audio_show(int(OBJ['numero_audio']), True)
+            try:
+                s.reproducir(id_audio)
+            except:
+                pass
 
 
 if __name__ == "__main__":
@@ -135,6 +155,8 @@ if __name__ == "__main__":
         jobs.append(Process(target=main_videos))
 
     jobs.append(Process(target=main_mqtt))
+
+    jobs.append(Process(target=main_sonido))
 
     for job in jobs:
         job.start()

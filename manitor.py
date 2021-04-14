@@ -2,6 +2,7 @@ from Manitor.Manitor import MANITOR
 from Process.Move_Person_Fron_Cam.DetectMoveSkinUtil import Deteccion_movimiento
 from Process.Move_Person_Fron_Cam.config_movimiento_frente_camara import \
     TIEMPO_DESCANSO_ENTRE_UNA_PERSONA_Y_OTRA_CUANDO_LA_PRIMERA_COMPLETO_DESINFECCION, FILE_CONFIG_MOVE_DETECT
+from Process.Util.Util import Util
 from Process.Videos_Sound_Avatar_Screen.Config_Videos_Sound_Screen.Instrucciones_Videos import \
     LISTADO_VIDEOS_INSTRUCCIONES
 import os
@@ -28,6 +29,9 @@ def main_move_detect():
 
         id_video = int(-1)
         time_elapsed = float()
+
+        def __init__(self):
+            self.util = Util()
 
         def iniciar_proceso(self):
             print("[main_move_detect]:", "Proceso iniciado")
@@ -73,6 +77,8 @@ def main_move_detect():
                 if conteo_tiempo:
                     print("[main_move_detect]:", tiempo, ":", "Siguiente instruccion:", name)
                     self.time_elapsed = self.time.time()
+
+            self.util.save_audio_show(self.id_video)
 
         @staticmethod
         def proceso_interrumpido_por_superar_tres_advertencias():
