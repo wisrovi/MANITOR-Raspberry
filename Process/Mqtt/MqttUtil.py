@@ -9,7 +9,7 @@ class Mqtt(object):
     import json
     import datetime
 
-    from Process.Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT
+    from Process.Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT, PORT_MQTT_FCV, BROKER_MQTT_FCV
 
     def __init__(self, clase_ejecutar):
         self.__get_mac()
@@ -29,13 +29,23 @@ class Mqtt(object):
         mac = self.getmac.get_mac_address()
         self.IDENTIFICADOR_MANITOR = mac
 
+    def __exist_file(self, file):
+        if self.os.path.isfile(file):
+            return True
+        else:
+            return False
+
     def __conect(self):
         try:
-            self.client.connect(host=self.BROKER_MQTT,
-                                port=self.PORT_MQTT)  # , keepalive=60, bind_address="") #connect to broker
+            if self.__exist_file(self.BASE_DIR_ROOT + "FCV"):
+                self.client.connect(host=self.BROKER_MQTT_FCV,
+                                    port=self.PORT_MQTT_FCV)  # , keepalive=60, bind_address="") #connect to broker
+            else:
+                self.client.connect(host=self.BROKER_MQTT,
+                                    port=self.PORT_MQTT)  # , keepalive=60, bind_address="") #connect to broker
             for topic in self.TOPICS_USAR:
                 self.__SuscribirTopic(topic)
-                print("[main_mqtt]:","Suscrito a:", topic)
+                print("[main_mqtt]:", "Suscrito a:", topic)
 
             self.__IniciarEscuchaMQTT()
         except:
