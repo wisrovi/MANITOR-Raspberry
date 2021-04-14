@@ -1,3 +1,6 @@
+from Process.Util.Util import Util
+
+
 class Avatar_video:
     import numpy as np
     import cv2
@@ -64,6 +67,7 @@ class Avatar_video:
             else:
                 if not self.primer_inicio_avatar:
                     self.primer_inicio_avatar = True
+                    Util().save_audio_show(11)
                     print("[main_videos]:", "Inicio Avatar Completo")
 
                 if self.hay_video_mostrar:

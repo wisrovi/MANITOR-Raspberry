@@ -43,16 +43,17 @@ def main_move_detect():
             manitor.video_instruccion_mostrar_video(self.id_video)
             self.time_elapsed = self.time.time()
 
-        @staticmethod
-        def primer_preaviso_no_movimiento():
+        def primer_preaviso_no_movimiento(self):
             print("[main_move_detect]:", "Primer preaviso")
+            self.util.save_audio_show(12)
 
-        @staticmethod
-        def segundo_preaviso_no_movimiento():
+        def segundo_preaviso_no_movimiento(self):
             print("[main_move_detect]:", "Segundo preaviso")
+            self.util.save_audio_show(12)
 
         def tercer_preaviso_no_movimiento(self):
             print("[main_move_detect]:", "Tercer preaviso, por favor repita la instruccion")
+            self.util.save_audio_show(13)
             self.id_video -= 1
             if self.id_video < 0:
                 self.id_video = 0
