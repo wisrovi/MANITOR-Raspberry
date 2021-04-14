@@ -39,6 +39,7 @@ def main_move_detect():
 
         def primer_movimiento_detectado(self):
             print("[main_move_detect]:", "Primer movimiento")
+            self.util.save_audio_show(0)
             self.id_video = 0
             manitor.video_instruccion_mostrar_video(self.id_video)
             self.time_elapsed = self.time.time()
