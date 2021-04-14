@@ -9,7 +9,8 @@ class Mqtt(object):
     import json
     import datetime
 
-    from Process.Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT, PORT_MQTT_FCV, BROKER_MQTT_FCV
+    from Process.Mqtt.config_mqtt import BROKER_MQTT, PORT_MQTT, PROJECT, TOPICS_USAR, FILE_MQTT, PORT_MQTT_FCV, \
+        BROKER_MQTT_FCV
 
     def __init__(self, clase_ejecutar):
         self.__get_mac()
@@ -40,16 +41,18 @@ class Mqtt(object):
             if self.__exist_file(self.BASE_DIR_ROOT + "FCV"):
                 self.client.connect(host=self.BROKER_MQTT_FCV,
                                     port=self.PORT_MQTT_FCV)  # , keepalive=60, bind_address="") #connect to broker
+                print("[main_mqtt]:", "usando broker FCV")
             else:
                 self.client.connect(host=self.BROKER_MQTT,
                                     port=self.PORT_MQTT)  # , keepalive=60, bind_address="") #connect to broker
+                print("[main_mqtt]:", "usando broker pruebas")
             for topic in self.TOPICS_USAR:
                 self.__SuscribirTopic(topic)
                 print("[main_mqtt]:", "Suscrito a:", topic)
 
             self.__IniciarEscuchaMQTT()
         except:
-            print("[main_mqtt]:","Error al conectarse al broker de MQTT")
+            print("[main_mqtt]:", "Error al conectarse al broker de MQTT")
 
     def EnviarCardHolder(self, uuid):
         mac = self.IDENTIFICADOR_MANITOR
