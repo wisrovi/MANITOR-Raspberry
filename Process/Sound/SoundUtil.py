@@ -1,9 +1,8 @@
-from Instrucciones_Guiones import GUIONES, PATH_VIDEOS
+from resources.Instrucciones_Guiones import GUIONES, PATH_VIDEOS
 
 
 class Sonido(object):
     from playsound import playsound
-    from concurrent.futures import ThreadPoolExecutor
 
     dialogos = list()
 
