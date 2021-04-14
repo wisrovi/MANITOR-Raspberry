@@ -70,17 +70,21 @@ def main_move_detect():
                 manitor.reportar_correcto_lavado_manos(historico[0])
                 manitor.video_instruccion_mostrar_video(self.id_video)
                 dm.set_time(TIEMPO_DESCANSO_ENTRE_UNA_PERSONA_Y_OTRA_CUANDO_LA_PRIMERA_COMPLETO_DESINFECCION)
+
+                self.util.save_audio_show(14)
             else:
                 id_este_video, nuevo_tiempo, name = manitor.get_data_video(self.id_video)
                 if id_este_video == self.id_video:
                     dm.set_time(nuevo_tiempo)
                     manitor.video_instruccion_mostrar_video(self.id_video)
 
+                    self.util.save_audio_show(self.id_video)
+
                 if conteo_tiempo:
                     print("[main_move_detect]:", tiempo, ":", "Siguiente instruccion:", name)
                     self.time_elapsed = self.time.time()
 
-            self.util.save_audio_show(self.id_video)
+
 
         @staticmethod
         def proceso_interrumpido_por_superar_tres_advertencias():
