@@ -54,11 +54,11 @@ class Mqtt(object):
         except:
             print("[main_mqtt]:", "Error al conectarse al broker de MQTT")
 
-    def EnviarCardHolder(self, uuid):
+    def EnviarCardHolder(self, uuid, vector_tiempos="[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"):
         mac = self.IDENTIFICADOR_MANITOR
         bateria = uuid[14:18]
         topic = self.PROJECT + "manitor/" + mac + "/" + uuid
-        msg = "{" + "'LV' : " + bateria + ", 'HOUR': " + self.__Leer_HoraActual() + ", 'mac' : " + mac + "}"
+        msg = "{" + "'LV' : " + bateria + ", 'HOUR': " + self.__Leer_HoraActual() + ", 'vector_tiempos' : " + vector_tiempos + "}"
         self.EnviarDatoServidor(topic, msg)
 
     def EnviarDatoServidor(self, TOPIC_PUBLISH_MQTT, MENSAJE_ENVIAR_MQTT):

@@ -5,7 +5,6 @@ USER_FCV = ""
 PWD_FCV = ""
 
 
-
 BROKER_MQTT = "192.168.1.109"  # ip del broker
 PORT_MQTT = 1884  # puerto del broker
 USER = ""
@@ -19,11 +18,14 @@ def Get_MAC():
 
 
 PROJECT = "/SPINPLM/"
+DEVICE = "" # "manitor/"
 
 TOPICS_USAR = list()
-TOPICS_USAR.append(PROJECT + "restart")
-TOPICS_USAR.append(PROJECT + "OTA")
-TOPICS_USAR.append(PROJECT + Get_MAC() + "/restart")
-TOPICS_USAR.append(PROJECT + Get_MAC() + "/OTA")
+TOPICS_USAR.append(PROJECT + DEVICE + "restart")
+TOPICS_USAR.append(PROJECT + DEVICE + "OTA")
+TOPICS_USAR.append(PROJECT + DEVICE + Get_MAC() + "/restart")
+TOPICS_USAR.append(PROJECT + DEVICE + Get_MAC() + "/OTA")
+TOPICS_USAR.append(PROJECT + DEVICE + Get_MAC() + "/nombre")
+
 
 FILE_MQTT = "json_mqtt.json"

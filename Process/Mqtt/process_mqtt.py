@@ -19,6 +19,10 @@ class Orden_mqtt_recibida:
     def private_restart():
         print("Orden privada: restart")
 
+    @staticmethod
+    def private_nombre():
+        print("Orden privada: nombre")
+
 
 class Mqtt_Decorador(object):
     def __init__(self, name, mqtt):
