@@ -9,9 +9,8 @@
 # *             https://hub.docker.com/r/don41382/rpi-python3-with-bluetooth/             *
 # *****************************************************************************************
 
-#FROM arm32v7/python:3.6.13-buster
+FROM arm32v7/python:3.6.13-buster
 #FROM arm32v7/python:3.7.10-stretch
-FROM don41382/rpi-python3-with-bluetooth
 
 
 # *****************************************************************************************
@@ -64,6 +63,20 @@ USER usuario
 
 
 
+
+
+# *****************************************************************************************
+# *                              install python packs                                     *
+# *****************************************************************************************
+
+# install dependencies
+RUN sudo pip3 install --upgrade pip
+
+# copy the dependencies file to the working directory
+COPY requirements.txt .
+RUN sudo pip3 install -r requirements.txt
+
+
 # *****************************************************************************************
 # *                              copy files project                                       *
 # *****************************************************************************************
@@ -72,5 +85,4 @@ USER usuario
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
 
-# CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD [ "sudo" ,"python3", "./docker_beacon_scan_flask.py" ]
+CMD [ "tail" ,"-f", "/etc/hosts" ]
