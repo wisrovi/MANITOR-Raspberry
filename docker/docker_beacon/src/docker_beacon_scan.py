@@ -1,3 +1,13 @@
+"""
+    CONFIG
+"""
+TIME_SCAN = 5
+NAME_FILE_BEACON = "json_beacon_scan.json"
+
+"""
+    Clases
+"""
+
 # https://github.com/bowdentheo/BLE-Beacon-Scanner
 
 class Beacon_Obj(object):
@@ -191,9 +201,53 @@ class beacontools:
         self.proc.join()
 
     def get_beacons(self):
-        return self.queue.get()
+        if not self.queue.empty():
+            return self.queue.get()
+        else:
+            return dict()
 
 
 
 
 
+
+
+"""
+    Proceso
+"""
+
+class Process_beacon_scan(object):
+    def __init__(self):
+        self.scan_beacon = beacontools(0, TIME_SCAN)
+
+    def main_beacon_scan(self):
+        import json
+        import time
+        self.scan_beacon.start_continue_process()
+
+        FOLDER = "/home/Beacon/"
+
+        while True:
+            BEACONS = self.scan_beacon.get_beacons()
+
+            OBJ = dict()
+            for key, beacon_class in BEACONS.items():
+                OBJ[key] = beacon_class.getJson()
+                print(beacon_class.getJson())
+
+            print("Escaneando")
+            print(OBJ)
+
+            #with open(FOLDER + NAME_FILE_BEACON, 'w') as outfile:
+            #    json.dump(OBJ, outfile)
+
+            time.sleep(TIME_SCAN)
+        scan_beacon.detener_continue_process()
+
+
+"""
+    Ejecutor unico para que solo se ejecute en este archivo
+"""
+
+if __name__ == '__main__':
+    Process_beacon_scan().main_beacon_scan()

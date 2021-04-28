@@ -1,6 +1,5 @@
-sudo mkdir /home/Beacon
-sudo chmod -R 777 /home/Beacon
+sudo docker pull don41382/rpi-python3-with-bluetooth
 
-docker build -t "docker_beacon_scan:v1" .
+sudo docker build -t "beacon_scan:v1" .
 
-docker container run --privileged -d docker_beacon_scan:v1
+docker container run -d --net host --name=beacon_scan beacon_scan:v1

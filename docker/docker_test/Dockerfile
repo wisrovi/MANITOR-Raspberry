@@ -8,10 +8,7 @@
 # *           Python Base Image from https://hub.docker.com/r/arm32v7/python/             *
 # *****************************************************************************************
 
-#FROM arm32v7/python:3.6.13-buster
-#FROM arm32v7/python:3.7.10-stretch
-FROM don41382/rpi-python3-with-bluetooth
-
+FROM arm32v7/python:3.6.13-buster
 
 # *****************************************************************************************
 # *                           create folder for copy files project                        *
@@ -19,9 +16,6 @@ FROM don41382/rpi-python3-with-bluetooth
 
 # creamos un directorio de trabajo donde poner los archivos fuente
 WORKDIR /code
-
-
-
 
 # *****************************************************************************************
 # *                              install packs in OS                                      *
@@ -33,15 +27,6 @@ RUN apt-get -y install sudo
 
 # otras instalaciones de fuentes en el SO
 RUN echo Hola mundo
-RUN apt-get -y install libbluetooth-dev
-RUN apt-get -y install libcap2-bin
-RUN apt-get -y install bluez
-
-# otras instalaciones de fuentes en el SO
-RUN echo Hola mundo
-
-
-
 
 # *****************************************************************************************
 # *                              create new user sudo                                     *
@@ -61,21 +46,16 @@ RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 # decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
 USER usuario
 
-
-
-
-
 # *****************************************************************************************
 # *                              install python packs                                     *
 # *****************************************************************************************
 
 # install dependencies
-RUN sudo pip3 install --upgrade pip
+RUN pip3 install --upgrade pip
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
-
 
 # *****************************************************************************************
 # *                              copy files project                                       *
@@ -85,5 +65,11 @@ RUN sudo pip3 install -r requirements.txt
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
 
-# CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD [ "sudo" ,"python3", "./docker_beacon_scan_flask.py" ]
+# update PATH environment variable
+# ENV PATH=/root/.local:$PATH
+
+# definir la carpeta a usar para lanzar el proyecto
+# CMD /bin/bash
+
+# command to run on container start
+CMD [ "sudo" ,"python3", "./test_mqtt.py" ]

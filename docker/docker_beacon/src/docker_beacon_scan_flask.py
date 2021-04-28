@@ -8,6 +8,7 @@ NAME_FILE_BEACON = "json_beacon_scan.json"
     Clases
 """
 
+
 # https://github.com/bowdentheo/BLE-Beacon-Scanner
 
 class Beacon_Obj(object):
@@ -20,7 +21,7 @@ class Beacon_Obj(object):
     tipo = str()
     empresa = str()
 
-    def __init__(self, mac: str, rssi: int, uuid: str, tx: int, maj: int, min: int, tip: str, company: str):
+    def __init__(self, mac, rssi, uuid, tx, maj, min, tip, company):
         self.mac = mac
         self.rssi = rssi
         self.uuid = uuid
@@ -201,44 +202,41 @@ class beacontools:
         self.proc.join()
 
     def get_beacons(self):
-        return self.queue.get()
-
-
-
-
-
+        if not self.queue.empty():
+            return self.queue.get()
+        else:
+            return dict()
 
 
 """
     Proceso
 """
 
-class Process_beacon_scan(object):
-    def __init__(self):
-        self.scan_beacon = beacontools(0, TIME_SCAN)
+from flask import Flask
+import json
 
-    def main_beacon_scan(self):
-        import json
-        import time
-        self.scan_beacon.start_continue_process()
+app = Flask(__name__)
 
-        FOLDER = "/home/Beacon/"
+scan_beacon = beacontools(0, TIME_SCAN)
+scan_beacon.start_continue_process()
 
-        while True:
-            BEACONS = self.scan_beacon.get_beacons()
 
-            OBJ = dict()
-            for key, beacon_class in BEACONS.items():
-                OBJ[key] = beacon_class.getJson()
-                print(beacon_class.getJson())
+@app.route('/beacons')
+def hello():
+    BEACONS = scan_beacon.get_beacons()
 
-            print("Escaneando")
+    DATOS = dict()
+    for key, beacon_class in BEACONS.items():
+        DATOS[key] = beacon_class.getJson()
+    data_beacons_json = json.dumps(DATOS, indent=4)
+    rta = data_beacons_json
+    print(rta)
+    return rta
 
-            with open(FOLDER + NAME_FILE_BEACON, 'w') as outfile:
-                json.dump(OBJ, outfile)
 
-            time.sleep(TIME_SCAN)
-        scan_beacon.detener_continue_process()
+@app.route('/')
+def hola():
+    return 'Beacon scan by Wisrovi'
 
 
 """
@@ -246,4 +244,4 @@ class Process_beacon_scan(object):
 """
 
 if __name__ == '__main__':
-    Process_beacon_scan().main_beacon_scan()
+    app.run(host="0.0.0.0", port=5001)

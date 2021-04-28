@@ -57,7 +57,7 @@ class Mqtt(object):
     def EnviarCardHolder(self, uuid, vector_tiempos="[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]"):
         mac = self.IDENTIFICADOR_MANITOR
         bateria = uuid[14:18]
-        topic = self.PROJECT + "manitor/" + mac + "/" + uuid
+        topic = self.PROJECT + "manitor/" + mac + "/" + uuid + "/lavado"
         msg = "{" + "'LV' : " + bateria + ", 'HOUR': " + self.__Leer_HoraActual() + ", 'vector_tiempos' : " + vector_tiempos + "}"
         self.EnviarDatoServidor(topic, msg)
 
