@@ -1,4 +1,4 @@
 
-docker build -t "audio_play:v1" .
+docker build -t "reproduce__audio:v1" .
 
-docker container  run -d --device /dev/snd --name=test_audio  audio_play:v1
+docker container run -d --device /dev/snd --name=reproduce__audio  -p 5002:5002  reproduce__audio:v1

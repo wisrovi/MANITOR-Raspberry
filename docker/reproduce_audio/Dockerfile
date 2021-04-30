@@ -45,18 +45,18 @@ RUN echo Paquetes instalados
 # *****************************************************************************************
 
 # crear el usuario con nombre usuario
-RUN useradd -m usuario
-
-# add el usuario al grupo habilitarlo sin contraseña
-RUN echo "usuario:grupo" | chpasswd
-
-# adicionar el usuario a sudo
-RUN adduser usuario sudo
-
-RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-
-# decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
-USER usuario
+#RUN useradd -m usuario
+#
+## add el usuario al grupo habilitarlo sin contraseña
+#RUN echo "usuario:grupo" | chpasswd
+#
+## adicionar el usuario a sudo
+#RUN adduser usuario sudo
+#
+#RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#
+## decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
+#USER usuario
 
 
 
@@ -82,4 +82,5 @@ RUN sudo pip3 install -r requirements.txt
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
 
-CMD [ "tail" ,"-f", "/etc/hosts" ]
+#CMD [ "tail" ,"-f", "/etc/hosts" ]
+CMD ["python3", "./service.py" ]
