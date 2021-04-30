@@ -33,6 +33,7 @@ RUN apt-get -y install sudo
 # otras instalaciones de fuentes en el SO
 RUN echo Instalando nuevos paquetes
 RUN apt-get install mpg123 -y
+RUN apt-get install python3-pip -y
 
 # otras instalaciones de fuentes en el SO
 RUN echo Paquetes instalados
