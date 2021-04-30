@@ -18,8 +18,7 @@ def leer_audios_disponibles(FOLDER):
     return audios_temporal
 
 
-audios = leer_audios_disponibles("audios")
-# audios = leer_audios_disponibles("resources")
+audios = leer_audios_disponibles("resources")
 
 
 def reproducir_audio(i):
