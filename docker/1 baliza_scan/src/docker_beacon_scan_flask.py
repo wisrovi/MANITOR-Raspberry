@@ -56,7 +56,7 @@ class beacontools:
         except:
             self.sock = None
             print("Error accessing bluetooth")
-        self.queue = self.Queue()
+        self.queue = self.Queue(maxsize=5)
 
     def hci_enable_le_scan(self):
         if self.sock is not None:
@@ -203,7 +203,13 @@ class beacontools:
 
     def get_beacons(self):
         if not self.queue.empty():
-            return self.queue.get()
+            data_complete = dict()
+            for _ in range(self.queue.qsize()):
+                data = self.queue.get()
+                for key, value in data.items():
+                    print(key, value)
+                    data_complete[key] = value
+            return data_complete
         else:
             return dict()
 
