@@ -133,7 +133,7 @@ else:
 def continue_life_pin():
     while True:
         Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "life_pin",)).start()
-        time.sleep(10)
+        time.sleep(60)
 
 
 Process(target=continue_life_pin).start()
