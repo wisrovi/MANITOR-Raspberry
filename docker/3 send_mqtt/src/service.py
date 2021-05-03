@@ -53,19 +53,27 @@ def on_message(client, userdata, message):
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("connected OK Returned code=", rc)
+        print("[INFO]: connected OK Returned code=", rc)
     elif rc == 1:
-        print("Conexión rechazada - versión de protocolo incorrecta")
+        print("[INFO]: Conexión rechazada - versión de protocolo incorrecta")
     elif rc == 2:
-        print("Conexión rechazada: identificador de cliente no válido")
+        print("[INFO]: Conexión rechazada: identificador de cliente no válido")
     elif rc == 3:
-        print("Conexión rechazada - servidor no disponible")
+        print("[INFO]: Conexión rechazada - servidor no disponible")
     elif rc == 4:
-        print("Conexión rechazada - nombre de usuario o contraseña incorrectos")
+        print("[INFO]: Conexión rechazada - nombre de usuario o contraseña incorrectos")
     elif rc == 5:
-        print("Conexión rechazada - no autorizada")
+        print("[INFO]: Conexión rechazada - no autorizada")
     else:
-        print("Bad connection Returned code=", rc)
+        print("[ERROR]: Bad connection Returned code=", rc)
+    print()
+
+
+def send_msg_mqtt(topic, msg):
+    print(f"[MQTT]: topic:{topic} - message:{msg}")
+    client.loop_stop()
+    client.publish(topic, msg)  # publish
+    client.loop_start()
 
 
 def conectar_broker():
@@ -94,12 +102,15 @@ def conectar_broker():
         client.loop_start()
 
         conectado = True
+
+        Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "Hello world",)).start()
     except:
         print("Credenciales no validas")
 
 
 def on_disconnect(client, userdata, rc):
     print("[ERROR]: disconnecting reason  " + str(rc))
+    client.loop_stop()
     time.sleep(5)
     conectar_broker()
 
@@ -118,13 +129,16 @@ else:
     client.on_disconnect = on_disconnect
     conectar_broker()
 
+
+def continue_life_pin():
+    while True:
+        Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "life_pin",)).start()
+        time.sleep(10)
+
+
+Process(target=continue_life_pin).start()
+
 app = Flask(__name__)
-
-
-def send_msg_mqtt(topic, msg):
-    print(f"[MQTT]: topic:{topic} - message:{msg}")
-    client.publish(topic, msg)  # publish
-    print("Message sent")
 
 
 @app.route('/')
