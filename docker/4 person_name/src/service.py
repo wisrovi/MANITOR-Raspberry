@@ -25,15 +25,27 @@ def save_file(PERSON_SCAN_TEMP):
 
 def read_file():
     PERSON_SCAN_TEMP = dict()
-    with open(FILE_HISTORY) as json_file:
-        PERSON_SCAN_TEMP = json.load(json_file)
+    try:
+        with open(FILE_HISTORY) as json_file:
+            PERSON_SCAN_TEMP = json.load(json_file)
+    except:
+        pass
     return PERSON_SCAN_TEMP
 
 
 if not os.path.isfile(FILE_HISTORY):
-    save_file({})
+    with open(FILE_HISTORY, 'w') as outfile:
+        json.dump({}, outfile)
 else:
     PERSON_SCAN = read_file()
+
+if not os.path.isfile(FILE_BEACON_SCAN):
+    with open(FILE_BEACON_SCAN, 'w') as outfile:
+        json.dump({}, outfile)
+
+if not os.path.isfile(FILE_PERSON_SCAN):
+    with open(FILE_PERSON_SCAN, 'w') as outfile:
+        json.dump({}, outfile)
 
 
 app = Flask(__name__)
@@ -62,6 +74,7 @@ def get_beacons_scan():
         time.sleep(4.5)
         PARAMS = dict()
         failed = False
+        BEACON_SCAN_FILE = None
         try:
             r = requests.get('http://' + SERVER + ':5001/beacons', params=PARAMS, timeout=10)
             BEACON_SCAN_FILE = r.json()
@@ -75,17 +88,18 @@ def get_beacons_scan():
                 more_near_rssi[key] = value['rssi']
             more_near_sorted = {k: v for k, v in sorted(more_near_rssi.items(), key=lambda item: item[1], reverse=True)}
 
-            BEACON_SCAN = BEACON_SCAN_FILE
             MORE_NEAR = dict()
             for k, v in more_near_sorted.items():
                 MORE_NEAR[k] = BEACON_SCAN_FILE[k]
                 break
 
             OBJ = dict()
-            OBJ['all'] = BEACON_SCAN
+            OBJ['all'] = BEACON_SCAN_FILE
             OBJ['near'] = MORE_NEAR
-            with open(FILE_BEACON_SCAN, 'w') as outfile:
-                json.dump(OBJ, outfile)
+            with open(FILE_BEACON_SCAN, 'w') as outfile_beacon_scan:
+                json.dump(OBJ, outfile_beacon_scan)
+
+            print(MORE_NEAR)
 
             all_uuid = list(MORE_NEAR.keys())
             if len(all_uuid) > 0:
@@ -114,10 +128,11 @@ def get_beacons_scan():
 
                     PERSON_SCAN_NOW = dict()
                     PERSON_SCAN_NOW[uuid_mas_cercano] = OBJ
-                    with open(FILE_PERSON_SCAN, 'w') as outfile:
-                        json.dump(PERSON_SCAN_NOW, outfile)
+                    with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
+                        json.dump(PERSON_SCAN_NOW, outfile_beacon_scan)
                 else:
                     print("[ERROR]:", f"La persona con beacon {uuid_mas_cercano} no tiene resultados del servidor para solicitud de nombre (/nombre)")
+        print("Process beacon_scan and history OK")
 
 
 Process(target=get_beacons_scan).start()
@@ -137,16 +152,22 @@ def history():
 @app.route('/name', methods=['GET'])
 def name():
     data = dict()
-    with open(FILE_PERSON_SCAN) as json_file:
-        data = json.load(json_file)
+    try:
+        with open(FILE_PERSON_SCAN) as json_file:
+            data = json.load(json_file)
+    except:
+        pass
     return json.dumps(data, indent=4)
 
 
 @app.route('/mirror', methods=['GET'])
 def mirror():
     BEACON_FILE = dict()
-    with open(FILE_BEACON_SCAN) as json_file:
-        BEACON_FILE = json.load(json_file)
+    try:
+        with open(FILE_BEACON_SCAN) as json_file:
+            BEACON_FILE = json.load(json_file)
+    except:
+        pass
     return json.dumps(BEACON_FILE, indent=4)
 
 
@@ -155,14 +176,16 @@ def help_service():
     OBJ = dict()
 
     options_config = list()
-    options_config.append("look port_broker")
-    options_config.append("look ip_broker")
-    OBJ['http://localhost:5003/config'] = options_config
+    options_config.append("look copy beacons now")
+    OBJ['http://localhost:5004/mirror'] = options_config
 
     options_send = list()
-    options_send.append("<topic> -> topico enviar mqtt")
-    options_send.append("<msg> -> mensaje enviar mqtt")
-    OBJ['http://localhost:5003/send?topic=<topic>&msg=<msg>'] = options_send
+    options_send.append("return last name received")
+    OBJ['http://localhost:5004/name'] = options_send
+
+    options_send = list()
+    options_send.append("return all history beacon - names since last create service")
+    OBJ['http://localhost:5004/history'] = options_send
 
     return json.dumps(OBJ, indent=4)
 
