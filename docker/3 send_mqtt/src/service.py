@@ -51,7 +51,25 @@ def on_message(client, userdata, message):
     # print("message retain flag=", message.retain)
 
 
-def on_connect(client, userdata, flags, rc):
+def on_connect_received(client, userdata, flags, rc):
+    if rc == 0:
+        print("[INFO]: connected OK Returned code=", rc)
+    elif rc == 1:
+        print("[INFO]: Conexión rechazada - versión de protocolo incorrecta")
+    elif rc == 2:
+        print("[INFO]: Conexión rechazada: identificador de cliente no válido")
+    elif rc == 3:
+        print("[INFO]: Conexión rechazada - servidor no disponible")
+    elif rc == 4:
+        print("[INFO]: Conexión rechazada - nombre de usuario o contraseña incorrectos")
+    elif rc == 5:
+        print("[INFO]: Conexión rechazada - no autorizada")
+    else:
+        print("[ERROR]: Bad connection Returned code=", rc)
+    print()
+
+
+def on_connect_send(client, userdata, flags, rc):
     if rc == 0:
         print("[INFO]: connected OK Returned code=", rc)
     elif rc == 1:
@@ -71,35 +89,35 @@ def on_connect(client, userdata, flags, rc):
 
 def send_msg_mqtt(topic, msg):
     print(f"[MQTT]: topic:{topic} - message:{msg}")
-    client.loop_stop()
-    client.publish(topic, msg)  # publish
-    client.loop_start()
+    client_send.publish(topic, msg)  # publish
 
 
 def conectar_broker():
     global conectado
     try:
-        client.on_connect = on_connect
+        client_receive.on_connect = on_connect_received
 
         if USER_BROKER is not None and PASSWORD_BROKER is not None:
             print("Usando user y password")
-            client.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
+            client_receive.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
+            client_send.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
 
-        client.connect(IP_BROKER, port=int(PORT_BROKER))
+        client_receive.connect(IP_BROKER, port=int(PORT_BROKER))
+        client_send.connect(IP_BROKER, port=int(PORT_BROKER))
 
         PROJECT = "SPINPLM"
         topic_subscribe_1 = "/" + PROJECT + "/manitor/#"
         topic_subscribe_2 = topic_subscribe_1[:-1] + get_mac() + "/#"
 
-        client.subscribe(topic_subscribe_1, qos=1)
-        client.subscribe(topic_subscribe_2, qos=1)
+        client_receive.subscribe(topic_subscribe_1, qos=1)
+        client_receive.subscribe(topic_subscribe_2, qos=1)
 
         print("subscrito a:", topic_subscribe_1)
         print("subscrito a:", topic_subscribe_2)
         print()
 
-        client.on_message = on_message
-        client.loop_start()
+        client_receive.on_message = on_message
+        client_receive.loop_start()
 
         conectado = True
 
@@ -108,7 +126,13 @@ def conectar_broker():
         print("Credenciales no validas")
 
 
-def on_disconnect(client, userdata, rc):
+def on_disconnect_receive(client, userdata, rc):
+    print("[ERROR]: disconnecting reason  " + str(rc))
+    client.loop_stop()
+    time.sleep(5)
+    conectar_broker()
+
+def on_disconnect_send(client, userdata, rc):
     print("[ERROR]: disconnecting reason  " + str(rc))
     client.loop_stop()
     time.sleep(5)
@@ -125,8 +149,10 @@ else:
         NAME_CLIENT = NAME_CLIENT + random.choice(char)
     os.environ['NAME_CLIENT'] = NAME_CLIENT
 
-    client = mqtt.Client(NAME_CLIENT, clean_session=False)
-    client.on_disconnect = on_disconnect
+    client_receive = mqtt.Client(NAME_CLIENT, clean_session=False)
+    client_send = mqtt.Client(NAME_CLIENT + "2", clean_session=False)
+    client_receive.on_disconnect = on_disconnect_receive
+    client_send.on_disconnect = on_disconnect_send
     conectar_broker()
 
 
