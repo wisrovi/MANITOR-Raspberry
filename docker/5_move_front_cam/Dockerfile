@@ -69,6 +69,8 @@ RUN sudo pip3 install -r requirements.txt
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
 
+RUN sudo chmod -R +777 /code
+
 # update PATH environment variable
 # ENV PATH=/root/.local:$PATH
 
