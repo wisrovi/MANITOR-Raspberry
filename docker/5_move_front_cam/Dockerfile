@@ -7,7 +7,8 @@
 # *                              choose the base image                                    *
 # *           Python Base Image from https://hub.docker.com/r/arm32v7/python/             *
 # *****************************************************************************************
-FROM imelnik/rpi-python3-tensorflow-opencv
+#FROM imelnik/rpi-python3-tensorflow-opencv
+FROM python:3
 
 # *****************************************************************************************
 # *                           create folder for copy files project                        *
@@ -24,6 +25,10 @@ WORKDIR /code
 RUN apt update -y
 RUN apt-get -y install sudo
 
+RUN apt-get install libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqtgui4 libqt4-test
+
+RUN apt-get -y autoremove
+
 # otras instalaciones de fuentes en el SO
 RUN echo Hola mundo
 
@@ -32,25 +37,25 @@ RUN echo Hola mundo
 # *****************************************************************************************
 
 # crear el usuario con nombre usuario
-RUN useradd -m usuario
-
-# add el usuario al grupo habilitarlo sin contraseña
-RUN echo "usuario:grupo" | chpasswd
-
-# adicionar el usuario a sudo
-RUN adduser usuario sudo
-
-RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
-
-# decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
-USER usuario
+#RUN useradd -m usuario
+#
+## add el usuario al grupo habilitarlo sin contraseña
+#RUN echo "usuario:grupo" | chpasswd
+#
+## adicionar el usuario a sudo
+#RUN adduser usuario sudo
+#
+#RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#
+## decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
+#USER usuario
 
 # *****************************************************************************************
 # *                              install python packs                                     *
 # *****************************************************************************************
 
 # install dependencies
-RUN pip3 install --upgrade pip
+# RUN pip3 install --upgrade pip
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
@@ -72,4 +77,6 @@ COPY ./src .
 
 # command to run on container start
 #CMD [ "sudo" ,"python3", "./test_mqtt.py" ]
-CMD [ python3", "./service.py" ]
+#CMD [ "python3", "./service.py" ]
+#CMD [ "python", "./my_script.py" ]
+CMD [ "tail" ,"-f", "/etc/hosts" ]
