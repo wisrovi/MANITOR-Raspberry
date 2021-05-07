@@ -82,7 +82,7 @@ RUN sudo pip3 install -r requirements.txt
 # Copy the Python Script
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
-RUN sudo chmod +777 DATA
+RUN sudo chmod -R +777 /code
 
 
 #CMD [ "tail" ,"-f", "/etc/hosts" ]

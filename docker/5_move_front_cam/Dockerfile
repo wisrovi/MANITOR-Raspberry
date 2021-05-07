@@ -25,7 +25,13 @@ WORKDIR /code
 RUN apt update -y
 RUN apt-get -y install sudo
 
-RUN apt-get install libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqtgui4 libqt4-test
+RUN sudo apt-get install -y python3
+RUN sudo apt-get install -y python3-pip
+RUN sudo apt-get install -y libhdf5-dev
+RUN sudo apt-get install -y libhdf5-serial-dev
+RUN sudo apt-get install -y libatlas-base-dev
+RUN sudo apt-get install -y libjasper-dev
+RUN sudo apt-get install -y libqtgui4 libqt4-test
 
 RUN apt-get -y autoremove
 
