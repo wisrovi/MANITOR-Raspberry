@@ -34,9 +34,9 @@ RUN apt-get -y install sudo
 
 # otras instalaciones de fuentes en el SO
 RUN echo Hola mundo
-RUN apt-get -y install libbluetooth-dev
-RUN apt-get -y install libcap2-bin
-RUN apt-get -y install bluez
+
+COPY system_install.sh .
+RUN sudo sh system_install.sh
 
 # otras instalaciones de fuentes en el SO
 RUN echo Hola mundo
@@ -61,6 +61,22 @@ RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
 USER usuario
+
+
+
+
+# *****************************************************************************************
+# *                              install python packs                                     *
+# *****************************************************************************************
+
+# install dependencies
+RUN sudo pip3 install --upgrade pip
+
+# copy the dependencies file to the working directory
+COPY requirements.txt .
+RUN sudo pip3 install -r requirements.txt
+
+
 
 
 

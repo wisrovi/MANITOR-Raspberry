@@ -15,6 +15,11 @@ scan_beacon = beacontools(0, TIME_SCAN)
 scan_beacon.start_continue_process()
 
 
+@app.route('/')
+def hola():
+    return 'Beacons Scan by Wisrovi'
+
+
 @app.route('/beacons')
 def hello():
     BEACONS = scan_beacon.get_beacons()

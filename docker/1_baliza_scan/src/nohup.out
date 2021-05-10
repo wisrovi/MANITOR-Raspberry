@@ -1,0 +1,13 @@
+
+ *** Looking for BLE Beacons ***
+
+ * Serving Flask app "service" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/May/2021 13:38:36] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 13:38:37] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 13:38:37] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 13:38:43] "[37mGET /beacons HTTP/1.1[0m" 200 -

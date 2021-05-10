@@ -1,3 +1,8 @@
+USAR_DOS_CLIENTES = True
+
+
+
+
 import time
 
 from flask import Flask, request
@@ -6,8 +11,12 @@ import os
 import random
 from multiprocessing import Process
 import paho.mqtt.client as mqtt  # import the client1
+import paho.mqtt.publish as publish
 import getmac
 import datetime
+
+
+FILE_SAVE_CONFIG = "config.json"
 
 IP_BROKER = os.environ.get('IP_BROKER')
 PORT_BROKER = os.environ.get('PORT_BROKER')
@@ -20,12 +29,17 @@ DATA_RECEIVED = str()
 TOPIC_RECEIVED = str()
 TIME_RECEIVED = str()
 
-print("IP_BROKER", IP_BROKER)
-print("PORT_BROKER", PORT_BROKER)
-print("NAME_CLIENT", NAME_CLIENT)
-print("MAC_CLIENT", MAC_CLIENT)
-print("USER_BROKER", USER_BROKER)
-print("PASSWORD_BROKER", PASSWORD_BROKER)
+print("[environ]: IP_BROKER", IP_BROKER)
+print("[environ]: PORT_BROKER", PORT_BROKER)
+print("[environ]: NAME_CLIENT", NAME_CLIENT)
+print("[environ]: MAC_CLIENT", MAC_CLIENT)
+print("[environ]: USER_BROKER", USER_BROKER)
+print("[environ]: PASSWORD_BROKER", PASSWORD_BROKER)
+print()
+
+
+client_receive = None
+client_send = None
 
 
 def Leer_HoraActual():
@@ -89,41 +103,120 @@ def on_connect_send(client, userdata, flags, rc):
 
 def send_msg_mqtt(topic, msg):
     print(f"[MQTT]: topic:{topic} - message:{msg}")
-    client_send.publish(topic, msg)  # publish
+    if USAR_DOS_CLIENTES:
+        if client_send  is not None:
+            client_send.publish(topic, msg)  # publish
+            print("[MQTT send]: OK")
+        else:
+            OBJ = dict()
+            try:
+                with open(FILE_SAVE_CONFIG) as json_file:
+                    OBJ = json.load(json_file)
+            except:
+                pass
+
+            if len(OBJ) > 0 :
+                ip = OBJ['ip']
+                port = OBJ['port']
+                name = OBJ['name']
+
+                user = OBJ.get('user')
+                password = OBJ.get('password')
+
+                data_auth = None
+                if user is not None and password is not None:
+                    data_auth = {
+                        'username': user,
+                        'password': password
+                    }
+
+                try:
+                    publish.single(topic, payload=msg,
+                                   hostname=ip, port=int(port), client_id=name,
+                                   auth=data_auth)
+                except:
+                    print("[MQTT send]: BAD")
 
 
 def conectar_broker():
     global conectado
+    global client_receive
+    global client_send
+    global PORT_BROKER
+
+
+    if MAC_CLIENT is None:
+        print("[conection]: No hay MAC para susbcribirse")
+
+    PORT_BROKER = int(PORT_BROKER)
+
+    char = "abcdefghijklmnñopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    NAME_CLIENT = str()
+    for _ in range(10):
+        NAME_CLIENT = NAME_CLIENT + random.choice(char)
+    os.environ['NAME_CLIENT'] = NAME_CLIENT
+
+    print("[conection]: Nombre cliente receptor:", NAME_CLIENT)
+    client_receive = mqtt.Client(NAME_CLIENT)
+
+    client_receive.on_message = on_message
+    client_receive.on_connect = on_connect_received
+    client_receive.on_disconnect = on_disconnect_receive
+
+    NAME_CLIENT = NAME_CLIENT + "2"
+
+    if USAR_DOS_CLIENTES:
+        print("[conection]: Nombre cliente transmision:", NAME_CLIENT)
+        client_send = mqtt.Client(NAME_CLIENT, clean_session=False)
+
+        client_send.on_disconnect = on_disconnect_send
+
     try:
-        client_receive.on_connect = on_connect_received
+        if client_receive is None:
+            print("[conection]: Error creando cliente para recepcion")
+
+        if USAR_DOS_CLIENTES:
+            if client_send is None:
+                print("[conection]: Error creando cliente para transmision")
 
         if USER_BROKER is not None and PASSWORD_BROKER is not None:
             print("Usando user y password")
             client_receive.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
-            client_send.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
+            if USAR_DOS_CLIENTES:
+                client_send.username_pw_set(username=USER_BROKER, password=PASSWORD_BROKER)
 
-        client_receive.connect(IP_BROKER, port=int(PORT_BROKER))
-        client_send.connect(IP_BROKER, port=int(PORT_BROKER))
+        print("[conection]: conectando al broker para recepcion")
+        print(f"[conection]: Credenciales usar: ip={IP_BROKER} y port={PORT_BROKER}")
+        client_receive.connect(IP_BROKER, port=PORT_BROKER)
 
+        if USAR_DOS_CLIENTES:
+            print("[conection]: conectando al broker para publicar")
+            client_send.connect(IP_BROKER, port=int(PORT_BROKER))
+
+        print("[conection]: creando topics para subscripcion")
         PROJECT = "SPINPLM"
         topic_subscribe_1 = "/" + PROJECT + "/manitor/#"
-        topic_subscribe_2 = topic_subscribe_1[:-1] + get_mac() + "/#"
+        topic_subscribe_2 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/#"
 
-        client_receive.subscribe(topic_subscribe_1, qos=1)
-        client_receive.subscribe(topic_subscribe_2, qos=1)
+        print("[conection]: Subscribiendo a ", topic_subscribe_1)
+        print("[conection]: Subscribiendo a ", topic_subscribe_2)
 
-        print("subscrito a:", topic_subscribe_1)
-        print("subscrito a:", topic_subscribe_2)
+        client_receive.subscribe(topic_subscribe_1)
+        client_receive.subscribe(topic_subscribe_2)
+
+        print("[conection]: subscrito a:", topic_subscribe_1)
+        print("[conection]: subscrito a:", topic_subscribe_2)
+        print("[conection]: iniciando bucle infinito de recepcion")
         print()
-
-        client_receive.on_message = on_message
         client_receive.loop_start()
 
         conectado = True
 
         Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "Hello world",)).start()
+        print()
     except:
-        print("Credenciales no validas")
+        print("[conection]: Credenciales no validas")
+        print()
 
 
 def on_disconnect_receive(client, userdata, rc):
@@ -131,6 +224,7 @@ def on_disconnect_receive(client, userdata, rc):
     client.loop_stop()
     time.sleep(5)
     conectar_broker()
+
 
 def on_disconnect_send(client, userdata, rc):
     print("[ERROR]: disconnecting reason  " + str(rc))
@@ -140,29 +234,56 @@ def on_disconnect_send(client, userdata, rc):
 
 
 conectado = False
-if IP_BROKER is None or PORT_BROKER is None or NAME_CLIENT is None:
-    print("No hay credenciales para conectar al broker")
-else:
-    char = "abcdefghijklmnñopqrstuvwyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    NAME_CLIENT = str()
-    for _ in range(10):
-        NAME_CLIENT = NAME_CLIENT + random.choice(char)
-    os.environ['NAME_CLIENT'] = NAME_CLIENT
 
-    client_receive = mqtt.Client(NAME_CLIENT, clean_session=False)
-    client_send = mqtt.Client(NAME_CLIENT + "2", clean_session=False)
-    client_receive.on_disconnect = on_disconnect_receive
-    client_send.on_disconnect = on_disconnect_send
+OBJ = dict()
+existe_archivo_configuracion = False
+try:
+    with open(FILE_SAVE_CONFIG) as json_file:
+        OBJ = json.load(json_file)
+    existe_archivo_configuracion = True
+except:
+    pass
+
+if existe_archivo_configuracion:
+    IP_BROKER = OBJ.get("ip")
+    PORT_BROKER = OBJ.get("port")
+    NAME_CLIENT = OBJ.get("name")
+    MAC_CLIENT = OBJ.get("mac")
+    USER_BROKER = OBJ.get("user")
+    PASSWORD_BROKER = OBJ.get("password")
+    print("[config]: cargando configuración guardada en el archivo config.json")
+    print()
+
+
+if IP_BROKER is None or PORT_BROKER is None or NAME_CLIENT is None:
+    print("[conection]: No hay credenciales para conectar al broker")
+    print()
+else:
     conectar_broker()
 
 
 def continue_life_pin():
+    mac = MAC_CLIENT
     while True:
-        Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "life_pin",)).start()
-        time.sleep(60)
+        if mac is None:
+            OBJ = dict()
+            try:
+                with open(FILE_SAVE_CONFIG) as json_file:
+                    OBJ = json.load(json_file)
+                    mac = OBJ['mac']
+            except:
+                pass
+
+        if mac is not  None:
+            Process(target=send_msg_mqtt, args=("/" + mac, "life_pin",)).start()
+            print("[mqtt send lifePin]: Enviado pin de vida")
+        else:
+            print("[mqtt send lifePin]: Error")
+        time.sleep(5)
 
 
 Process(target=continue_life_pin).start()
+
 
 app = Flask(__name__)
 
@@ -186,28 +307,62 @@ def config():
     global NAME_CLIENT
     global IP_BROKER
     global PORT_BROKER
+    global USER_BROKER
+    global PASSWORD_BROKER
+    global MAC_CLIENT
     global conectado
 
     port = request.args.get('port')
     ip = request.args.get('ip')
     name = request.args.get('name')
+    user = request.args.get('user')
+    pwd = request.args.get('pwd')
+    mac = request.args.get('mac')
 
     if ip is not None:
         os.environ['IP_BROKER'] = ip
         IP_BROKER = ip
+        print("[save new config]: new ip broker")
 
     if port is not None:
         os.environ['PORT_BROKER'] = port
         PORT_BROKER = port
+        print("[save new config]: new port broker")
 
     if name is not None:
         os.environ['NAME_CLIENT'] = name
         NAME_CLIENT = name
+        print("[save new config]: new name client for broker")
+
+    if user is not None:
+        os.environ['USER_BROKER'] = user
+        USER_BROKER = user
+        print("[save new config]: new user broker")
+
+    if pwd is not None:
+        os.environ['PASSWORD_BROKER'] = pwd
+        PASSWORD_BROKER = pwd
+        print("[save new config]: new password broker")
+
+    if mac is not None:
+        os.environ['MAC_CLIENT'] = mac
+        MAC_CLIENT = mac
+        print("[save new config]: new mac client")
+
+    print()
 
     OBJ = dict()
     OBJ['ip'] = IP_BROKER
     OBJ['port'] = PORT_BROKER
     OBJ['name'] = NAME_CLIENT
+    OBJ['mac'] = MAC_CLIENT
+
+    if USER_BROKER is not None and PASSWORD_BROKER is not None:
+        OBJ['user'] = USER_BROKER
+        OBJ['password'] = PASSWORD_BROKER
+
+    with open(FILE_SAVE_CONFIG, 'w') as outfile:
+        json.dump(OBJ, outfile)
 
     if not conectado:
         conectar_broker()
@@ -227,7 +382,7 @@ def send():
         # topic = topic[topic.find("/"):]
 
         print()
-        print("***************************************************************************")
+        print("[send from get to mqtt]: sending")
         print(topic, " -> ", msg)
 
         if msg is not None and topic is not None:
@@ -250,9 +405,22 @@ def help_service():
     OBJ = dict()
 
     options_config = list()
-    options_config.append("look port_broker")
-    options_config.append("look ip_broker")
+    options_config.append("look: port_broker")
+    options_config.append("look: ip_broker")
+    options_config.append("look: user_broker")
+    options_config.append("look: password_broker")
+    options_config.append("look: name_client_conect_broker")
+    options_config.append("look: mac_client")
     OBJ['http://localhost:5003/config'] = options_config
+
+    options_config = list()
+    options_config.append("config: ip broker")
+    options_config.append("config: port broker")
+    options_config.append("config: user_broker")
+    options_config.append("config: password_broker")
+    options_config.append("config: name_client_conect_broker")
+    options_config.append("config: mac client")
+    OBJ['http://localhost:5003/config?ip=<ip broker>&port=<port broker>&name=<name client>&mac=<mac client>&user=<user broker [optional]>&&pwd=<password broker [optional]>'] = options_config
 
     options_config = list()
     options_config.append("look data received")
