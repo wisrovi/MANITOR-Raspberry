@@ -73,4 +73,4 @@ USER usuario
 COPY ./src .
 
 # CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD [ "sudo" ,"python3", "./docker_beacon_scan_flask.py" ]
+CMD [ "sudo" ,"python3", "./service.py" ]

@@ -1,0 +1,1 @@
+TIME_SCAN = 5
