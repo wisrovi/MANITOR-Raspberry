@@ -279,7 +279,7 @@ def continue_life_pin():
             print("[mqtt send lifePin]: Enviado pin de vida")
         else:
             print("[mqtt send lifePin]: Error")
-        time.sleep(5)
+        time.sleep(60)
 
 
 Process(target=continue_life_pin).start()
