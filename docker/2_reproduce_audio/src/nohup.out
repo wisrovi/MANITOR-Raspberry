@@ -21,3 +21,32 @@ Playing MPEG stream from 01bienvenidoAlManitor.mp3 ...
 MPEG 1.0 layer III, 192 kbit/s, 48000 Hz joint-stereo
                                                                             
 [0:04] Decoding of 01bienvenidoAlManitor.mp3 finished.
+ * Serving Flask app "service" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+ * Serving Flask app "service" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5002/ (Press CTRL+C to quit)
+1 <class 'int'>
+127.0.0.1 - - [10/May/2021 17:55:46] "[37mGET /reproduce?id=1 HTTP/1.1[0m" 200 -
+High Performance MPEG 1.0/2.0/2.5 Audio Player for Layer 1, 2, and 3.
+Version 0.3.2-1 (2012/03/25). Written and copyrights by Joe Drew,
+now maintained by Nanakos Chrysostomos and others.
+Uses code from various people. See 'README' for more!
+THIS SOFTWARE COMES WITH ABSOLUTELY NO WARRANTY! USE AT YOUR OWN RISK!
+tcgetattr(): Inappropriate ioctl for device
+Title	:                                Artist :                               
+Album	:                                Year	 : 2021
+Comment :                                Genre :                               
+
+Directory: resources
+Playing MPEG stream from 02MojeAmbasManosConAgua.mp3 ...
+MPEG 1.0 layer III, 192 kbit/s, 48000 Hz joint-stereo
+                                                                            
+[0:02] Decoding of 02MojeAmbasManosConAgua.mp3 finished.

@@ -1,0 +1,1324 @@
+ * Serving Flask app "service" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5004/ (Press CTRL+C to quit)
+127.0.0.1 - - [10/May/2021 18:02:06] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:07] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:07] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:07] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:07] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:07] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:08] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:08] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:08] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:09] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:09] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:09] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:09] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:10] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:10] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:10] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:10] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:11] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:02:11] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:01] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:01] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:02] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:02] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:02] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:02] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:03] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:03] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:03] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:03] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:04] "[37mGET /mirror HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:03:04] "[37mGET /mirror HTTP/1.1[0m" 200 -
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -44, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -46, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -46, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -46, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -46, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -46, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -66, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -64, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'00007067-8690-e202-8d7b-203206310317': {'mac': '90:e2:02:8d:7b:20', 'rssi': -70, 'uuid': '00007067-8690-e202-8d7b-203206310317', 'tx_power': 0, 'major': 1000, 'minor': 1, 'tipo': 'iBeacon', 'empresa': '00007067'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -68, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -70, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -68, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'00007067-8690-e202-8d7b-203206310317': {'mac': '90:e2:02:8d:7b:20', 'rssi': -68, 'uuid': '00007067-8690-e202-8d7b-203206310317', 'tx_power': 0, 'major': 1000, 'minor': 1, 'tipo': 'iBeacon', 'empresa': '00007067'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -68, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -64, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -68, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'00007067-8690-e202-8d7b-203206310317': {'mac': '90:e2:02:8d:7b:20', 'rssi': -68, 'uuid': '00007067-8690-e202-8d7b-203206310317', 'tx_power': 0, 'major': 1000, 'minor': 1, 'tipo': 'iBeacon', 'empresa': '00007067'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -68, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'00007067-8690-e202-8d7b-203206310317': {'mac': '90:e2:02:8d:7b:20', 'rssi': -64, 'uuid': '00007067-8690-e202-8d7b-203206310317', 'tx_power': 0, 'major': 1000, 'minor': 1, 'tipo': 'iBeacon', 'empresa': '00007067'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -64, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -64, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -60, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -48, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -62, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -64, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -58, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -56, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -50, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -52, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
+Process beacon_scan and history OK
+{'fda50693-a4e2-4fb1-afcf-c6eb07647825': {'mac': 'eb:ed:93:4a:db:b3', 'rssi': -54, 'uuid': 'fda50693-a4e2-4fb1-afcf-c6eb07647825', 'tx_power': 0, 'major': 5, 'minor': 6, 'tipo': 'iBeacon', 'empresa': 'fda50693'}}
