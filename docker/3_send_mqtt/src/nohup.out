@@ -4934,3 +4934,69 @@
 [MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
 [MQTT send]: OK
 127.0.0.1 - - [10/May/2021 18:56:47] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:56:52] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:56:52] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:56:57] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:56:57] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:02] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:02] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:11] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:12] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:16] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:17] "[37mGET /data HTTP/1.1[0m" 200 -
+[mqtt send lifePin]: Enviado pin de vida
+[MQTT]: topic:/c4:65:16:c0:28:05 - message:life_pin
+[MQTT send]: OK
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:21] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:22] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:26] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:27] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:31] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:32] "[37mGET /data HTTP/1.1[0m" 200 -
+
+[send from get to mqtt]: sending
+/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud  ->  1
+127.0.0.1 - - [10/May/2021 18:57:36] "[37mPOST /send HTTP/1.1[0m" 200 -
+[MQTT]: topic:/SPINPLM/manitor/c4:65:16:c0:28:05/fda50693-a4e2-4fb1-afcf-c6eb07647825/solicitud - message:1
+[MQTT send]: OK
+127.0.0.1 - - [10/May/2021 18:57:37] "[37mGET /data HTTP/1.1[0m" 200 -
