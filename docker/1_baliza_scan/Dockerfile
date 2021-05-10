@@ -71,6 +71,7 @@ USER usuario
 # Copy the Python Script
 # copy only the dependencies installation from the 1st stage image
 COPY ./src .
+RUN sudo chmod -R +777 /code
 
 # CMD [ "tail" ,"-f", "/etc/hosts" ]
 CMD [ "sudo" ,"python3", "./service.py" ]
