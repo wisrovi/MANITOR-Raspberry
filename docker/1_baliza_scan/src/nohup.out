@@ -2049,3 +2049,9 @@ fda50693-a4e2-4fb1-afcf-c6eb07647825 <ScanUtility.Beacon_Obj object at 0x7ff2000
 127.0.0.1 - - [10/May/2021 18:57:26] "[37mGET /beacons HTTP/1.1[0m" 200 -
 127.0.0.1 - - [10/May/2021 18:57:31] "[37mGET /beacons HTTP/1.1[0m" 200 -
 127.0.0.1 - - [10/May/2021 18:57:36] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:57:41] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:57:46] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:57:51] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:57:56] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:58:01] "[37mGET /beacons HTTP/1.1[0m" 200 -
+127.0.0.1 - - [10/May/2021 18:58:07] "[37mGET /beacons HTTP/1.1[0m" 200 -
