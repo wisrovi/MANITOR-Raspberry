@@ -6,12 +6,10 @@
 # *****************************************************************************************
 # *                              choose the base image                                    *
 # *           Python Base Image from https://hub.docker.com/r/arm32v7/python/             *
-# *             https://hub.docker.com/r/don41382/rpi-python3-with-bluetooth/             *
+# *             https://volkanpaksoy.com/archive/2019/12/05/Using-Audio-in-Docker-Container/             *
 # *****************************************************************************************
 
-#FROM arm32v7/python:3.6.13-buster
-#FROM arm32v7/python:3.7.10-stretch
-FROM don41382/rpi-python3-with-bluetooth
+FROM ubuntu
 
 
 # *****************************************************************************************
@@ -19,9 +17,7 @@ FROM don41382/rpi-python3-with-bluetooth
 # *****************************************************************************************
 
 # creamos un directorio de trabajo donde poner los archivos fuente
-WORKDIR /code
-
-
+#WORKDIR /code
 
 
 # *****************************************************************************************
@@ -30,17 +26,9 @@ WORKDIR /code
 
 # instalar paquetes necesarios en el sistema
 RUN apt update -y
-RUN apt-get -y install sudo
+#RUN apt-get -y install sudo
 
-# otras instalaciones de fuentes en el SO
-RUN echo Hola mundo
-RUN apt-get -y install libbluetooth-dev
-RUN apt-get -y install libcap2-bin
-RUN apt-get -y install bluez
-
-# otras instalaciones de fuentes en el SO
-RUN echo Hola mundo
-
+RUN apt-get install -y mosquitto
 
 
 
@@ -49,19 +37,33 @@ RUN echo Hola mundo
 # *****************************************************************************************
 
 # crear el usuario con nombre usuario
-RUN useradd -m usuario
+#RUN useradd -m usuario
+#
+## add el usuario al grupo habilitarlo sin contraseña
+#RUN echo "usuario:grupo" | chpasswd
+#
+## adicionar el usuario a sudo
+#RUN adduser usuario sudo
+#
+#RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+#
+## decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
+#USER usuario
 
-# add el usuario al grupo habilitarlo sin contraseña
-RUN echo "usuario:grupo" | chpasswd
 
-# adicionar el usuario a sudo
-RUN adduser usuario sudo
 
-RUN echo "usuario ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-# decirle docker que usuario debe usar para los demas pasos, incluso la ejecusion del proyecto
-USER usuario
 
+# *****************************************************************************************
+# *                              install python packs                                     *
+# *****************************************************************************************
+
+# install dependencies
+#RUN sudo pip3 install --upgrade pip
+#
+## copy the dependencies file to the working directory
+#COPY requirements.txt .
+#RUN sudo pip3 install -r requirements.txt
 
 
 # *****************************************************************************************
@@ -70,7 +72,7 @@ USER usuario
 
 # Copy the Python Script
 # copy only the dependencies installation from the 1st stage image
-COPY ./src .
+#COPY ./src .
 
-# CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD [ "sudo" ,"python3", "./docker_beacon_scan_flask.py" ]
+#CMD [ "tail" ,"-f", "/etc/hosts" ]
+CMD ["mosquitto", "-p", "1884" ]

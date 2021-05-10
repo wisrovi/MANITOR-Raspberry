@@ -8,7 +8,9 @@
 # *           Python Base Image from https://hub.docker.com/r/arm32v7/python/             *
 # *****************************************************************************************
 #FROM imelnik/rpi-python3-tensorflow-opencv
-FROM python:3
+#FROM python:3
+FROM arm32v7/python:3.6.13-buster
+
 
 # *****************************************************************************************
 # *                           create folder for copy files project                        *
@@ -27,11 +29,39 @@ RUN apt-get -y install sudo
 
 RUN sudo apt-get install -y python3
 RUN sudo apt-get install -y python3-pip
+RUN sudo apt-get install -y python3-dev
+
 RUN sudo apt-get install -y libhdf5-dev
 RUN sudo apt-get install -y libhdf5-serial-dev
+
 RUN sudo apt-get install -y libatlas-base-dev
-RUN sudo apt-get install -y libjasper-dev
-RUN sudo apt-get install -y libqtgui4 libqt4-test
+RUN sudo apt-get install -y libatlas-base-dev gfortran
+
+RUN sudo apt-get install -y libqtgui4
+RUN sudo apt-get install -y libhdf5-dev
+RUN sudo apt-get install -y libhdf5-serial-dev
+RUN sudo apt-get install -y libqtgui4 libqtwebkit4 libqt4-test python3-pyqt5
+RUN sudo apt-get install -y libfontconfig1-dev
+RUN sudo apt-get install -y libcairo2-dev
+RUN sudo apt-get install -y libx264-dev
+RUN sudo apt-get install -y libxvidcore-dev
+RUN sudo apt-get install -y libv4l-dev
+RUN sudo apt-get install -y libavformat-dev
+RUN sudo apt-get install -y libswscale-dev
+RUN sudo apt-get install -y libavcodec-dev
+RUN sudo apt-get install -y libpng-dev
+RUN sudo apt-get install -y libjpeg-dev
+RUN sudo apt-get install -y libtiff5-dev
+RUN sudo apt-get install -y libqt4-test
+RUN sudo apt-get install -y ibgtk2.0-dev
+
+RUN sudo apt-get install -y libtbb-dev
+RUN sudo apt-get install -y qt5-default
+RUN sudo apt-get install -y libvorbis-dev
+RUN sudo apt-get install -y libxvidcore-dev
+RUN sudo apt-get install -y libx264-dev
+RUN sudo apt-get install -y libopencore-amrwb-dev
+RUN sudo apt-get install -y x264 v4l-utils
 
 RUN apt-get -y autoremove
 
@@ -65,6 +95,9 @@ RUN echo Hola mundo
 
 # copy the dependencies file to the working directory
 COPY requirements.txt .
+RUN sudo pip3 install numpy
+RUN pip install --upgrade pip setuptools wheel
+RUN sudo pip3 install opencv-python
 RUN sudo pip3 install -r requirements.txt
 
 # *****************************************************************************************

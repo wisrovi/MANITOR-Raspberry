@@ -6,3 +6,5 @@ sudo docker build -t "move_front_cam:v1" .
 docker container run --privileged -d --device=/dev/vchiq -v /opt/vc:/opt/vc -e LD_LIBRARY_PATH=/opt/vc/lib --name=move_front_cam -p 5006:5006 move_front_cam:v1
 #--device=/dev/vcsm
 #--device=/dev/vchiq
+
+# sudo docker exec -it move_front_cam bash
