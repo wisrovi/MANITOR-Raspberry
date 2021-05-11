@@ -127,3 +127,5 @@ resources/original/video MANITOR.mp4
 *.out
 docker/4_person_name/src/DATA/PERSON_SCAN.json
 *.out
+docker/3_send_mqtt/src/nohup.out
+docker/1_baliza_scan/src/nohup.out
