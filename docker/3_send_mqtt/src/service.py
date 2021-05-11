@@ -17,6 +17,9 @@ import datetime
 
 
 FILE_SAVE_CONFIG = "config.json"
+PROJECT = "SPINPLM"
+
+
 
 IP_BROKER = os.environ.get('IP_BROKER')
 PORT_BROKER = os.environ.get('PORT_BROKER')
@@ -28,6 +31,8 @@ PASSWORD_BROKER = os.environ.get('PASSWORD')
 DATA_RECEIVED = str()
 TOPIC_RECEIVED = str()
 TIME_RECEIVED = str()
+NOMBRE = str()
+
 
 print("[environ]: IP_BROKER", IP_BROKER)
 print("[environ]: PORT_BROKER", PORT_BROKER)
@@ -56,9 +61,26 @@ def on_message(client, userdata, message):
     global DATA_RECEIVED
     global TOPIC_RECEIVED
     global TIME_RECEIVED
+    global NOMBRE
+
     DATA_RECEIVED = str(message.payload.decode("utf-8"))
     TOPIC_RECEIVED = message.topic
     TIME_RECEIVED = Leer_HoraActual()
+
+    filter_topic = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/"
+
+    restore_filter = TOPIC_RECEIVED[len(filter_topic):]
+
+    print("[received]: [topic base]:", filter_topic)
+    print("[received]: [topic complete]:", TOPIC_RECEIVED)
+    print("[received]: [filter]:", restore_filter)
+    print("[received]: [mac]:", MAC_CLIENT)
+    print("[received]: [mensaje]:", DATA_RECEIVED)
+    if restore_filter == "nombre":
+        NOMBRE = DATA_RECEIVED
+        print("[received]: [nombre]:", NOMBRE)
+    print()
+
     # print("message received ", DATA_RECEIVED)
     # print("message topic=", message.topic)
     # print("message qos=", message.qos)
@@ -194,7 +216,6 @@ def conectar_broker():
             client_send.connect(IP_BROKER, port=int(PORT_BROKER))
 
         print("[conection]: creando topics para subscripcion")
-        PROJECT = "SPINPLM"
         topic_subscribe_1 = "/" + PROJECT + "/manitor/#"
         topic_subscribe_2 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/#"
 
@@ -295,10 +316,14 @@ def hola():
 
 @app.route('/data')
 def data():
+    global NOMBRE
     OBJ = dict()
     OBJ['data'] = DATA_RECEIVED
     OBJ['topic'] = TOPIC_RECEIVED
+    OBJ['nombre'] = NOMBRE
     OBJ['time_received'] = TIME_RECEIVED
+
+    NOMBRE = str()
     return json.dumps(OBJ, indent=4)
 
 

@@ -1,7 +1,9 @@
 import requests
 import getmac
+
 SERVER = "localhost"
 NAME_SIMULING = "WilliamRodriguez"
+
 
 def get_mac():
     mac = getmac.get_mac_address()
