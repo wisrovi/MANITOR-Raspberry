@@ -126,3 +126,4 @@ dmypy.json
 resources/original/video MANITOR.mp4
 *.out
 docker/4_person_name/src/DATA/PERSON_SCAN.json
+*.out
