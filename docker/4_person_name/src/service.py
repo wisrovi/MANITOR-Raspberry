@@ -10,9 +10,9 @@ from multiprocessing import Process
 SERVER = "localhost"
 
 
-FILE_HISTORY = "DATA/history.json"
+FILE_HISTORY = "/code/DATA/history.json"
 FILE_BEACON_SCAN = "/code/DATA/BEACON_SCAN.json"
-FILE_PERSON_SCAN = "DATA/PERSON_SCAN.json"
+FILE_PERSON_SCAN = "/code/DATA/PERSON_SCAN.json"
 
 PERSON_SCAN = dict()
 PERSON_SCAN_NOW = dict()
@@ -21,6 +21,7 @@ PERSON_SCAN_NOW = dict()
 def save_file(PERSON_SCAN_TEMP):
     with open(FILE_HISTORY, 'w') as outfile:
         json.dump(PERSON_SCAN_TEMP, outfile)
+        print("[history save]: ", PERSON_SCAN_TEMP)
 
 
 def read_file():
@@ -114,12 +115,12 @@ def get_beacons_scan():
                 PARAMS = dict()
                 r = requests.get('http://' + SERVER + ':5003/data', params=PARAMS, timeout=10)
                 data_response = r.json()
-                # print(data_response['data'])
+                print(data_response['nombre'])
 
-                if len(data_response['data'])>0:
+                if len(data_response['nombre'])>0:
                     OBJ = dict()
                     OBJ['data'] = MORE_NEAR[uuid_mas_cercano]
-                    OBJ['name'] = data_response['data']
+                    OBJ['name'] = data_response['nombre']
                     OBJ['time'] = Leer_HoraActual()
 
                     if not uuid_mas_cercano in list(PERSON_SCAN.keys()):
@@ -147,6 +148,15 @@ def hola():
 def history():
     data = read_file()
     return json.dumps(data, indent=4)
+
+
+@app.route('/names', methods=['GET'])
+def names():
+    OBJ = dict()
+    for key, value in read_file().items():
+        print(value)
+        OBJ[key] = value['name']
+    return json.dumps(OBJ, indent=4)
 
 
 @app.route('/name', methods=['GET'])
@@ -182,6 +192,10 @@ def help_service():
     options_send = list()
     options_send.append("return last name received")
     OBJ['http://localhost:5004/name'] = options_send
+
+    options_send = list()
+    options_send.append("return history name received")
+    OBJ['http://localhost:5004/names'] = options_send
 
     options_send = list()
     options_send.append("return all history beacon - names since last create service")

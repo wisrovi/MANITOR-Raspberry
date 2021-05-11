@@ -6,7 +6,7 @@ NAME_SIMULING = "WilliamRodriguez"
 
 
 def get_mac():
-    mac = getmac.get_mac_address()
+    mac = "c4:65:16:c0:28:05"#getmac.get_mac_address()
     return mac
 
 

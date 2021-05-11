@@ -4,9 +4,13 @@ from Lienzo import Lienzo, Video
 from Sincro import Sincro
 from Util import Util
 from time import time
-from multiprocessing import Process
+from multiprocessing import Process, Queue
+from flask import Flask, request
+import json
+app = Flask(__name__)
 
 util = Util()
+pqueue = Queue()
 
 
 tiempo_paso = 100
@@ -14,6 +18,19 @@ tiempo_inicial = time()
 video = None
 crono = None
 esperando_siguiente_paso = False
+
+
+def leer_cola():
+    if not pqueue.empty():
+        data_complete = dict()
+        for _ in range(pqueue.qsize()):
+            data = pqueue.get()
+            for key, value in data.items():
+                # print(key, value)
+                data_complete[key] = value
+        return data_complete
+    else:
+        return dict()
 
 
 def activar_nuevo_video(ID_PASO = 1):
@@ -56,7 +73,18 @@ def video_interfaz():
     nombre_poner = lienzo.get_void_board()
     titulo_poner = lienzo.get_void_board()
 
+    nombre_mostrar = None
     while True:
+        data = leer_cola()
+        if len(data) > 0 :
+            id = data.get('id')
+            name = data.get('name')
+            print("[queue]:", id)
+            print("[queue]:", name)
+            print()
+            if id is not None:
+                activar_nuevo_video(int(id))
+
         board = lienzo.get_board()
 
         if ((time() - tiempo_inicial) >= tiempo_paso) and not esperando_siguiente_paso:
@@ -67,14 +95,15 @@ def video_interfaz():
             esperando_siguiente_paso = True
             print("Limpiando pantalla")
         else:
+            hay_image, image = video_instruccion.read()
             if not esperando_siguiente_paso:
-                hay_image, image = video_instruccion.read()
                 if hay_image:
                     video_poner = image
                 else:
                     video_instruccion = cv2.VideoCapture(video)
 
-                hay_image, image = cronometro.read()
+            hay_image, image = cronometro.read()
+            if not esperando_siguiente_paso:
                 if hay_image:
                     crono_poner = image
                 else:
@@ -101,5 +130,27 @@ def video_interfaz():
     cv2.destroyAllWindows()
 
 
+@app.route('/')
+def hola():
+    return 'Interfaz visual by Wisrovi'
+
+
+@app.route('/mostrar', methods=['GET'])
+def mostrar():
+    id = request.args.get('id')
+    name = request.args.get('name')
+
+    if id is not None and name is not None:
+        OBJ = dict()
+        OBJ['id'] = id
+        OBJ['name'] = name
+        pqueue.put(OBJ)
+        return json.dumps(OBJ, indent=4)
+
+    return "no hay dados ingresados, por favor consulte /help las opciones de variables a usar"
+
+
 if __name__ == '__main__':
     Process(target=video_interfaz).start()
+    app.run(host="0.0.0.0", port=5005)
+    print("[system]: started")

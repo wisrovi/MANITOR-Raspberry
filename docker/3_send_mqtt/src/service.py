@@ -32,6 +32,8 @@ DATA_RECEIVED = str()
 TOPIC_RECEIVED = str()
 TIME_RECEIVED = str()
 NOMBRE = str()
+OTA = False
+restart = False
 
 
 print("[environ]: IP_BROKER", IP_BROKER)
@@ -62,14 +64,18 @@ def on_message(client, userdata, message):
     global TOPIC_RECEIVED
     global TIME_RECEIVED
     global NOMBRE
+    global OTA
+    global restart
 
     DATA_RECEIVED = str(message.payload.decode("utf-8"))
     TOPIC_RECEIVED = message.topic
     TIME_RECEIVED = Leer_HoraActual()
 
-    filter_topic = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/"
+    filter_base = "/" + PROJECT + "/manitor/"
+    filter_topic = filter_base + MAC_CLIENT + "/"
 
     restore_filter = TOPIC_RECEIVED[len(filter_topic):]
+    restore_filter_2 = TOPIC_RECEIVED[len(filter_base):]
 
     print("[received]: [topic base]:", filter_topic)
     print("[received]: [topic complete]:", TOPIC_RECEIVED)
@@ -79,6 +85,22 @@ def on_message(client, userdata, message):
     if restore_filter == "nombre":
         NOMBRE = DATA_RECEIVED
         print("[received]: [nombre]:", NOMBRE)
+
+    if restore_filter == "OTA":
+        OTA = True
+        print("[received]: [OTA]:", OTA)
+
+    if restore_filter == "restart":
+        restart = True
+        print("[received]: [restart]:", restart)
+
+    if restore_filter_2 == "OTA":
+        OTA = True
+        print("[received]: [OTA]:", OTA)
+
+    if restore_filter_2 == "restart":
+        restart = True
+        print("[received]: [restart]:", restart)
     print()
 
     # print("message received ", DATA_RECEIVED)
@@ -216,17 +238,27 @@ def conectar_broker():
             client_send.connect(IP_BROKER, port=int(PORT_BROKER))
 
         print("[conection]: creando topics para subscripcion")
-        topic_subscribe_1 = "/" + PROJECT + "/manitor/#"
-        topic_subscribe_2 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/#"
-
+        topic_subscribe_1 = "/" + PROJECT + "/manitor/OTA"
+        topic_subscribe_2 = "/" + PROJECT + "/manitor/restart"
+        topic_subscribe_5 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/nombre"
+        topic_subscribe_3 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/OTA"
+        topic_subscribe_4 = "/" + PROJECT + "/manitor/" + MAC_CLIENT + "/restart"
         print("[conection]: Subscribiendo a ", topic_subscribe_1)
         print("[conection]: Subscribiendo a ", topic_subscribe_2)
-
+        print("[conection]: Subscribiendo a ", topic_subscribe_3)
+        print("[conection]: Subscribiendo a ", topic_subscribe_4)
+        print("[conection]: Subscribiendo a ", topic_subscribe_5)
         client_receive.subscribe(topic_subscribe_1)
         client_receive.subscribe(topic_subscribe_2)
-
+        client_receive.subscribe(topic_subscribe_3)
+        client_receive.subscribe(topic_subscribe_4)
+        client_receive.subscribe(topic_subscribe_5)
         print("[conection]: subscrito a:", topic_subscribe_1)
         print("[conection]: subscrito a:", topic_subscribe_2)
+        print("[conection]: subscrito a:", topic_subscribe_3)
+        print("[conection]: subscrito a:", topic_subscribe_4)
+        print("[conection]: subscrito a:", topic_subscribe_5)
+
         print("[conection]: iniciando bucle infinito de recepcion")
         print()
         client_receive.loop_start()
@@ -321,6 +353,8 @@ def data():
     OBJ['data'] = DATA_RECEIVED
     OBJ['topic'] = TOPIC_RECEIVED
     OBJ['nombre'] = NOMBRE
+    OBJ['OTA'] = OTA
+    OBJ['restart'] = restart
     OBJ['time_received'] = TIME_RECEIVED
 
     NOMBRE = str()
