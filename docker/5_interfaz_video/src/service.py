@@ -111,6 +111,7 @@ def video_interfaz():
 
         # print(video_poner)
         # print(crono_poner)
+
         lienzo.poner_cronometro(crono_poner)
         lienzo.poner_instruccion(video_poner)
         lienzo.poner_nombre(nombre_poner)
