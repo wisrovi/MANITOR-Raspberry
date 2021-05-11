@@ -1,5 +1,11 @@
 cd 1_baliza_scan/src/
-sudo python service.py
+sudo nohup python3 service.py &
 
 cd ../../2_reproduce_audio/src
-sudo python service.py
+nohup python3 service.py &
+
+cd ../../3_send_mqtt/src
+nohup python3 service.py &
+
+cd ../../4_person_name/src
+nohup python3 service.py &
