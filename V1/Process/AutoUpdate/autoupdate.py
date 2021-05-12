@@ -14,7 +14,7 @@ class AutoUpdate_project:
 
     RAMA_TRABAJO = "main"
     NOT_ERASE_FILES = ['.git', '.gitattributes', '.gitignore', '.idea', 'info_version.txt', 'autoupdate.py', 'env',
-                       '__init__.py']
+                       'brain.py']
 
     def __init__(self, project, root_path=None):
         self.local_version = Version()

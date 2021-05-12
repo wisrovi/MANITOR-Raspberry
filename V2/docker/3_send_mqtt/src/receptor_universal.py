@@ -13,6 +13,17 @@ def on_message(client, userdata, message):
 
 IP_BROKER = "192.168.1.112"
 PORT_BROKER = "1884"
+
+
+
+IP_BROKER = "172.30.19.92"
+PORT_BROKER = "1883"
+
+
+
+
+
+
 PORT_BROKER = int(PORT_BROKER)
 
 print(f"Credenciales usar: ip={IP_BROKER} y port={PORT_BROKER}")
