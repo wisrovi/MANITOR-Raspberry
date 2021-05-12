@@ -132,3 +132,4 @@ V2/docker/1_baliza_scan/src/nohup.out
 V2/docker/4_person_name/src/DATA/PERSON_SCAN.json
 V2/docker/3_send_mqtt/src/nohup.out
 V2/docker/1_baliza_scan/src/nohup.out
+V2/docker/6_move_front_cam/src/static/move.jpg
