@@ -1,7 +1,7 @@
 
 import os.path as path
 
-from Process.AutoUpdate.autoupdate import Autoupdate
+from V1.Process.AutoUpdate.autoupdate import Autoupdate
 from decouple import config
 
 

@@ -64,5 +64,8 @@ Sincro['9'] = Recurso(paso=9, time=9).json()
 Sincro['10'] = Recurso(paso=10, time=9).json()
 
 if __name__ == '__main__':
+    tiempo_total = 0
     for key, value in Sincro.items():
         print(key, value)
+        tiempo_total += value['time']
+    print("Tiempo total lavado de manos:", tiempo_total, "segundos")
