@@ -1,16 +1,15 @@
 from datetime import datetime
 import time
-from app.evaluar_movimiento import evaluar_movimiento
-from app.get import get
+from evaluar_movimiento import evaluar_movimiento
+
+from urls import URL_SONIDO, URL_VIDEO
+from get import get
 
 pasos = {1: 8, 2: 5, 3: 8, 4: 7, 5: 9, 6: 6, 7: 5, 8: 8, 9: 9, 10: 9}
 
-WAIT_TIME = 0.5 # 0.1
+WAIT_TIME = 0.5  # 0.1
 PENALITY_TIME = 3
 CONTADOR = 30
-
-URL_SONIDO = 'http://localhost:5002/reproduce?id='
-URL_VIDEO = 'http://localhost:5005/mostrar?id=$ID&name='
 
 
 def secuencia_lavado(nombre):

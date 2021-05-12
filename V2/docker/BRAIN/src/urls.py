@@ -1,0 +1,5 @@
+URL_MOVIMIENTO = 'http://localhost:5006/move?umbral=30'
+URL_SONIDO = 'http://localhost:5002/reproduce?id='
+URL_VIDEO = 'http://localhost:5005/mostrar?id=$ID&name='
+URL_NAME = 'http://localhost:5004/name'
+URL_ENVIA_VECTOR = 'http://localhost:5007/report'

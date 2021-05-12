@@ -1,17 +1,10 @@
 import time
-import json
-
-from app.procesar_lavado import procesar_lavado
-
-from app.get import get
+from urls import URL_NAME, URL_ENVIA_VECTOR
+from procesar_lavado import procesar_lavado
+from get import get
 
 salir = True
 SLEEP_TIME = 5
-
-URL_NAME = 'http://localhost:5004/name'
-URL_ENVIA_VECTOR = 'http://localhost:5007/report'
-
-# nombre_anterior = 'Fulano de Tal'
 
 contador = 0
 
@@ -26,25 +19,28 @@ while salir:
 
     nombre = None
 
-    print(name_json)
-    if 'name' in name_json:
-        nombre = name_json['name']
-        print("[Debug]:", nombre)
+    if len(name_json) > 0:
+        uuid = [f for f in name_json][0]
+        name_json = name_json[uuid]
+        print(name_json)
+        if 'name' in name_json:
+            nombre = name_json['name']
+            print("[Debug]:", nombre)
 
-        # if nombre != nombre_anterior:
-        if not procesar_lavado(nombre):
-            print('NO SE DETECTO MOVIMIENTO')
-            # nombre_anterior = 'Fulano de Tal'
-        else:
-            print('ENVIANDO VECTOR')
-            get(URL_ENVIA_VECTOR)
-            # nombre_anterior = nombre
-        # else:
-        #     contador += 1
+            # if nombre != nombre_anterior:
+            if not procesar_lavado(nombre):
+                print('NO SE DETECTO MOVIMIENTO')
+                # nombre_anterior = 'Fulano de Tal'
+            else:
+                print('ENVIANDO VECTOR')
+                get(URL_ENVIA_VECTOR)
+                # nombre_anterior = nombre
+            # else:
+            #     contador += 1
 
-    # if contador >= 3:
-    #     contador = 0
-    #     nombre_anterior = 'Fulano de Tal'
+        # if contador >= 3:
+        #     contador = 0
+        #     nombre_anterior = 'Fulano de Tal'
 
     print('esperando 5 Segundos', nombre)
 

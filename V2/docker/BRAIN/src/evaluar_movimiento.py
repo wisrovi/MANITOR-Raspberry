@@ -1,7 +1,5 @@
-from app.get import get
-import json
-
-URL_MOVIMIENTO = 'http://192.168.1.110:5006/move?umbral=30'
+from urls import URL_MOVIMIENTO
+from get import get
 
 
 def evaluar_movimiento():

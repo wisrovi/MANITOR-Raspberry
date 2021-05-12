@@ -1,5 +1,5 @@
-from app.secuencia_lavado import secuencia_lavado
-from app.evaluar_movimiento import evaluar_movimiento
+from secuencia_lavado import secuencia_lavado
+from evaluar_movimiento import evaluar_movimiento
 import time
 
 TIME_WAIT = 1
