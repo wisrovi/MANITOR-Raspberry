@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template, jsonify
 import cv2
 import numpy as np
 import json
@@ -138,6 +138,7 @@ def leer_cola():
 
 
 def main_move_detect_process(ver=True):
+    global pqueue
     movimiento = 0
 
     franja_colores = leer_configuracion()
@@ -180,6 +181,7 @@ def main_move_detect_process(ver=True):
                 OBJ['time'] = Leer_HoraActual()
                 OBJ['move'] = movimiento
                 pqueue.put(OBJ)
+                # print("save")
 
         # ---------------- salida del while al oprimir la tecla ESC
         k = cv2.waitKey(30) & 0xff
@@ -223,13 +225,19 @@ def move():
     umbral = request.args.get('umbral')
     if umbral is None:
         umbral = 60
+    else:
+        umbral = int(umbral)
     data = leer_cola()
+    print(data)
 
-    OBJ = dict()
-    OBJ['acc'] = data['move']
-    OBJ['time'] = Leer_HoraActual()
-    OBJ['move'] = 1 if data['move'] >= umbral else 0
-    return json.dumps(OBJ, indent=4)
+    if len(data) > 0:
+        OBJ = dict()
+        OBJ['acc'] = data['move']
+        OBJ['time'] = Leer_HoraActual()
+        OBJ['move'] = 1 if data['move'] >= umbral else 0
+        return jsonify(OBJ)
+    else:
+        return "Error"
 
 
 @app.route('/help')
@@ -245,4 +253,4 @@ def help_service():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5006)
+    app.run(host="0.0.0.0", port=5006, debug=True)

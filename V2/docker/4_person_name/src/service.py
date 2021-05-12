@@ -139,7 +139,18 @@ def get_beacons_scan():
                             print("[ERROR]:", f"La persona con beacon {uuid_mas_cercano} no tiene resultados del servidor para solicitud de nombre (/nombre)")
                 else:
                     print("[NEAR]:", [k for k, v in MORE_NEAR.items()][0])
+
+                    OBJ = dict()
+                    OBJ['data'] = MORE_NEAR
+                    history = read_file()
+                    for key, value in history.items():
+                        if [k for k, v in MORE_NEAR.items()][0] == key:
+                            OBJ['name'] = value['name']
+                    OBJ['time'] = Leer_HoraActual()
+
                     # print("El nombre ya existe")
+                    with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
+                        json.dump(OBJ, outfile_beacon_scan)
                     pass
         # print("Process beacon_scan and history OK")
 
@@ -173,6 +184,11 @@ def name():
     try:
         with open(FILE_PERSON_SCAN) as json_file:
             data = json.load(json_file)
+            print(data)
+
+        with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
+            json.dump({}, outfile_beacon_scan)
+
     except:
         pass
     return json.dumps(data, indent=4)
