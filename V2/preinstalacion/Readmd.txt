@@ -1,0 +1,5 @@
+# Aumentar la memoria swap
+https://geekland.eu/incrementar-la-memoria-swap-en-una-raspberry-pi/
+
+# instalar docker
+# instalar servicios
