@@ -19,6 +19,11 @@ video = None
 crono = None
 esperando_siguiente_paso = False
 
+PANTALLA_COMPLETA = False
+if PANTALLA_COMPLETA:
+    cv2.namedWindow("Frame", cv2.WND_PROP_FULLSCREEN)
+    cv2.setWindowProperty("Frame", cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
 
 def leer_cola():
     if not pqueue.empty():
@@ -59,7 +64,7 @@ def video_interfaz():
     cronometro = Video()
 
     ancho_pantalla, alto_pantalla = util.screen_size()
-    ancho_pantalla, alto_pantalla = int(ancho_pantalla * 0.4), int(alto_pantalla * 0.4)  # solo demo
+    # ancho_pantalla, alto_pantalla = int(ancho_pantalla * 0.4), int(alto_pantalla * 0.4)  # solo demo
 
     LIENZO_MOSTRAR_VIDEOS = (alto_pantalla, ancho_pantalla)  # pixeles (alto, ancho)
 
