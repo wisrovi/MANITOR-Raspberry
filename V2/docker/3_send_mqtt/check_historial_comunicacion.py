@@ -105,7 +105,7 @@ while True:
     client_receive.publish(topico_enviar, mensaje_enviar)
 
     with open("historico.csv", "a") as file:
-        file.write('\n' + data + ",")
+        file.write('\n' + '\n' + data + "#")
 
     time.sleep(5)
 
