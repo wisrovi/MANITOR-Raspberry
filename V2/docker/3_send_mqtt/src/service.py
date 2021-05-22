@@ -346,6 +346,20 @@ def hola():
     return 'Send MQTT by Wisrovi'
 
 
+@app.route('/mac')
+def mac():
+    return MAC_CLIENT
+
+
+@app.route('/credenciales')
+def credenciales():
+    OBJ = dict()
+    OBJ['ip'] = IP_BROKER
+    OBJ['port'] = PORT_BROKER
+    OBJ['name_client'] = NAME_CLIENT
+    return json.dumps(OBJ, indent=4)
+
+
 @app.route('/data')
 def data():
     global NOMBRE
@@ -492,6 +506,14 @@ def help_service():
     options_send.append("<topic> -> topico enviar mqtt")
     options_send.append("<msg> -> mensaje enviar mqtt")
     OBJ['http://localhost:5003/send?topic=<topic>&msg=<msg>'] = options_send
+
+    options_send = list()
+    options_send.append("ver credenciales de conexion")
+    OBJ['http://localhost:5003/credenciales'] = options_send
+
+    options_send = list()
+    options_send.append("ver mac de conexion del cliente")
+    OBJ['http://localhost:5003/mac'] = options_send
 
     return json.dumps(OBJ, indent=4)
 

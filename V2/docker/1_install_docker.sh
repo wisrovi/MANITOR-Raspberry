@@ -1,3 +1,7 @@
+
+
+
+
 # https://pimylifeup.com/raspberry-pi-docker/
 
 # descarga e instala docker
@@ -12,6 +16,11 @@ logout
 
 # ver version
 docker --version
+
+
+sudo apt-get install libffi-dev libssl-dev
+sudo pip3 install docker-compose
+
 
 # probar primer container
 docker run hello-world

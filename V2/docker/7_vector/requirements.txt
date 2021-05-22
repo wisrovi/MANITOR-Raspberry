@@ -1,8 +1,7 @@
-#opencv-python==4.5.1.48
-#click==7.1.2
+click==7.1.2
 Flask==1.1.2
-requests==2.25.1
-#itsdangerous==1.1.0
-#Jinja2==2.11.3
-#MarkupSafe==1.1.1
-#Werkzeug==1.0.1
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+Werkzeug==1.0.1
+requests==2.21.0

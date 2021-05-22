@@ -1,0 +1,1 @@
+sudo docker exec -it base_opencv bash

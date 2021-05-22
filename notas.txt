@@ -3,3 +3,8 @@ despues de validar su completo funcionamiento (incluyendo los sonidos) se debe c
 pasos a ejecutar:
 
 https://python.plainenglish.io/turning-your-python-script-into-a-real-program-cb702e16ed02
+
+para enlazar contenedores:
+
+https://www.josedomingo.org/pledin/2016/02/enlazando-contenedores-docker/
+
