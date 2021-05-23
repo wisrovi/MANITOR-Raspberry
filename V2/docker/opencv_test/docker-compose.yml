@@ -4,13 +4,13 @@ services:
      container_name: camera 
      build:
         context: .
-        dockerfile: Dockerfile_wisrovi
+        dockerfile: Dockerfile
      network_mode: host
      restart: always
      volumes:
         - /dev/bus/usb:/dev/bus/usb
         - /opt/vc:/opt/vc
-        - ./python:/app
+        - /home/pi/Desktop/demo:/code
         - /tmp/.X11-unix:/tmp/.X11-unix
      environment:
         LD_LIBRARY_PATH: /opt/vc/lib
