@@ -9,8 +9,8 @@ RUN apt update -y
 RUN apt-get -y install sudo
 
 # 4) instalar dependencias del SO
-COPY system_install.sh .
-RUN sudo sh system_install.sh
+RUN apt-get install mpg123 -y
+RUN apt-get install python3-pip -y
 
 # 5) instalar dependencias de python
 COPY requirements.txt .

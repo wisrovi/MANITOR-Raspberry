@@ -1,7 +1,7 @@
 
 sudo sh system_install.sh
 
-sudo docker build -t "beacon_scan:v1" .
+sh build_image.sh
 
 echo **************************** lanzando contenedor ****************************
 

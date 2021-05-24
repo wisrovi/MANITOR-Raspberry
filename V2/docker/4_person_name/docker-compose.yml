@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+   nombre_persona:
+      container_name: nombre_persona
+      build:
+         context: .
+         dockerfile: Dockerfile
+      volumes:
+         - /home/pi/DATA/history.json:/code/DATA/history.json
+         - /home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json
+         - /home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json
+      ports:
+         - 5004:5004
+      depends_on:
+         - beacon_scan
+         - send_mqtt

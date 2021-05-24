@@ -9,8 +9,13 @@ RUN apt-get update -y
 RUN apt-get -y install sudo
 
 # 4) instalar dependencias del SO
-COPY system_install.sh .
-RUN sudo sh system_install.sh
+RUN apt-get -y install libbluetooth-dev
+RUN apt-get -y install libcap2-bin
+RUN apt-get -y install bluez
+
+RUN apt-get -y install libglib2.0-dev
+RUN apt-get -y install libbluetooth-dev
+RUN apt-get -y install libboost-python-dev
 
 # 5) instalar dependencias de python
 COPY requirements.txt .

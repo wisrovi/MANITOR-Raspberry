@@ -1,0 +1,1 @@
+sudo docker build -t "move_front_cam:v1" .

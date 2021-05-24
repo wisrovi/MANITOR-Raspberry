@@ -1,0 +1,71 @@
+version: '3.7'
+services:
+  beacon_scan:
+    container_name: beacon_scan
+    build:
+      context: 1_baliza_scan
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always
+    privileged: true
+
+  send_mqtt:
+    container_name: send_mqtt
+    build:
+      context: 3_send_mqtt
+      dockerfile: Dockerfile
+    ports:
+      - 5003:5003
+    environment:
+      MAC_CLIENT: dc:a6:32:34:07:0f
+      IP_BROKER: 192.168.1.114
+      PORT_BROKER: 1883
+      NAME_CLIENT: RPI
+    restart: always
+
+  nombre_persona:
+    container_name: nombre_persona
+    build:
+      context: 4_person_name
+      dockerfile: Dockerfile
+    volumes:
+      - /home/pi/DATA/history.json:/code/DATA/history.json
+      - /home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json
+      - /home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json
+    ports:
+      - 5004:5004
+    depends_on:
+      - beacon_scan
+      - send_mqtt
+
+  reproduce_audio:
+    container_name: reproduce_audio
+    build:
+      context: 2_reproduce_audio
+      dockerfile: Dockerfile
+    ports:
+      - 5002:5002
+    restart: always
+    devices:
+      - "/dev/snd:/dev/snd"
+    privileged: true
+
+  move_front_cam:
+    container_name: move_front_cam
+    build:
+      context: 6_move_front_cam
+      dockerfile: Dockerfile
+    network_mode: host
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - /opt/vc:/opt/vc
+      - /home/pi/Desktop/demo:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      LD_LIBRARY_PATH: /opt/vc/lib
+      DISPLAY:
+    devices:
+      - "/dev/vchiq:/dev/vchiq"
+    restart: always
+    privileged: true
+

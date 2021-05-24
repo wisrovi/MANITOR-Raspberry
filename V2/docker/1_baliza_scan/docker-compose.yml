@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+   beacon_scan:
+      container_name: beacon_scan
+      build:
+         context: .
+         dockerfile: Dockerfile
+      network_mode: host
+      restart: always
+      privileged: true

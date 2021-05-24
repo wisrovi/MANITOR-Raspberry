@@ -1,0 +1,1 @@
+docker build -t "manitor_send_mqtt:latest" .

@@ -7,7 +7,8 @@ import getmac
 import time
 from multiprocessing import Process
 
-SERVER = "localhost"
+MICROSERVICIO_SEND_MQTT = "send_mqtt"
+MICROSERVICIO_SCAN_BEACON = "beacon_scan"
 
 
 FILE_HISTORY = "/code/DATA/history.json"
@@ -77,7 +78,7 @@ def get_beacons_scan():
         failed = False
         BEACON_SCAN_FILE = None
         try:
-            r = requests.get('http://' + SERVER + ':5001/beacons', params=PARAMS, timeout=10)
+            r = requests.get('http://' + MICROSERVICIO_SCAN_BEACON + ':5001/beacons', params=PARAMS, timeout=10)
             BEACON_SCAN_FILE = r.json()
         except:
             print("[ERROR]: Problema al enviar el dato al servidor (port: 5001)")
@@ -112,12 +113,12 @@ def get_beacons_scan():
                         PARAMS = dict()
                         PARAMS['msg'] = "1"
                         PARAMS['topic'] = get_topic(uuid_mas_cercano)
-                        r = requests.post('http://' + SERVER + ':5003/send', data=PARAMS, timeout=10)
+                        r = requests.post('http://' + MICROSERVICIO_SEND_MQTT + ':5003/send', data=PARAMS, timeout=10)
                         # print(r.text, PARAMS['topic'])
 
                         time.sleep(0.5)
                         PARAMS = dict()
-                        r = requests.get('http://' + SERVER + ':5003/data', params=PARAMS, timeout=10)
+                        r = requests.get('http://' + MICROSERVICIO_SEND_MQTT + ':5003/data', params=PARAMS, timeout=10)
                         data_response = r.json()
                         print(data_response['nombre'])
 

@@ -1,0 +1,1 @@
+docker build -t "manitor_reproduce_audio:latest" .
