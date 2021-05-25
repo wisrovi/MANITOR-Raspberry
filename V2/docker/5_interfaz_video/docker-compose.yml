@@ -1,7 +1,7 @@
 version: "3.7"
 services:
-  camera:
-     container_name: camera 
+  interfaz_video:
+     container_name: interfaz_video
      build:
         context: .
         dockerfile: Dockerfile

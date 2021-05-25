@@ -1,5 +1,8 @@
-URL_MOVIMIENTO = 'http://localhost:5006/move?umbral=30'
-URL_SONIDO = 'http://localhost:5002/reproduce?id='
-URL_VIDEO = 'http://localhost:5005/mostrar?id=$ID&name='
-URL_NAME = 'http://localhost:5004/name'
-URL_ENVIA_VECTOR = 'http://localhost:5007/report'
+GATEWAY = "localhost"
+GATEWAY = "192.168.1.106"
+
+URL_SONIDO = 'http://' + GATEWAY + ':5002/reproduce?id='
+URL_NAME = 'http://' + GATEWAY + ':5004/name'
+URL_VIDEO = 'http://' + GATEWAY + ':5005/mostrar?id=$ID&name='
+URL_MOVIMIENTO = 'http://' + GATEWAY + ':5006/move?umbral=$umb'
+URL_ENVIA_VECTOR = 'http://' + GATEWAY + ':5007/report'

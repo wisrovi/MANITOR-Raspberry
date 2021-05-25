@@ -4,10 +4,43 @@ import json
 import requests
 import os
 
+# https://www.lawebdelprogramador.com/codigo/Python/4288-Obtener-la-puerta-de-enlace-o-gateway-de-nuestro-Linux.html
 
-SERVER = "localhost"
-SERVER = "send_mqtt"
+import subprocess
+import re
 
+
+def __getRoute():
+    """
+    Funcion que devuelve el resultado del comando 'route -n'
+    """
+    try:
+        return subprocess.getoutput("/sbin/route -n").splitlines()
+    except:
+        return ""
+
+
+def returnGateway():
+    """ Funcion que devuelve la puerta de enlace predeterminada ... """
+    # Recorremos todas las lineas de la lista
+    for line in __getRoute():
+        # Si la primera posicion de la lista empieza 0.0.0.0
+        if line.split()[0] == "0.0.0.0":
+            # Cogemos la direccion si el formato concuerda con una direccion ip
+            if re.match("^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$", line.split()[1]):
+                return line.split()[1]
+    return ''
+
+
+GATEWAY = returnGateway()
+#############################################################################################################################
+print("**********************************")
+print("*         {}          *".format(GATEWAY))
+print("**********************************")
+
+# SERVER = "localhost"
+# SERVER = "send_mqtt"
+SERVER = GATEWAY
 
 MAC_CLIENT = os.environ.get('MAC_CLIENT')
 if MAC_CLIENT is None:
@@ -17,9 +50,7 @@ TOPIC_SEND_VECTOR = '/SPINPLM/'
 
 URL_SERVICE_SEND_MQTT = 'http://' + SERVER + ':5003/send?topic='
 
-
 app = Flask(__name__)
-
 
 VECTOR = dict()
 
@@ -29,6 +60,7 @@ def envia_vector(mensaje, uuid, mac=None):
         mac = MAC_CLIENT
     topico = TOPIC_SEND_VECTOR + mac + "/" + uuid + "/lavado"
     fullurl = URL_SERVICE_SEND_MQTT + topico + '&msg=' + mensaje
+    print("send to:", fullurl)
     r = requests.get(url=fullurl)
     try:
         data = r.json()
@@ -42,13 +74,21 @@ def hola():
     return 'Vector by Wisrovi'
 
 
+@app.route('/memory')
+def memory():
+    OBJ = dict()
+    for key, value in enumerate(VECTOR):
+        OBJ[str(key)] = value
+    return make_response(OBJ, 200)
+
+
 @app.route('/time')
 def time():
     global VECTOR
-    id = request.args.get('id')
-    time = float(request.args.get('time'))
-    if id and time:
-        VECTOR[id] = time
+    id_received = request.args.get('id')
+    time_received = float(request.args.get('time'))
+    if id_received and time_received:
+        VECTOR[id_received] = time_received
         print(VECTOR)
         return make_response({'code': 'SUCESS'}, 200)
     else:
@@ -100,10 +140,11 @@ def help_service():
     options_config.append("<mac> recibe la mac del manitor para enviarlo al servidor")
     OBJ['http://localhost:5007/report?voltaje=<voltaje>&uuid=<uuid>&mac=<mac>'] = options_config
 
+    options_config = list()
+    options_config.append("Permite leer el vector actual, pero no lo envia.")
+    OBJ['http://localhost:5007/memory'] = options_config
+
     return json.dumps(OBJ, indent=4)
-
-
-
 
 
 if __name__ == '__main__':

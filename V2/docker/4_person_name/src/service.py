@@ -39,7 +39,9 @@ def returnGateway():
 
 GATEWAY = returnGateway()
 #############################################################################################################################
-
+print("**********************************")
+print("*         {}          *".format(GATEWAY))
+print("**********************************")
 
 MICROSERVICIO_SEND_MQTT = "send_mqtt"
 MICROSERVICIO_SCAN_BEACON = "beacon_scan"

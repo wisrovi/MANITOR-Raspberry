@@ -49,9 +49,14 @@ echo "Creando archivo PERSON_SCAN.json."
 touch /home/pi/DATA/PERSON_SCAN.json && chmod +777 /home/pi/DATA/PERSON_SCAN.json
 fi
 
+sudo apt install xauth
+sudo apt install acl
+sudo apt install x11-apps
+
 sudo docker build -t "manitor_beacon_scan:latest" "1_baliza_scan"
 sudo docker build -t "manitor_reproduce_audio:latest" "2_reproduce_audio"
 sudo docker build -t "manitor_send_mqtt:latest" "3_send_mqtt"
 sudo docker build -t "manitor_nombre_persona:latest" "4_person_name"
-
+sudo docker build -t "manitor_interfaz_video:latest" "5_interfaz_video"
 sudo docker build -t "manitor_move_front_cam:latest" "6_move_front_cam"
+sudo docker build -t "manitor_vector:latest" "7_vector"

@@ -1,8 +1,5 @@
 USAR_DOS_CLIENTES = True
 
-
-
-
 import time
 
 from flask import Flask, request
@@ -14,11 +11,10 @@ import paho.mqtt.client as mqtt  # import the client1
 import paho.mqtt.publish as publish
 import datetime
 
-
 FILE_SAVE_CONFIG = "config.json"
 PROJECT = "SPINPLM"
 
-
+TOPIC_SUBSCRIBE = list()
 
 IP_BROKER = os.environ.get('IP_BROKER')
 PORT_BROKER = os.environ.get('PORT_BROKER')
@@ -34,7 +30,6 @@ NOMBRE = str()
 OTA = False
 restart = False
 
-
 print("[environ]: IP_BROKER", IP_BROKER)
 print("[environ]: PORT_BROKER", PORT_BROKER)
 print("[environ]: NAME_CLIENT", NAME_CLIENT)
@@ -42,7 +37,6 @@ print("[environ]: MAC_CLIENT", MAC_CLIENT)
 print("[environ]: USER_BROKER", USER_BROKER)
 print("[environ]: PASSWORD_BROKER", PASSWORD_BROKER)
 print()
-
 
 client_receive = None
 client_send = None
@@ -146,7 +140,7 @@ def on_connect_send(client, userdata, flags, rc):
 def send_msg_mqtt(topic, msg):
     print(f"[MQTT]: topic:{topic} - message:{msg}")
     if USAR_DOS_CLIENTES:
-        if client_send  is not None:
+        if client_send is not None:
             client_send.publish(topic, msg)  # publish
             print("[MQTT send]: OK")
         else:
@@ -157,7 +151,7 @@ def send_msg_mqtt(topic, msg):
             except:
                 pass
 
-            if len(OBJ) > 0 :
+            if len(OBJ) > 0:
                 ip = OBJ['ip']
                 port = OBJ['port']
                 name = OBJ['name']
@@ -185,7 +179,7 @@ def conectar_broker():
     global client_receive
     global client_send
     global PORT_BROKER
-
+    global TOPIC_SUBSCRIBE
 
     if MAC_CLIENT is None:
         print("[conection]: No hay MAC para susbcribirse")
@@ -265,6 +259,12 @@ def conectar_broker():
 
         Process(target=send_msg_mqtt, args=("/" + MAC_CLIENT, "Hello world",)).start()
         print()
+
+        TOPIC_SUBSCRIBE.append(topic_subscribe_1)
+        TOPIC_SUBSCRIBE.append(topic_subscribe_2)
+        TOPIC_SUBSCRIBE.append(topic_subscribe_3)
+        TOPIC_SUBSCRIBE.append(topic_subscribe_4)
+        TOPIC_SUBSCRIBE.append(topic_subscribe_5)
     except:
         print("[conection]: Credenciales no validas")
         print()
@@ -305,7 +305,6 @@ if existe_archivo_configuracion:
     print("[config]: cargando configuración guardada en el archivo config.json")
     print()
 
-
 if IP_BROKER is None or PORT_BROKER is None or NAME_CLIENT is None:
     print("[conection]: No hay credenciales para conectar al broker")
     print()
@@ -325,7 +324,7 @@ def continue_life_pin():
             except:
                 pass
 
-        if mac is not  None:
+        if mac is not None:
             Process(target=send_msg_mqtt, args=("/" + mac, "life_pin",)).start()
             print("[mqtt send lifePin]: Enviado pin de vida")
         else:
@@ -334,7 +333,6 @@ def continue_life_pin():
 
 
 Process(target=continue_life_pin).start()
-
 
 app = Flask(__name__)
 
@@ -347,6 +345,14 @@ def hola():
 @app.route('/mac')
 def mac():
     return MAC_CLIENT
+
+
+@app.route('/topics')
+def topics():
+    OBJ = dict()
+    for key, value in enumerate(TOPIC_SUBSCRIBE):
+        OBJ[str(key)] = value
+    return json.dumps(OBJ, indent=4)
 
 
 @app.route('/credenciales')
@@ -491,7 +497,8 @@ def help_service():
     options_config.append("config: password_broker")
     options_config.append("config: name_client_conect_broker")
     options_config.append("config: mac client")
-    OBJ['http://localhost:5003/config?ip=<ip broker>&port=<port broker>&name=<name client>&mac=<mac client>&user=<user broker [optional]>&&pwd=<password broker [optional]>'] = options_config
+    OBJ[
+        'http://localhost:5003/config?ip=<ip broker>&port=<port broker>&name=<name client>&mac=<mac client>&user=<user broker [optional]>&&pwd=<password broker [optional]>'] = options_config
 
     options_config = list()
     options_config.append("look data received")
@@ -512,6 +519,10 @@ def help_service():
     options_send = list()
     options_send.append("ver mac de conexion del cliente")
     OBJ['http://localhost:5003/mac'] = options_send
+
+    options_send = list()
+    options_send.append("ver topics de conexion del cliente al broker")
+    OBJ['http://localhost:5003/topics'] = options_send
 
     return json.dumps(OBJ, indent=4)
 

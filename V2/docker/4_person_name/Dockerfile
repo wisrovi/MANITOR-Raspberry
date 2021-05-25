@@ -1,5 +1,4 @@
 # 1) indicamos la imagen base a usar
-#FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 FROM arm32v7/python:3.6.13-buster
 
 # 2) creamos una carpeta para alojar los archivos del proyecto
@@ -8,12 +7,14 @@ WORKDIR /code
 # 3) instalamos sudo y actualizamos
 RUN apt update -y
 RUN apt-get -y install sudo
-RUN apt-get -y install net-tools
 
 # 4) instalar dependencias del SO
 
 # 5) instalar dependencias de python
 RUN pip3 install flask
+
+RUN apt-get -y install net-tools
+RUN pip3 install requests
 
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt

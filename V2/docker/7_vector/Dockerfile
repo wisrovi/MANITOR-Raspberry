@@ -13,6 +13,9 @@ RUN apt-get -y install sudo
 # 5) instalar dependencias de python
 RUN pip3 install flask
 
+RUN apt-get -y install net-tools
+RUN pip3 install requests
+
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
 

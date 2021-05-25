@@ -24,7 +24,7 @@ services:
       - 5003:5003
     environment:
       MAC_CLIENT: dc:a6:32:34:07:0f
-      IP_BROKER: 192.168.1.114
+      IP_BROKER: 192.168.1.115
       PORT_BROKER: 1883
       NAME_CLIENT: RPI
     restart: always
@@ -89,6 +89,7 @@ services:
       - /opt/vc:/opt/vc
       - /home/pi/Desktop/demo:/code
       - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/pi/.Xauthority:/root/.Xauthority
     environment:
       LD_LIBRARY_PATH: /opt/vc/lib
       DISPLAY:
@@ -103,3 +104,42 @@ services:
       retries: 3
       start_period: 40s
 
+  vector:
+    container_name: vector
+    build:
+      context: 7_vector
+      dockerfile: Dockerfile
+    ports:
+      - 5007:5007
+    environment:
+      MAC_CLIENT: dc:a6:32:34:07:0f
+    depends_on:
+      - send_mqtt
+    restart: always
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5007/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  interfaz_video:
+    container_name: interfaz_video
+    build:
+      context: 5_interfaz_video
+      dockerfile: Dockerfile
+    network_mode: host
+    restart: always
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - /opt/vc:/opt/vc
+      - /home/pi/Desktop/demo:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/pi/.Xauthority:/root/.Xauthority
+    environment:
+      LD_LIBRARY_PATH: /opt/vc/lib
+      DISPLAY:
+    devices:
+      - "/dev/vchiq:/dev/vchiq"
+    privileged: true
