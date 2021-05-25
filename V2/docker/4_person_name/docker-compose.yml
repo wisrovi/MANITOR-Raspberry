@@ -3,7 +3,7 @@ services:
    nombre_persona:
       container_name: nombre_persona
       build:
-         context: .
+         context: ""
          dockerfile: Dockerfile
       volumes:
          - /home/pi/DATA/history.json:/code/DATA/history.json

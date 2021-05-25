@@ -10,8 +10,11 @@ RUN apt-get -y install x11-apps
 
 RUN export DISPLAY=:0
 
+RUN pip3 install flask
+
 COPY src .
 
 RUN chmod -R +777 /code
 
 CMD ["tail","-f","/dev/null"]
+# CMD ["python3", "./service.py" ]

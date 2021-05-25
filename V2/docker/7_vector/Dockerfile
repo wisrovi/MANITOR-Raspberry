@@ -11,6 +11,8 @@ RUN apt-get -y install sudo
 # 4) instalar dependencias del SO
 
 # 5) instalar dependencias de python
+RUN pip3 install flask
+
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
 

@@ -12,7 +12,6 @@ import random
 from multiprocessing import Process
 import paho.mqtt.client as mqtt  # import the client1
 import paho.mqtt.publish as publish
-import getmac
 import datetime
 
 
@@ -55,7 +54,6 @@ def Leer_HoraActual():
 
 
 def get_mac():
-    mac = getmac.get_mac_address()
     return MAC_CLIENT
 
 

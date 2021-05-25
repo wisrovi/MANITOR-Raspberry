@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.9'
 services:
   beacon_scan:
     container_name: beacon_scan
@@ -8,6 +8,12 @@ services:
     network_mode: host
     restart: always
     privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5001/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   send_mqtt:
     container_name: send_mqtt
@@ -22,21 +28,37 @@ services:
       PORT_BROKER: 1883
       NAME_CLIENT: RPI
     restart: always
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5003/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   nombre_persona:
     container_name: nombre_persona
     build:
       context: 4_person_name
       dockerfile: Dockerfile
+#    command: tail -f /etc/hosts
     volumes:
-      - /home/pi/DATA/history.json:/code/DATA/history.json
-      - /home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json
-      - /home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json
+      - "/home/pi/DATA/history.json:/code/DATA/history.json:rw"
+      - "/home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json:rw"
+      - "/home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json:rw"
     ports:
       - 5004:5004
+    links:
+      - beacon_scan:beacon_scan
     depends_on:
       - beacon_scan
       - send_mqtt
+    restart: always
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5004/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   reproduce_audio:
     container_name: reproduce_audio
@@ -49,6 +71,12 @@ services:
     devices:
       - "/dev/snd:/dev/snd"
     privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5002/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   move_front_cam:
     container_name: move_front_cam
@@ -68,4 +96,10 @@ services:
       - "/dev/vchiq:/dev/vchiq"
     restart: always
     privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5006/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 

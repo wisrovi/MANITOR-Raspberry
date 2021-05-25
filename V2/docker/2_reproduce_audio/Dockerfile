@@ -13,6 +13,8 @@ RUN apt-get install mpg123 -y
 RUN apt-get install python3-pip -y
 
 # 5) instalar dependencias de python
+RUN pip3 install flask
+
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
 

@@ -18,6 +18,8 @@ RUN apt-get -y install libbluetooth-dev
 RUN apt-get -y install libboost-python-dev
 
 # 5) instalar dependencias de python
+RUN pip3 install flask
+
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
 

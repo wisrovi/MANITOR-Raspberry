@@ -11,13 +11,13 @@ def on_message(client, userdata, message):
     print(OBJ)
 
 
-IP_BROKER = "192.168.1.112"
-PORT_BROKER = "1884"
-
-
-
-IP_BROKER = "172.30.19.92"
+IP_BROKER = "192.168.1.115"
 PORT_BROKER = "1883"
+
+
+
+# IP_BROKER = "172.30.19.92"
+# PORT_BROKER = "1883"
 
 
 

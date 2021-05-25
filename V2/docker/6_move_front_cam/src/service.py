@@ -1,15 +1,16 @@
-import os
-
-from flask import Flask, request, render_template, jsonify
-import cv2
-import numpy as np
-import json
-from os import remove
 import datetime
+import json
 import time
 from multiprocessing import Process, Queue
+from os import remove
+
+import cv2
+import numpy as np
+from flask import Flask, request, render_template, jsonify
+
 
 pqueue = Queue()
+
 
 from config_movimiento_frente_camara import FILE_CONFIG_MOVE_DETECT, constante_cambio_area
 
@@ -249,8 +250,12 @@ def help_service():
     options_config.append("umbral = valor minimo de precision requerida (%) [0 - 100], el valor por default es 60 (%)")
     OBJ['http://localhost:5006/move?umbral=<umbral>'] = options_config
 
+    options_config = list()
+    options_config.append("cam = permite visualizar la imagen de la camara actual (no en video sino el fotograma cuando se hizo la solicitud)")
+    OBJ['http://localhost:5006/cam'] = options_config
+
     return json.dumps(OBJ, indent=4)
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5006, debug=True)
+    app.run(host="0.0.0.0", port=5006)

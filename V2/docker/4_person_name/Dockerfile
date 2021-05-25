@@ -8,10 +8,13 @@ WORKDIR /code
 # 3) instalamos sudo y actualizamos
 RUN apt update -y
 RUN apt-get -y install sudo
+RUN apt-get -y install net-tools
 
 # 4) instalar dependencias del SO
 
 # 5) instalar dependencias de python
+RUN pip3 install flask
+
 COPY requirements.txt .
 RUN sudo pip3 install -r requirements.txt
 

@@ -1,14 +1,52 @@
-import requests
-from flask import Flask, request
+import datetime
 import json
 import os
-import datetime
-import getmac
 import time
 from multiprocessing import Process
 
+import getmac
+import requests
+from flask import Flask
+
+
+# https://www.lawebdelprogramador.com/codigo/Python/4288-Obtener-la-puerta-de-enlace-o-gateway-de-nuestro-Linux.html
+
+import subprocess
+import re
+
+
+def __getRoute():
+    """
+    Funcion que devuelve el resultado del comando 'route -n'
+    """
+    try:
+        return subprocess.getoutput("/sbin/route -n").splitlines()
+    except:
+        return ""
+
+
+def returnGateway():
+    """ Funcion que devuelve la puerta de enlace predeterminada ... """
+    # Recorremos todas las lineas de la lista
+    for line in __getRoute():
+        # Si la primera posicion de la lista empieza 0.0.0.0
+        if line.split()[0] == "0.0.0.0":
+            # Cogemos la direccion si el formato concuerda con una direccion ip
+            if re.match("^([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$", line.split()[1]):
+                return line.split()[1]
+    return ''
+
+
+GATEWAY = returnGateway()
+#############################################################################################################################
+
+
 MICROSERVICIO_SEND_MQTT = "send_mqtt"
 MICROSERVICIO_SCAN_BEACON = "beacon_scan"
+
+
+MICROSERVICIO_SEND_MQTT = GATEWAY
+MICROSERVICIO_SCAN_BEACON = GATEWAY
 
 
 FILE_HISTORY = "/code/DATA/history.json"
@@ -36,18 +74,21 @@ def read_file():
 
 
 if not os.path.isfile(FILE_HISTORY):
-    with open(FILE_HISTORY, 'w') as outfile:
-        json.dump({}, outfile)
+    os.system("touch " + FILE_HISTORY)
+    # with open(FILE_HISTORY, 'w') as outfile:
+    #     json.dump({}, outfile)
 else:
     PERSON_SCAN = read_file()
 
 if not os.path.isfile(FILE_BEACON_SCAN):
-    with open(FILE_BEACON_SCAN, 'w') as outfile:
-        json.dump({}, outfile)
+    os.system("touch " + FILE_BEACON_SCAN)
+    # with open(FILE_BEACON_SCAN, 'w') as outfile:
+    #     json.dump({}, outfile)
 
 if not os.path.isfile(FILE_PERSON_SCAN):
-    with open(FILE_PERSON_SCAN, 'w') as outfile:
-        json.dump({}, outfile)
+    os.system("touch " + FILE_PERSON_SCAN)
+    # with open(FILE_PERSON_SCAN, 'w') as outfile:
+    #     json.dump({}, outfile)
 
 
 app = Flask(__name__)
