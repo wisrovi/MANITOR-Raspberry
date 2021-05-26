@@ -4,6 +4,8 @@ FROM arm32v7/python:3.6.13-buster
 # 2) creamos una carpeta para alojar los archivos del proyecto
 WORKDIR /code
 
+RUN echo person_name
+
 # 3) instalamos sudo y actualizamos
 RUN apt update -y
 RUN apt-get -y install sudo

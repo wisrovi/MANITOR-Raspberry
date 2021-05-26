@@ -27,9 +27,9 @@ class Consult_Microservicios(object):
         else:
             return False
 
-    def mostrar_audiovisual(self, id, nombre):
-        self.__get(self.URL_SONIDO + str(id))
-        self.__get(self.URL_VIDEO.replace('$ID', str(id)) + nombre)
+    def mostrar_audiovisual(self, id_audiovisual, nombre):
+        self.__get(self.URL_SONIDO + str(id_audiovisual))
+        self.__get(self.URL_VIDEO.replace('$ID', str(id_audiovisual)) + nombre)
 
     def leer_nombre_persona(self):
         name_json = self.__get(self.URL_NAME)

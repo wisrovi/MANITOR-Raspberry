@@ -2,6 +2,8 @@ FROM armindocachada/tensorflow2-opencv4-raspberrypi4:2.2_4.5.0
 
 WORKDIR /code
 
+RUN echo interfaz_video
+
 RUN export READTHEDOCS=true
 RUN pip3 install picamera
 

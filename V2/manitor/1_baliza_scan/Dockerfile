@@ -1,16 +1,23 @@
 # 1) indicamos la imagen base a usar
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1
+FROM arm32v7/python:3.6.13-buster
 
 # 2) creamos una carpeta para alojar los archivos del proyecto
 WORKDIR /code
 
+RUN echo baliza_scan
+
 # 3) instalamos sudo y actualizamos
-RUN apt update -y
+RUN apt-get update -y
 RUN apt-get -y install sudo
 
 # 4) instalar dependencias del SO
-RUN apt-get install mpg123 -y
-RUN apt-get install python3-pip -y
+RUN apt-get -y install libbluetooth-dev
+RUN apt-get -y install libcap2-bin
+RUN apt-get -y install bluez
+
+RUN apt-get -y install libglib2.0-dev
+RUN apt-get -y install libbluetooth-dev
+RUN apt-get -y install libboost-python-dev
 
 # 5) instalar dependencias de python
 RUN pip3 install flask
@@ -25,5 +32,5 @@ COPY src .
 RUN sudo chmod -R +777 /code
 
 # 8) le decimos que archivo ejecutar cuando se lance el container
-#CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD ["python3", "./service.py" ]
+# CMD [ "tail" ,"-f", "/etc/hosts" ]
+CMD [ "sudo" ,"python3", "./service.py" ]

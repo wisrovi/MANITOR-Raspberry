@@ -1,27 +1,22 @@
 # 1) indicamos la imagen base a usar
+#FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 FROM arm32v7/python:3.6.13-buster
 
 # 2) creamos una carpeta para alojar los archivos del proyecto
 WORKDIR /code
 
+RUN echo send_mqtt
+
 # 3) instalamos sudo y actualizamos
-RUN apt-get update -y
+RUN apt update -y
 RUN apt-get -y install sudo
 
 # 4) instalar dependencias del SO
-RUN apt-get -y install libbluetooth-dev
-RUN apt-get -y install libcap2-bin
-RUN apt-get -y install bluez
-
-RUN apt-get -y install libglib2.0-dev
-RUN apt-get -y install libbluetooth-dev
-RUN apt-get -y install libboost-python-dev
+#RUN apt-get -y install python3-dev
 
 # 5) instalar dependencias de python
 RUN pip3 install flask
-
-COPY requirements.txt .
-RUN sudo pip3 install -r requirements.txt
+RUN pip3 install paho-mqtt
 
 # 6) copiamos la carpeta del codigo y todos sus recursos
 COPY src .
@@ -30,5 +25,5 @@ COPY src .
 RUN sudo chmod -R +777 /code
 
 # 8) le decimos que archivo ejecutar cuando se lance el container
-# CMD [ "tail" ,"-f", "/etc/hosts" ]
-CMD [ "sudo" ,"python3", "./service.py" ]
+#CMD [ "tail" ,"-f", "/etc/hosts" ]
+CMD ["python3", "./service.py" ]
