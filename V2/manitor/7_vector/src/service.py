@@ -105,6 +105,9 @@ def report():
     if not voltaje:
         voltaje = '3.7'
 
+    if not mac:
+        mac = MAC_CLIENT
+
     datos_vector_enviar = list()
     for i in range(10):
         if str(i) in VECTOR:

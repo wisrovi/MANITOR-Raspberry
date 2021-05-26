@@ -12,4 +12,10 @@ pasos = {  # id_paso:  tiempo_minimo_paso
 }
 
 WAIT_TIME = 0.5  # 0.1
+UMBRAL_SET_MOVE = 30
+
 PENALITY_TIME = 3
+MAX_NUM_ALERT = 3
+SCAN_TIME = 5
+
+AUDIO_POR_FAVOR_MUEVA_MANOS = 12

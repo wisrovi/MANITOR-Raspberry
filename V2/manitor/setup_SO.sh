@@ -11,8 +11,8 @@ chmod +777 /etc/udev/rules.d/
 
 sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:linux-arm
 
-sudo docker pull arm32v7/python
+sudo docker pull arm32v7/python:3.6.13-buster
 
-sudo docker pull mcr.microsoft.com/dotnet/runtime
+sudo docker pull mcr.microsoft.com/dotnet/runtime:3.1
 
-sudo docker pull armindocachada/tensorflow2-opencv4-raspberrypi4
+sudo docker pull armindocachada/tensorflow2-opencv4-raspberrypi4:2.2_4.5.0
