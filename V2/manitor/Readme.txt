@@ -16,6 +16,10 @@ sh setup_SO.sh
 
 SUBSYSTEM=="vchiq",MODE="0666"
 
-# 3) construir las diferentes imagenes y contenedores del manitor, este comando dentro de la carpeta "manitor"
+# 3) crear las imagenes de los microservicios, este comando dentro de la carpeta "manitor"
+
+sudo sh recreate_images.sh
+
+# 4) construir los diferentes contenedores del manitor, este comando dentro de la carpeta "manitor"
 
 docker-compose up -d

@@ -2,9 +2,7 @@ version: '3.9'
 services:
   beacon_scan:
     container_name: beacon_scan
-    build:
-      context: 1_baliza_scan
-      dockerfile: Dockerfile
+    image: manitor_beacon_scan:V1.0
     network_mode: host
     restart: always
     privileged: true
@@ -17,9 +15,7 @@ services:
 
   send_mqtt:
     container_name: send_mqtt
-    build:
-      context: 3_send_mqtt
-      dockerfile: Dockerfile
+    image: manitor_send_mqtt:V1.0
     ports:
       - 5003:5003
     environment:
@@ -37,9 +33,7 @@ services:
 
   nombre_persona:
     container_name: nombre_persona
-    build:
-      context: 4_person_name
-      dockerfile: Dockerfile
+    image: manitor_nombre_persona:V1.0
 #    command: tail -f /etc/hosts
     volumes:
       - /home/pi/DATA/history.json:/code/DATA/history.json
@@ -62,9 +56,7 @@ services:
 
   reproduce_audio:
     container_name: reproduce_audio
-    build:
-      context: 2_reproduce_audio
-      dockerfile: Dockerfile
+    image: manitor_reproduce_audio:V1.0
     ports:
       - 5002:5002
     restart: always
@@ -80,9 +72,7 @@ services:
 
   move_front_cam:
     container_name: move_front_cam
-    build:
-      context: 6_move_front_cam
-      dockerfile: Dockerfile
+    image: manitor_move_front_cam:V1.0
     network_mode: host
     volumes:
       - /dev/bus/usb:/dev/bus/usb
@@ -106,9 +96,7 @@ services:
 
   vector:
     container_name: vector
-    build:
-      context: 7_vector
-      dockerfile: Dockerfile
+    image: manitor_vector:V1.0
     ports:
       - 5007:5007
     environment:
@@ -126,9 +114,7 @@ services:
 
   interfaz_video:
     container_name: interfaz_video
-    build:
-      context: 5_interfaz_video
-      dockerfile: Dockerfile
+    image: manitor_interfaz_video:V1.0
     network_mode: host
     restart: always
     volumes:
@@ -142,4 +128,16 @@ services:
       DISPLAY:
     devices:
       - "/dev/vchiq:/dev/vchiq"
+    privileged: true
+
+  brain:
+    container_name: brain
+    image: manitor_brain:V1.0
+    depends_on:
+      - reproduce_audio
+      - nombre_persona
+      - interfaz_video
+      - move_front_cam
+      - vector
+    restart: always
     privileged: true

@@ -5,6 +5,7 @@ services:
      build:
         context: .
         dockerfile: Dockerfile
+     command: tail -f /etc/hosts
      network_mode: host
      restart: always
      volumes:
