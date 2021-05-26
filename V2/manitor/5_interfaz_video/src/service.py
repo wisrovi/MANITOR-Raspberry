@@ -156,6 +156,19 @@ def mostrar():
     return "no hay dados ingresados, por favor consulte /help las opciones de variables a usar"
 
 
+@app.route('/help')
+def help_service():
+    OBJ = dict()
+
+    options_config = list()
+    options_config.append("muestra un video dentro del banco de videos, el nombre de la persona y un texto con el paso a seguir")
+    options_config.append("<id>: indica el id del video")
+    options_config.append("<name>: indica el nombre a mostrar en la interfaz grafica")
+    OBJ['http://localhost:5005/mostrar?id=<id>&name=<name>'] = options_config
+
+    return json.dumps(OBJ, indent=4)
+
+
 if __name__ == '__main__':
     Process(target=video_interfaz).start()
     app.run(host="0.0.0.0", port=5005)

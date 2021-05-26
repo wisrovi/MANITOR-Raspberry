@@ -4,7 +4,6 @@ import os
 import time
 from multiprocessing import Process
 
-import getmac
 import requests
 from flask import Flask
 
@@ -50,6 +49,9 @@ MICROSERVICIO_SCAN_BEACON = "beacon_scan"
 MICROSERVICIO_SEND_MQTT = GATEWAY
 MICROSERVICIO_SCAN_BEACON = GATEWAY
 
+
+MAC_RPI = requests.get('http://' + MICROSERVICIO_SCAN_BEACON + ':5003/mac', params={}, timeout=10)
+print("\n\n La mac de la RPI es: {} \n\n".format(MAC_RPI))
 
 FILE_HISTORY = "/code/DATA/history.json"
 FILE_BEACON_SCAN = "/code/DATA/BEACON_SCAN.json"
@@ -102,7 +104,7 @@ def Leer_HoraActual():
 
 
 def get_mac():
-    mac = getmac.get_mac_address()
+    mac = MAC_RPI
     return mac
 
 
@@ -118,6 +120,8 @@ def get_beacons_scan():
     while True:
         time.sleep(4.5)
         PARAMS = dict()
+        uuid_near = ""
+        nombre_near = ""
         failed = False
         BEACON_SCAN_FILE = None
         try:
@@ -136,6 +140,7 @@ def get_beacons_scan():
             MORE_NEAR = dict()
             for k, v in more_near_sorted.items():
                 MORE_NEAR[k] = BEACON_SCAN_FILE[k]
+                uuid_near = k
                 break
 
             OBJ = dict()
@@ -171,6 +176,8 @@ def get_beacons_scan():
                             OBJ['name'] = data_response['nombre']
                             OBJ['time'] = Leer_HoraActual()
 
+                            nombre_near = data_response['nombre']
+
                             if not uuid_mas_cercano in list(PERSON_SCAN.keys()):
                                 PERSON_SCAN[uuid_mas_cercano] = OBJ
                                 save_file(PERSON_SCAN)
@@ -190,12 +197,14 @@ def get_beacons_scan():
                     for key, value in history.items():
                         if [k for k, v in MORE_NEAR.items()][0] == key:
                             OBJ['name'] = value['name']
+                            nombre_near = value['name']
                     OBJ['time'] = Leer_HoraActual()
 
                     # print("El nombre ya existe")
                     with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
                         json.dump(OBJ, outfile_beacon_scan)
                     pass
+            print("count beacon: {} - near: {} - nombre: {}".format(len(BEACON_SCAN_FILE), uuid_near, nombre_near))
         # print("Process beacon_scan and history OK")
 
 

@@ -1,3 +1,13 @@
+# 0) Aumentar la memoria swap
+sudo nano /etc/dphys-swapfile
+
+# 0.1) Buscar la linea: CONF_SWAPSIZE=100, y cambiarla por
+CONF_SWAPSIZE=512
+
+# 0.2) Reiniciar la swap:
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
+
 # 1) Instalar fuentes en el sistema operativo y descargar imagenes base de docker
 
 sh setup_SO.sh
