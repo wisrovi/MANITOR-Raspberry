@@ -7,7 +7,7 @@ class Consult_Microservicios(object):
     import re
 
     def __init__(self):
-        self.GATEWAY = self.returnGateway()
+        self.GATEWAY = "172.16.62.83"#self.returnGateway()
 
     def __getRoute(self):
         """
@@ -65,6 +65,7 @@ class Consult_Microservicios(object):
 
     def leer_nombre_persona(self):
         name_json = self.__get(self.URL_NAME)
+        print("[leer_nombre_persona]: Nombre leido:", name_json)
         nombre = None
         uuid = None
         if name_json is not None:
