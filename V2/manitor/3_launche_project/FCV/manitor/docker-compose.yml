@@ -117,6 +117,8 @@ services:
     image: manitor_interfaz_video:V1.0
     network_mode: host
     restart: always
+    depends_on:
+      - move_front_cam
     volumes:
       - /dev/bus/usb:/dev/bus/usb
       - /opt/vc:/opt/vc
@@ -148,6 +150,8 @@ services:
       - move_front_cam
       - vector
     restart: always
+    volumes:
+      - .src:/code_brain
     privileged: true
     healthcheck:
       test: ["CMD","curl","-f", "http://localhost:5008/help"]

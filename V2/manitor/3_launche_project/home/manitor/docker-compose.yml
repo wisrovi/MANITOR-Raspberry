@@ -117,6 +117,8 @@ services:
     image: manitor_interfaz_video:V1.0
     network_mode: host
     restart: always
+    depends_on:
+      - move_front_cam
     volumes:
       - /dev/bus/usb:/dev/bus/usb
       - /opt/vc:/opt/vc
@@ -147,6 +149,8 @@ services:
       - interfaz_video
       - move_front_cam
       - vector
+    volumes:
+      - .src:/code_brain
     restart: always
     privileged: true
     healthcheck:
