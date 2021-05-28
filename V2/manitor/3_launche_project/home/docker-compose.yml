@@ -1,0 +1,157 @@
+version: '3.9'
+services:
+  beacon_scan:
+    container_name: beacon_scan
+    image: manitor_beacon_scan:V1.0
+    network_mode: host
+    restart: always
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5001/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  send_mqtt:
+    container_name: send_mqtt
+    image: manitor_send_mqtt:V1.0
+    ports:
+      - 5003:5003
+    environment:
+      MAC_CLIENT: dc:a6:32:34:07:0f
+      IP_BROKER: 192.168.1.115
+      PORT_BROKER: 1883
+      NAME_CLIENT: RPI
+    restart: always
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5003/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  nombre_persona:
+    container_name: nombre_persona
+    image: manitor_nombre_persona:V1.0
+#    command: tail -f /etc/hosts
+    volumes:
+      - /home/pi/DATA/history.json:/code/DATA/history.json
+      - /home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json
+      - /home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json
+    ports:
+      - 5004:5004
+    links:
+      - beacon_scan:beacon_scan
+    depends_on:
+      - beacon_scan
+      - send_mqtt
+    restart: always
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5004/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  reproduce_audio:
+    container_name: reproduce_audio
+    image: manitor_reproduce_audio:V1.0
+    ports:
+      - 5002:5002
+    restart: always
+    devices:
+      - "/dev/snd:/dev/snd"
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5002/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  move_front_cam:
+    container_name: move_front_cam
+    image: manitor_move_front_cam:V1.0
+    network_mode: host
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - /opt/vc:/opt/vc
+      - /home/pi/Desktop/demo:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/pi/.Xauthority:/root/.Xauthority
+    environment:
+      LD_LIBRARY_PATH: /opt/vc/lib
+      DISPLAY:
+    devices:
+      - "/dev/vchiq:/dev/vchiq"
+    restart: always
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5006/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  vector:
+    container_name: vector
+    image: manitor_vector:V1.0
+    ports:
+      - 5007:5007
+    environment:
+      MAC_CLIENT: dc:a6:32:34:07:0f
+    depends_on:
+      - send_mqtt
+    restart: always
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5007/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  interfaz_video:
+    container_name: interfaz_video
+    image: manitor_interfaz_video:V1.0
+    network_mode: host
+    restart: always
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - /opt/vc:/opt/vc
+      - /home/pi/Desktop/demo:/code
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /home/pi/.Xauthority:/root/.Xauthority
+    environment:
+      LD_LIBRARY_PATH: /opt/vc/lib
+      DISPLAY:
+    devices:
+      - "/dev/vchiq:/dev/vchiq"
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5005/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  brain:
+    container_name: brain
+    image: manitor_brain:V1.0
+    ports:
+      - 5008:5008
+    depends_on:
+      - reproduce_audio
+      - nombre_persona
+      - interfaz_video
+      - move_front_cam
+      - vector
+    restart: always
+    privileged: true
+    healthcheck:
+      test: ["CMD","curl","-f", "http://localhost:5008/help"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

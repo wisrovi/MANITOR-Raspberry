@@ -23,3 +23,8 @@ sudo sh recreate_images.sh
 # 4) construir los diferentes contenedores del manitor, este comando dentro de la carpeta "manitor"
 
 docker-compose up -d
+
+# 5) quitar la suspencion de pantalla, abrir el archivo ( /etc/xdg/lxsession/LXDE-pi/autostart) con nano y escribir al final del archivo:
+@xset s noblank
+@xset s off
+@xset -dpms

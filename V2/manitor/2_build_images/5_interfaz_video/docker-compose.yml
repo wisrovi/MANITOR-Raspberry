@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+   interfaz_video:
+      container_name: interfaz_video
+      image: manitor_interfaz_video:V1.0
+      network_mode: host
+      restart: always
+      volumes:
+         - /dev/bus/usb:/dev/bus/usb
+         - /opt/vc:/opt/vc
+         - /home/pi/Desktop/demo:/code
+         - /tmp/.X11-unix:/tmp/.X11-unix
+         - /home/pi/.Xauthority:/root/.Xauthority
+      environment:
+         LD_LIBRARY_PATH: /opt/vc/lib
+         DISPLAY:
+      devices:
+         - "/dev/vchiq:/dev/vchiq"
+      privileged: true
+      healthcheck:
+         test: [ "CMD","curl","-f", "http://localhost:5005/help" ]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
+         start_period: 40s
