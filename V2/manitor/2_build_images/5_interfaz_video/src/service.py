@@ -45,8 +45,8 @@ def activar_nuevo_video(ID_PASO = 1):
     global crono
     global esperando_siguiente_paso
     tiempo_paso = Sincro[str(ID_PASO)]['time']
-    crono = Sincro[str(ID_PASO)]['cronometro']
-    video = Sincro[str(ID_PASO)]['video']
+    crono = Sincro[str(ID_PASO)].get('cronometro')
+    video = Sincro[str(ID_PASO)].get('video')
     print("[time]:", util.Leer_HoraActual())
     print("[Video]: ", video)
     print("[Crono]: ", crono)

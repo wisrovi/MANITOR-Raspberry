@@ -1,4 +1,4 @@
-FROM armindocachada/tensorflow2-opencv4-raspberrypi4:2.2_4.5.0
+FROM armindocachada/tensorflow2-opencv4-raspberrypi4:2.2_4.5.0ModuleNotFoundError: No module named 'tkinter'
 
 WORKDIR /code_video
 
@@ -16,6 +16,9 @@ RUN apt-get install x11-xserver-utils
 RUN export DISPLAY=:0
 
 RUN pip3 install flask
+
+RUN apt-get -y install python3-tk
+RUN apt-get -y install ffmpeg
 
 # 6) copiamos la carpeta del codigo y todos sus recursos
 COPY src .
