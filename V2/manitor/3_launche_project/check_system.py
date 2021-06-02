@@ -89,10 +89,14 @@ def clicked_send_audiovisual():
     try:
         url = 'http://' + txt.get() + ':5005/mostrar?id=' + combo.get() + "&name=" + name_person.get()
         rta = get(url)
-        if rta[1].find("near"):
-            uuid_cardholder.set([k for k in json.loads(rta[1])['near'].keys()][0])
     except:
-        print('Info', 'No se encontró el microservicio 5004')
+        print('Info', 'No se encontró el microservicio 5005')
+
+    try:
+        url = 'http://' + txt.get() + ':5002/reproduce?id=' + combo.get()
+        rta = get(url)
+    except:
+        print('Info', 'No se encontró el microservicio 5002')
 
 
 def cambio_opcion(event):
