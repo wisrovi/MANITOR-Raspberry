@@ -7,7 +7,7 @@ class Consult_Microservicios(object):
     import re
 
     def __init__(self):
-        self.GATEWAY = "192.168.1.100"#self.returnGateway()
+        self.GATEWAY = self.returnGateway()  # "192.168.1.100"#
 
     def __getRoute(self):
         """

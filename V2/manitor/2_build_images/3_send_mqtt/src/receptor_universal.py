@@ -11,7 +11,7 @@ def on_message(client, userdata, message):
     print(OBJ)
 
 
-IP_BROKER = "192.168.1.115"
+IP_BROKER = "192.168.1.108"
 PORT_BROKER = "1883"
 
 

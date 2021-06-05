@@ -1,6 +1,6 @@
 import paho.mqtt.client as mqtt  # import the client1
 
-IP_BROKER = "192.168.1.115"
+IP_BROKER = "192.168.1.108"
 PORT_BROKER = "1883"
 PORT_BROKER = int(PORT_BROKER)
 

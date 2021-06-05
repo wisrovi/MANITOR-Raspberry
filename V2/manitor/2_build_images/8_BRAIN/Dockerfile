@@ -17,5 +17,5 @@ COPY src .
 
 RUN chmod -R +777 /code_brain
 
-CMD ["tail","-f","/dev/null"]
-# CMD ["python3", "./service.py" ]
+# CMD ["tail","-f","/dev/null"]
+CMD ["python3", "./service.py" ]
