@@ -7,7 +7,7 @@ class Consult_Microservicios(object):
     import re
 
     def __init__(self):
-        self.GATEWAY = "172.16.62.83"#self.returnGateway()
+        self.GATEWAY = "192.168.1.100"#self.returnGateway()
 
     def __getRoute(self):
         """
@@ -30,13 +30,13 @@ class Consult_Microservicios(object):
         return ''
 
     def __get(self, url):
+        r = None
         try:
             r = self.requests.get(url=url)
             data = r.json()
             return data
         except Exception as err:
-            print(err)
-            print(url)
+            print(url, err, r.text)
             return None
 
     def get_ip_localhost(self):
@@ -47,34 +47,38 @@ class Consult_Microservicios(object):
         movimiento = self.__get(url)
 
         if movimiento is not None:
-            print("RTA:", movimiento)
+            # print("RTA:", movimiento)
             if 'move' in movimiento:
                 movimiento = movimiento['move']
                 return False if movimiento == 0 else True
             else:
                 return False
         else:
-            return False
+            return None
 
     def mostrar_audiovisual(self, id_audiovisual, nombre):
-        self.__get(self.URL_SONIDO + str(id_audiovisual))
-        self.__get(self.URL_VIDEO.replace('$ID', str(id_audiovisual)) + nombre)
+        try:
+            self.__get(self.URL_SONIDO + str(id_audiovisual))
+            self.__get(self.URL_VIDEO.replace('$ID', str(id_audiovisual)) + nombre)
+        except:
+            print(id_audiovisual, nombre)
 
     def mostrar_video(self, id_audiovisual, nombre):
         self.__get(self.URL_VIDEO.replace('$ID', str(id_audiovisual)) + nombre)
 
     def leer_nombre_persona(self):
         name_json = self.__get(self.URL_NAME)
-        print("[leer_nombre_persona]: Nombre leido:", name_json)
         nombre = None
         uuid = None
         if name_json is not None:
             if len(name_json) > 0:
-                uuid = [f for f in name_json][0]
-                name_json = name_json[uuid]
-                print(name_json)
+                if 'data' in name_json:
+                    data = name_json['data']
+                    uuid = [k for k in data.keys()][0]
+                    # print(data)
                 if 'name' in name_json:
                     nombre = name_json['name']
+                    # print("[leer_nombre_persona]: Nombre leido:", nombre, uuid)
         return nombre, uuid
 
     def guardar_en_vector(self, id_paso:str, tiempo:str):
@@ -88,6 +92,7 @@ class Consult_Microservicios(object):
         self.__get(url)
 
     def indicar_audio_mueva_manos(self):
+        print("Enviando audio: por favor mueva las manos (audio 11)")
         self.__get(self.URL_SONIDO + str(self.AUDIO_POR_FAVOR_MUEVA_MANOS))
 
 

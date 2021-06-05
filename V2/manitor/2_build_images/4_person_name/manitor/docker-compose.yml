@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+   nombre_persona:
+      container_name: nombre_persona
+      image: manitor_nombre_persona:V1.0
+      #    command: tail -f /etc/hosts
+      volumes:
+         - /home/pi/DATA/history.json:/code/DATA/history.json
+         - /home/pi/DATA/BEACON_SCAN.json:/code/DATA/BEACON_SCAN.json
+         - /home/pi/DATA/PERSON_SCAN.json:/code/DATA/PERSON_SCAN.json
+      ports:
+         - 5004:5004
+      restart: always
+      healthcheck:
+         test: [ "CMD","curl","-f", "http://localhost:5004/help" ]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
+         start_period: 40s

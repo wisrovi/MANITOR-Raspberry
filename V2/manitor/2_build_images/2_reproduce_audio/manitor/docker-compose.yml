@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+   reproduce_audio:
+      container_name: reproduce_audio
+      image: manitor_reproduce_audio:V1.0
+      ports:
+         - 5002:5002
+      restart: always
+      devices:
+         - "/dev/snd:/dev/snd"
+      privileged: true
+      healthcheck:
+         test: [ "CMD","curl","-f", "http://localhost:5002/help" ]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
+         start_period: 40s

@@ -164,36 +164,55 @@ def get_beacons_scan():
                     all_uuid = list(MORE_NEAR.keys())
                     if len(all_uuid) > 0:
                         uuid_mas_cercano = list(MORE_NEAR.keys())[0]
-                        PARAMS = dict()
-                        PARAMS['msg'] = "1"
-                        PARAMS['topic'] = get_topic(uuid_mas_cercano)
-                        r = requests.post('http://' + MICROSERVICIO_SEND_MQTT + ':5003/send', data=PARAMS, timeout=10)
-                        # print(r.text, PARAMS['topic'])
 
-                        time.sleep(0.5)
-                        PARAMS = dict()
-                        r = requests.get('http://' + MICROSERVICIO_SEND_MQTT + ':5003/data', params=PARAMS, timeout=10)
-                        data_response = r.json()
-                        print(data_response['nombre'])
+                        name_saved = None
+                        for key, value in read_file().items():
+                            if key == uuid_mas_cercano:
+                                name_saved = value
 
-                        if len(data_response['nombre'])>0:
+                        if name_saved is not None:
+                            print("[Name in History]:", name_saved)
                             OBJ = dict()
                             OBJ['data'] = MORE_NEAR[uuid_mas_cercano]
-                            OBJ['name'] = data_response['nombre']
+                            OBJ['name'] = name_saved
                             OBJ['time'] = Leer_HoraActual()
-
-                            nombre_near = data_response['nombre']
-
-                            if not uuid_mas_cercano in list(PERSON_SCAN.keys()):
-                                PERSON_SCAN[uuid_mas_cercano] = OBJ
-                                save_file(PERSON_SCAN)
 
                             PERSON_SCAN_NOW = dict()
                             PERSON_SCAN_NOW[uuid_mas_cercano] = OBJ
                             with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
                                 json.dump(PERSON_SCAN_NOW, outfile_beacon_scan)
-                        else:
-                            print("[ERROR]:", f"La persona con beacon {uuid_mas_cercano} no tiene resultados del servidor para solicitud de nombre (/nombre)")
+
+                        if name_saved is None:
+                            PARAMS = dict()
+                            PARAMS['msg'] = "1"
+                            PARAMS['topic'] = get_topic(uuid_mas_cercano)
+                            r = requests.post('http://' + MICROSERVICIO_SEND_MQTT + ':5003/send', data=PARAMS, timeout=10)
+                            # print(r.text, PARAMS['topic'])
+
+                            time.sleep(0.5)
+                            PARAMS = dict()
+                            r = requests.get('http://' + MICROSERVICIO_SEND_MQTT + ':5003/data', params=PARAMS, timeout=10)
+                            data_response = r.json()
+                            print(data_response['nombre'])
+
+                            if len(data_response['nombre'])>0:
+                                OBJ = dict()
+                                OBJ['data'] = MORE_NEAR[uuid_mas_cercano]
+                                OBJ['name'] = data_response['nombre']
+                                OBJ['time'] = Leer_HoraActual()
+
+                                nombre_near = data_response['nombre']
+
+                                if not uuid_mas_cercano in list(PERSON_SCAN.keys()):
+                                    PERSON_SCAN[uuid_mas_cercano] = OBJ
+                                    save_file(PERSON_SCAN)
+
+                                PERSON_SCAN_NOW = dict()
+                                PERSON_SCAN_NOW[uuid_mas_cercano] = OBJ
+                                with open(FILE_PERSON_SCAN, 'w') as outfile_beacon_scan:
+                                    json.dump(PERSON_SCAN_NOW, outfile_beacon_scan)
+                            else:
+                                print("[ERROR]:", f"La persona con beacon {uuid_mas_cercano} no tiene resultados del servidor para solicitud de nombre (/nombre)")
                 else:
                     print("[NEAR]:", [k for k, v in MORE_NEAR.items()][0])
 

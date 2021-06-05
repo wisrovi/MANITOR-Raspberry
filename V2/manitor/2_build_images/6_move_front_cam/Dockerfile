@@ -17,6 +17,8 @@ RUN pip3 install flask
 
 COPY src .
 
+RUN touch /static/move.jpg
+
 RUN chmod -R +777 /code_move
 
 # CMD ["tail","-f","/dev/null"]

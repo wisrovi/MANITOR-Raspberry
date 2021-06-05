@@ -1,0 +1,1 @@
+sudo docker build -t "manitor_interfaz_video:V1.0" .

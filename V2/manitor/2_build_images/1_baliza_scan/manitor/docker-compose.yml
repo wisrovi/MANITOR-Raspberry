@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+   beacon_scan:
+      container_name: beacon_scan
+      image: manitor_beacon_scan:V1.0
+      network_mode: host
+      restart: always
+      privileged: true
+      healthcheck:
+         test: [ "CMD","curl","-f", "http://localhost:5001/help" ]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
+         start_period: 40s

@@ -1,0 +1,1 @@
+sudo docker build -t "manitor_nombre_persona:V1.0" .

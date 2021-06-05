@@ -127,7 +127,7 @@ services:
       - /home/pi/.Xauthority:/root/.Xauthority
     environment:
       LD_LIBRARY_PATH: /opt/vc/lib
-      DISPLAY:
+      DISPLAY: :0
     devices:
       - "/dev/vchiq:/dev/vchiq"
     privileged: true
