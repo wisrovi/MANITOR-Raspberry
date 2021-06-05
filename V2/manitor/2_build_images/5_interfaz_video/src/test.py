@@ -10,8 +10,10 @@ class Fullscreen_Tkinter:
     width = 800
     height = 480
 
-    framesNum = 24 * 3
-    framesNum_crono = 24 * 1
+    FPS = 5
+
+    framesNum = FPS * 3
+    framesNum_crono = FPS * 1
     tipo_letra = "Courier"
 
     def __init__(self):
@@ -199,26 +201,26 @@ class Interfaz_visual(Fullscreen_Tkinter):
         self.listado_todos_videos_gif = list()
         self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "0_fondo.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "1_morjarse_manos_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "1_morjarse_manos_5fps.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "2_aplique_jabon_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "2_aplique_jabon_5fps.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "3_palma_con_palma_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "3_palma_con_palma_5fps.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "4_detras_manos_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "4_detras_manos_5fps.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "5_entre_ dedos _15fps.gif", self.framesNum))
-        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "6_detras_dedos_15fps.gif", self.framesNum))
-        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "7_pulgares_15fps.gif", self.framesNum))
-        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "8_unas_15 fps.gif", self.framesNum))
-        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "9_munecas_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "5_entre_ dedos _5fps.gif", self.framesNum))
+        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "6_detras_dedos_5fps.gif", self.framesNum))
+        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "7_pulgares_5fps.gif", self.framesNum))
+        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "8_unas_5fps.gif", self.framesNum))
+        self.listado_todos_videos_gif.append(self.cargar_frames(FOLDER + "9_munecas_5fps.gif", self.framesNum))
         self.listado_todos_videos_gif.append(
-            self.cargar_frames(FOLDER + "10_enjuaga_seca_15fps.gif", self.framesNum))
+            self.cargar_frames(FOLDER + "10_enjuaga_seca_5fps.gif", self.framesNum))
 
         FOLDER = "resources/crono/"
         self.listado_todos_crono_gif = list()
         self.listado_todos_crono_gif.append(self.cargar_frames("resources/manos/0_fondo.gif", self.framesNum))
-        self.listado_todos_crono_gif.append(self.cargar_frames(FOLDER + "1_seg_cronometro_15fps.gif", self.framesNum_crono))
+        self.listado_todos_crono_gif.append(self.cargar_frames(FOLDER + "1_seg_cronometro_5fps.gif", self.framesNum_crono))
 
     def mostrar_video(self, id_video, id_crono=1):
         self.frames = self.listado_todos_videos_gif[id_video]
