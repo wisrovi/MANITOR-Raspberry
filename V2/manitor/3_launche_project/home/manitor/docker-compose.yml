@@ -149,8 +149,6 @@ services:
       - interfaz_video
       - move_front_cam
       - vector
-    volumes:
-      - .src:/code_brain
     restart: always
     privileged: true
     healthcheck:

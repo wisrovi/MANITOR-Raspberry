@@ -150,8 +150,6 @@ services:
       - move_front_cam
       - vector
     restart: always
-    volumes:
-      - .src:/code_brain
     privileged: true
     healthcheck:
       test: ["CMD","curl","-f", "http://localhost:5008/help"]

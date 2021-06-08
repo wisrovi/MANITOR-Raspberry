@@ -36,7 +36,9 @@ class Consult_Microservicios(object):
             data = r.json()
             return data
         except Exception as err:
-            print(url, err, r.text)
+            if r is not None:
+                r = r.text
+            print(url, err, r)
             return None
 
     def get_ip_localhost(self):

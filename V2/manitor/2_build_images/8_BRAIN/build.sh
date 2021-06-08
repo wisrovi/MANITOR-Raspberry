@@ -1,0 +1,1 @@
+sudo docker build -t "manitor_brain:V1.0" .

@@ -137,7 +137,9 @@ def proceso_brain():
                     persona[3] = hay_movimiento
 
                 if not persona[4]:  # verifico que el proceso no haya iniciado
-                    if persona[0] is not None and persona[8] is not None:
+                    hay_persona = persona[0] is not None
+                    hay_uuid_cardholder = persona[8] is not None
+                    if hay_persona and hay_uuid_cardholder:
                         if len(persona[0]) > 0 and persona[3]:  # miro que haya una persona frente al manitor y esta se haya
                             # movido por primera vez
                             persona[7] = 0  # borro el conteo de penalidades
@@ -162,7 +164,8 @@ def proceso_brain():
                             persona[7] = 0  # borro el conteo de penalidades
                             persona[4] = False  # Finalizo el proceso
                             microservicio.reportar_vector(uuid=persona[9][1], voltaje=persona[9][0])
-                            persona[0] = ""  # limpio el nombre actual
+                            persona[0] = None  # limpio el nombre actual
+                            persona[1] = None  # limpio el nombre actual
                             microservicio.mostrar_video(id_audiovisual=0, nombre="")   # limpio la pantalla de interfaz_video y borro el nombre de la persona
                             sleep(config.TIME_NEXT_PERSON)  # espero un tiempo antes de procesar a otra persona
 
@@ -186,7 +189,8 @@ def proceso_brain():
                             uuid_uso_manitor = persona[9][0]
                         microservicio.reportar_vector(uuid=persona_uso_manitor, voltaje=uuid_uso_manitor)
 
-                        persona[0] = ""  # limpio el nombre actual
+                        persona[0] = None  # limpio el nombre actual
+                        persona[1] = None  # limpio el nombre actual
                         microservicio.mostrar_video(id_audiovisual=0, nombre="")  # limpio la pantalla de interfaz_video y borro el nombre de la persona
                         sleep(config.TIME_NEXT_PERSON)   # espero un tiempo antes de procesar a otra persona
 

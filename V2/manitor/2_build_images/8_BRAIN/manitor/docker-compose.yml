@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+   brain:
+      container_name: brain
+      image: manitor_brain:V1.0
+      ports:
+         - 5008:5008
+      restart: always
+      privileged: true
+      healthcheck:
+         test: [ "CMD","curl","-f", "http://localhost:5008/help" ]
+         interval: 1m30s
+         timeout: 10s
+         retries: 3
+         start_period: 40s
