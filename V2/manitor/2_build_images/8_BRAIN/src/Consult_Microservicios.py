@@ -7,7 +7,8 @@ class Consult_Microservicios(object):
     import re
 
     def __init__(self):
-        self.GATEWAY = self.returnGateway()  # "192.168.1.100"#
+        # TODO: Dejar unicamente returnGateway()
+        self.GATEWAY = "192.168.1.109" # self.returnGateway()
 
     def __getRoute(self):
         """
@@ -91,7 +92,8 @@ class Consult_Microservicios(object):
     def reportar_vector(self, uuid, voltaje):
         url = self.URL_ENVIA_VECTOR.replace("$UUID", uuid)
         url = url.replace("$VOLT", str(voltaje))
-        self.__get(url)
+        rta = self.__get(url)
+        print(rta)
 
     def indicar_audio_mueva_manos(self):
         print("Enviando audio: por favor mueva las manos (audio 11)")

@@ -66,7 +66,7 @@ def envia_vector(mensaje, uuid, mac=None):
         data = r.json()
         print(data)
     except:
-        pass
+        print(r.text)
 
 
 @app.route('/')
@@ -92,6 +92,7 @@ def time():
         print(VECTOR)
         return make_response({'code': 'SUCESS'}, 200)
     else:
+        print("Faltan datos: ", id_received, time_received)
         return make_response({'code': 'NO DATA'}, 200)
 
 
@@ -117,7 +118,6 @@ def report():
     mensaje = '[' + ','.join([str(value_in_vector) for value_in_vector in datos_vector_enviar]) + ']'
     fecha = datetime.now().strftime("%d/%m/%Y-%H:%M:%S")
     mensaje = '{' + str(voltaje) + ',' + str(fecha) + ',' + mensaje + '}'
-    print(mensaje)
     envia_vector(mensaje, uuid, mac)
     VECTOR = dict()
 

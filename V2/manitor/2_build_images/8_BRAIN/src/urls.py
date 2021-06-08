@@ -24,7 +24,8 @@ def returnGateway():
     return ''
 
 
-GATEWAY = returnGateway()
+# TODO: Dejar unicamente returnGateway()
+GATEWAY = "192.168.1.109"  # returnGateway()
 
 URL_SONIDO = 'http://' + GATEWAY + ':5002/reproduce?id='
 URL_NAME = 'http://' + GATEWAY + ':5004/name'

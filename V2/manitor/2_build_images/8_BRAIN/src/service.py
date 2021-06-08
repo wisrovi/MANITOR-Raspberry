@@ -170,12 +170,14 @@ def proceso_brain():
                             sleep(config.TIME_NEXT_PERSON)  # espero un tiempo antes de procesar a otra persona
 
             if persona[4]:  # valido que exista un proceso iniciado
-                if (time() - tiempo_siguiente_paso) >= config.pasos[persona[6]]:
+                tiempo_usado = int((time() - tiempo_siguiente_paso)*10)/10
+                if tiempo_usado >= config.pasos[persona[6]]:
                     persona[7] = 0  # borro el conteo de penalidades
                     persona[6] += 1  # autorizo el siguiente paso en el lavado de manos
                     if persona[6] < len(config.pasos):
                         microservicio.mostrar_audiovisual(id_audiovisual=persona[6], nombre=persona[0])
-                        microservicio.guardar_en_vector(id_paso=persona[6] - 1, tiempo=tiempo_siguiente_paso)
+                        print("[TO VECTOR]:", persona[9], "id", persona[6] - 1, "time", tiempo_usado, "({})".format(config.pasos[persona[6]-1]))
+                        microservicio.guardar_en_vector(id_paso=persona[6] - 1, tiempo=tiempo_usado)
                         tiempo_siguiente_paso = time()  # seteo el tiempo minimo para el siguiente paso
                     else:
                         persona[6] = 0
@@ -184,9 +186,10 @@ def proceso_brain():
                         persona_uso_manitor = persona[8]
                         uuid_uso_manitor = persona[6]
                         if persona_uso_manitor is None:
-                            persona_uso_manitor = persona_uso_manitor
+                            persona_uso_manitor = persona[9][1]
                         if uuid_uso_manitor is None:
                             uuid_uso_manitor = persona[9][0]
+                        print("[TO VECTOR]:", persona_uso_manitor, "-", uuid_uso_manitor, "[REPORT]")
                         microservicio.reportar_vector(uuid=persona_uso_manitor, voltaje=uuid_uso_manitor)
 
                         persona[0] = None  # limpio el nombre actual
