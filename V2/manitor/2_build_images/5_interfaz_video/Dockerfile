@@ -1,5 +1,8 @@
 FROM armindocachada/tensorflow2-opencv4-raspberrypi4:2.2_4.5.0
 
+#Author and Maintainer
+MAINTAINER wisrovi.rodriguez@gmail.com
+
 WORKDIR /code_video
 
 RUN echo interfaz_video

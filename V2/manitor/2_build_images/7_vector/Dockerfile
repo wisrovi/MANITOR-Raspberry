@@ -1,6 +1,9 @@
 # 1) indicamos la imagen base a usar
 FROM arm32v7/python:3.6.13-buster
 
+#Author and Maintainer
+MAINTAINER wisrovi.rodriguez@gmail.com
+
 # 2) creamos una carpeta para alojar los archivos del proyecto
 WORKDIR /code
 

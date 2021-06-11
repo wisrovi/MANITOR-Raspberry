@@ -1,6 +1,9 @@
 # 1) indicamos la imagen base a usar
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 
+#Author and Maintainer
+MAINTAINER wisrovi.rodriguez@gmail.com
+
 # 2) creamos una carpeta para alojar los archivos del proyecto
 WORKDIR /code
 
