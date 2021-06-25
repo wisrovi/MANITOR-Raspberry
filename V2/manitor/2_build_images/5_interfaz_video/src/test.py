@@ -156,19 +156,22 @@ class Fullscreen_Tkinter:
             ind_c = 0
             self.var_reiniciar_video.set(False)
 
-        """ Actualiza la imagen gif """
-        ind += 1
-        if ind >= len(self.frames):
-            ind = 0
-        frame = self.frames[ind]
-        self.canvas_video_instruccion.create_image(0, 0, image=frame, anchor=self.NW)
+        BANDERA_REFRESH = True
+        if BANDERA_REFRESH:
+            """ Actualiza la imagen gif """
+            ind += 1
+            if ind >= len(self.frames):
+                ind = 0
+            frame = self.frames[ind]
+            self.canvas_video_instruccion.create_image(0, 0, image=frame, anchor=self.NW)
 
-        """ Actualiza el crono gif """
-        ind_c += 1
-        if ind_c >= len(self.crono):
-            ind_c = 0
-        frame = self.crono[ind_c]
-        self.canvas_crono.create_image(0, 0, image=frame, anchor=self.NW)
+            """ Actualiza el crono gif """
+            ind_c += 1
+            if ind_c >= len(self.crono):
+                ind_c = 0
+            frame = self.crono[ind_c]
+
+            self.canvas_crono.create_image(0, 0, image=frame, anchor=self.NW)
 
         self.window.after(40, self.update_video_instrucion, (ind, ind_c))  # Numero que regula la velocidad del gif
 
