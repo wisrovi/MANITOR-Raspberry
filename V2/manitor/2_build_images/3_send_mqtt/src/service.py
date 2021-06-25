@@ -7,7 +7,7 @@ import json
 import os
 import random
 from multiprocessing import Process
-import paho.mqtt.client as mqtt  # import the client1
+import paho.mqtt.client as mqtt
 import paho.mqtt.publish as publish
 import datetime
 
